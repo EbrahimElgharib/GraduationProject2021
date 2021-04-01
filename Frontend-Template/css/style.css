@@ -1,0 +1,209 @@
+                        .jumbotron {
+                            background-image: url("");
+                            background-repeat: no-repeat;
+                            margin-bottom: 0px;
+                            background-size: cover;
+                            background-position: center;
+                            background-attachment: fixed;
+                        }
+                        
+                        .jumbotron1 {
+                            background-image: url("/images/pexels-chokniti-khongchum-2280547.jpg");
+                            background-repeat: no-repeat;
+                            margin-bottom: 0px;
+                            background-size: cover;
+                            background-position: center;
+                            background-attachment: fixed;
+                        }
+                        
+                        #simulation {
+                            background-color: #ecf0f1;
+                        }
+                        
+                        .myPadding {
+                            padding-top: 30px;
+                            padding-bottom: 70px;
+                        }
+                        /* .myImage {
+    margin-left: 50px;
+} */
+                        
+                        .myMoving {
+                            margin-left: 10px;
+                        }
+                        
+                        .center {
+                            text-align: center;
+                            font-family: fantasy;
+                        }
+                        
+                        .moving {
+                            text-align: center;
+                            padding-right: 70px;
+                            font-family: Tahoma;
+                        }
+                        
+                        .explore {
+                            padding-left: 200px;
+                        }
+                        
+                        .Top {
+                            margin-bottom: 15px;
+                            margin-left: 60px;
+                        }
+                        /* 
+.control {
+    margin-right: 500px;
+} */
+                        
+                        #student {
+                            padding-top: 20px;
+                        }
+                        
+                        .mySize {
+                            width: 100px;
+                            height: 550px;
+                        }
+                        /* .bottomPadding {
+     padding-bottom: 1px; 
+} */
+                        
+                        .exploration {
+                            background-color: #bdc3c7;
+                        }
+                        
+                        .translate {
+                            padding-top: 40px;
+                            padding-bottom: 40px;
+                        }
+                        
+                        #blogs {
+                            background-color: #7f8c8d;
+                        }
+                        
+                        .padding-bot {
+                            padding-bottom: 20px;
+                        }
+                        
+                        .margin-left {
+                            margin-left: 100px;
+                        }
+                        
+                        #btnScroll {
+                            display: none;
+                            position: fixed;
+                            bottom: 30px;
+                            right: 40px;
+                            z-index: 100;
+                            cursor: pointer;
+                            padding: 16px;
+                        }
+                        
+                        .size {
+                            width: 10px;
+                            height: 10px;
+                        }
+                        
+                        .bg-footer {
+                            background-color: #34495e;
+                        }
+                        
+                        .margin-right {
+                            margin-right: 100px;
+                        }
+                        
+                        .form {
+                            margin: 100px 100px 100px 100px;
+                        }
+                        
+                        .margin {
+                            margin: 200px 100px 100px 100px;
+                        }
+                        /*     
+    .margin-move {
+        padding-right: 30px;
+    } */
+                        
+                        html {
+                            scroll-behavior: smooth;
+                        }
+                        
+                        .marginTop {
+                            margin-top: 100px;
+                        }
+                        
+                        .margin-Top {
+                            margin-top: 100px;
+                            /* justify-content: initial; */
+                        }
+                        
+                        .image {
+                            background-repeat: no-repeat;
+                            margin-bottom: 50px;
+                            background-size: cover;
+                            background-position: center;
+                            background-attachment: fixed;
+                            width: 500px;
+                            height: 500px;
+                        }
+                        
+                        .moving-top {
+                            margin-top: 80px;
+                        }
+                        
+                        .centeralize {
+                            justify-content: center;
+                        }
+                        
+                        .text-decoration {
+                            /* border-bottom: 1px solid #000; */
+                            font-size: 2.5rem;
+                            font-weight: 700;
+                            border-bottom: 2px solid #34495e;
+                            display: inline-block;
+                            padding-bottom: 10px;
+                            font-family: sans-serif;
+                        }
+                        /* a:hover {
+        border-bottom: 2px solid #34495e;
+        display: inline-block;
+        padding-bottom: 10px;
+        font-family: sans-serif;
+    } */
+                        
+                        .marginLeft {
+                            margin-left: 100px;
+                        }
+                        
+                        @media (min-width: 1200px) {
+                            .marginLeft1 {
+                                margin-left: 800px;
+                            }
+                        }
+                        
+                        @media (min-width: 992px) and (max-width: 1199.98px) {
+                            .marginLeft1 {
+                                margin-left: 400px;
+                                margin-right: 500px;
+                            }
+                        }
+                        
+                        @media (min-width: 768px) and (max-width: 991.98px) {
+                            .marginLeft1 {
+                                margin-left: 300px;
+                                margin-right: 400px;
+                            }
+                        }
+                        
+                        @media (min-width: 576px) and (max-width: 767.98px) {
+                            .marginLeft1 {
+                                margin-left: 200px;
+                                margin-right: 200px;
+                            }
+                        }
+                        
+                        @media (max-width: 575.98px) {
+                            .marginLeft1 {
+                                margin-left: 100px;
+                            }
+                        }
