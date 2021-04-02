@@ -175,6 +175,11 @@
                             margin-left: 100px;
                         }
                         
+                    
+                    .text-black {
+                        color: #000;
+                      }
+                    
                         @media (min-width: 1200px) {
                             .marginLeft1 {
                                 margin-left: 800px;
