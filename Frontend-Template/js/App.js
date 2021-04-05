@@ -38,3 +38,12 @@ function toUp() {
     document.documentElement.scrollTop = 0;
 
 }
+
+
+function redirection() {
+
+    let url = "signUp.html";
+    window.location.href(url);
+
+
+}
