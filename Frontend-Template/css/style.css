@@ -25,6 +25,10 @@
     padding-bottom: 70px;
 }
 
+.MYmovingSection {
+    margin-right: 100px;
+}
+
 
 /* .myImage {
 margin-left: 50px;
@@ -234,6 +238,19 @@ body {
 
 body {
     position: relative
+}
+
+.mt {
+    margin-top: 40px;
+}
+
+.blog {
+    background-image: url("/GraduationProject2021/Frontend-Template/images/pexels-thisisengineering-3912472.jpg");
+    background-repeat: no-repeat;
+    margin-bottom: 0px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 
