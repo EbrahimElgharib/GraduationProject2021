@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Front End 
+
+    ##### FrontEnd
+    # https://pypi.org/project/django-bootstrap4/
+    "bootstrap4",
 
 
     # External Packages
