@@ -42,15 +42,16 @@ INSTALLED_APPS = [
     # https://pypi.org/project/django-bootstrap4/
     "bootstrap4",
 
-
-    # External Packages
-
+    ##### External Packages
+    # https://github.com/jazzband/django-taggit
+    "taggit",
+    # https://github.com/summernote/django-summernote
+    'django_summernote',
 
     # Apps
     'labs',
     'accounts',
     'about',
-    'contact_us',
     'blog',
     'settings',
 ]
@@ -141,5 +142,8 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_URL = '/media/'
-
 MEDIA_ROOT = BASE_DIR / "media"
+
+### Show summernote package
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+SUMMERNOTE_THEME = 'bs4'  # Show summernote with Bootstrap4
