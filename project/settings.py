@@ -37,6 +37,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    ##### FrontEnd
+    # https://pypi.org/project/django-bootstrap4/
+    "bootstrap4",
+
+    ##### External Packages
+    # https://github.com/jazzband/django-taggit
+    "taggit",
+    # https://github.com/summernote/django-summernote
+    'django_summernote',
+
+    # Apps
+    'labs',
+    'accounts',
+    'about',
+    'blog',
+    'settings',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +135,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    '/var/www/static/',
+]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / "media"
+
+### Show summernote package
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+SUMMERNOTE_THEME = 'bs4'  # Show summernote with Bootstrap4
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
