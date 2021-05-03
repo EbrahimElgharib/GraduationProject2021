@@ -16,6 +16,21 @@
     background-attachment: fixed;
 }
 
+.team {
+
+    background-color:#bdc3c7;
+}
+
+.Virtual-labs {
+
+    background-color: #bdc3c7;
+}
+
+.content {
+
+    background-color: #ecf0f1;
+}
+
 #simulation {
     background-color: #ecf0f1;
 }
@@ -229,6 +244,16 @@ html {
     display: inline-block;
     padding-bottom: 10px;
     font-family: sans-serif;
+}
+
+
+.text-decore {
+
+    border-bottom:  1px salmon silver;
+    display: inline-block;
+    padding-bottom: 10px;
+    
+
 }
 
 html,
