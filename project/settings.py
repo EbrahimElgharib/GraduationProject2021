@@ -147,3 +147,5 @@ MEDIA_ROOT = BASE_DIR / "media"
 ### Show summernote package
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 SUMMERNOTE_THEME = 'bs4'  # Show summernote with Bootstrap4
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
