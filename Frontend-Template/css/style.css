@@ -240,7 +240,7 @@ html {
     /* border-bottom: 1px solid #000; */
     font-size: 2.5rem;
     font-weight: 700;
-    border-bottom: 2px solid #34495e;
+    border-bottom: 2px solid #fff;
     display: inline-block;
     padding-bottom: 10px;
     font-family: sans-serif;
@@ -252,7 +252,7 @@ html {
     border-bottom:  1px salmon silver;
     display: inline-block;
     padding-bottom: 10px;
-    
+
 
 }
 
