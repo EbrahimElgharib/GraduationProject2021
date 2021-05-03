@@ -8,7 +8,7 @@
 }
 
 .backGroundImage {
-    background-image: url("/GraduationProject2021/Frontend-Template/images/pexels-chokniti-khongchum-2280547.jpg");
+    background-image: url("../images/pexels-chokniti-khongchum-2280547.jpg");
     background-repeat: no-repeat;
     margin-bottom: 0px;
     background-size: cover;
