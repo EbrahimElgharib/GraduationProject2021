@@ -23,7 +23,34 @@
     float: left; */
  
     }
-  
+    /* .cover{
+ 
+        background-repeat: no-repeat;
+        margin-bottom: 0px;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+         background-image: url('/images/pexels-polina-zimmerman-3747486.jpg');
+
+    } */
+
+
+    .MovingLeft {
+
+
+        justify-content: center;
+        background-color: #f5f6fa;
+    
+
+    }
+
+    .cssImage:hover {
+
+        transition: steps(1);
+
+
+    }
+
  .color a:hover {
    
      color: #34495e;
