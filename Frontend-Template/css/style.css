@@ -16,6 +16,19 @@
     background-attachment: fixed;
 }
 
+.underline a:hover {
+    border-bottom: 3px solid #2980b9;
+    padding-bottom: 3px;
+    /* transition: 0.5s ease-in-out;
+    float: left; */
+ 
+    }
+  
+ .color a:hover {
+   
+     color: #34495e;
+    }
+
 .team {
 
     background-color:#bdc3c7;
