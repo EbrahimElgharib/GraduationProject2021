@@ -47,3 +47,16 @@ function redirection() {
 
 
 }
+
+
+function onLoading() {
+
+    let LoadingPage = dodocument.getElementsByClassName("loading");
+    LoadingPage.addEventListener('onload'),
+        function() {
+
+            console.log("you have finished your loading page")
+
+        }
+
+}
