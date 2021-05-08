@@ -43,11 +43,10 @@ INSTALLED_APPS = [
     "bootstrap4",
 
     ##### External Packages
-    # https://github.com/jazzband/django-taggit
-    "taggit",
-    # https://github.com/summernote/django-summernote
-    'django_summernote',
-
+    "taggit", # https://github.com/jazzband/django-taggit
+    'django_summernote', # https://github.com/summernote/django-summernote
+    'django_countries', # https://github.com/SmileyChris/django-countries
+    
     # Apps
     'labs',
     'accounts',
