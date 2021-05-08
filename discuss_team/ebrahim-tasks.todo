@@ -1,0 +1,13 @@
+Tasks:
+    Accounts_app:
+        ☐ models @today 
+        ☐ signup @today 
+        ☐ login  @today 
+        ☐ others...... @low 
+        ☐ ...
+        ☐ profile @high 
+        ☐ edit-profile @high 
+        ☐ ** Auth @low
+            ☐ Google
+            ☐ FB
+            ☐ ....
