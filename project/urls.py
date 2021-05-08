@@ -18,6 +18,9 @@ from django.urls import path, include
 
 
 urlpatterns = [
+    # accounts must be at first of all
+    path('accounts/', include('django.contrib.auth.urls')), # User Auth
+    path('accounts/', include('accounts.urls', namespace='accounts')), # Profile
     path('admin/', admin.site.urls),
-    path('summernote/', include('django_summernote.urls')),
+    path('summernote/', include('django_summernote.urls')), # summernote package for text editor in admin
 ]
