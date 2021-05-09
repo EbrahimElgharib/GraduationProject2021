@@ -55,8 +55,10 @@ function onLoading() {
     LoadingPage.addEventListener('onload'),
         function() {
 
-            console.log("you have finished your loading page")
+            console.log("you have finished your loading page");
 
         }
 
 }
+
+new WOW().init();
