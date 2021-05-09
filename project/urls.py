@@ -23,6 +23,7 @@ urlpatterns = [
     path('accounts/', include('accounts.urls', namespace='accounts')), # Profile
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')), # summernote package for text editor in admin
+    path('', include('settings.urls', namespace='home')),
 
 
 ]
