@@ -10,7 +10,7 @@ from .models import Profile
 # Create your views here.
 
 def signup(request):
-       # check if form is submitted 
+   # check if form is submitted 
    if request.method == 'POST':
       # get request data
       form = SignupForm(request.POST)

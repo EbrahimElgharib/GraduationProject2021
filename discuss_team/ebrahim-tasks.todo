@@ -15,7 +15,10 @@ Tasks:
             ☐ FB
             ☐ ....
 
-
+    contact_app:
+        ☐ settings of app with template
+        ☐ send_message view
+        ☐ 
     settings_app:
         ✔ home.html with login&out @done (٩‏/٥‏/٢٠٢١, ٣:٠٤:١٦ ص)
         ☐ ..

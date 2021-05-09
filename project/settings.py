@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,10 +50,10 @@ INSTALLED_APPS = [
     
     # Apps
     'labs',
-    'accounts',
     'about',
     'blog',
     'settings',
+    'contact',
 ]
 
 
@@ -155,9 +156,19 @@ SUMMERNOTE_THEME = 'bs4'  # Show summernote with Bootstrap4
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
-### login
+##### login
 LOGIN_URL = '/accounts/login'
 
-### Redirect to home URL after login (Default redirects to /accounts/profile/)
+##### Redirect to home URL after login (Default redirects to /accounts/profile/)
 # LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+
+
+### send emails
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'ebrahimtest44@gmail.com'
+EMAIL_HOST_PASSWORD = 'suctirajajirqwdw'
