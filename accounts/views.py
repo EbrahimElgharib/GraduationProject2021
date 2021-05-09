@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
+from django.contrib.auth.decorators import login_required
 
 from .forms import SignupForm, ProfileForm, UserForm
 from .models import Profile
@@ -32,12 +33,14 @@ def signup(request):
    return render(request,'registration/signup.html',{'form':form})
 
 # show profile data to user
+@login_required
 def profile(request):
    profile = Profile.objects.get(user=request.user)
    context = {'profile':profile}
    return render(request, 'profile/profile.html',context)
 
 # show (Form) of all profile data to user
+@login_required
 def edit_profile(request):
    # get profile data to show it in form
    profile = Profile.objects.get(user=request.user)

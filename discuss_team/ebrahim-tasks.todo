@@ -1,13 +1,22 @@
 Tasks:
     Accounts_app:
-        ☐ models @today 
-        ☐ signup @today 
-        ☐ login  @today 
-        ☐ others...... @low 
-        ☐ ...
-        ☐ profile @high 
-        ☐ edit-profile @high 
+        ✔ models @today @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٠٣ ص)
+        ✔ signup @today @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٠٥ ص)
+        ✔ login  @today @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٠٥ ص)
+        ✔ others...... @low @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٥٧ ص)
+        ☐ reset password @low 
+            ✔ html + settings @done (٩‏/٥‏/٢٠٢١, ٣:٠٢:٣٠ ص)
+            ✔ send email [consol] @done (٩‏/٥‏/٢٠٢١, ٣:٠٢:٣١ ص)
+            ☐ send email [gmail] @critical 
+        ✔ profile @high @done (٩‏/٥‏/٢٠٢١, ٣:٠٣:٠٠ ص)
+        ✔ edit-profile @high @done (٩‏/٥‏/٢٠٢١, ٣:٠٣:٠١ ص)
         ☐ ** Auth @low
             ☐ Google
             ☐ FB
             ☐ ....
+
+
+    settings_app:
+        ✔ home.html with login&out @done (٩‏/٥‏/٢٠٢١, ٣:٠٤:١٦ ص)
+        ☐ ..
+        ☐ ..

@@ -57,8 +57,7 @@ INSTALLED_APPS = [
 
 
 
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+
 
 
 MIDDLEWARE = [
@@ -154,3 +153,11 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 SUMMERNOTE_THEME = 'bs4'  # Show summernote with Bootstrap4
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+
+### login
+LOGIN_URL = '/accounts/login'
+
+### Redirect to home URL after login (Default redirects to /accounts/profile/)
+# LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
