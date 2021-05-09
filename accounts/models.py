@@ -6,6 +6,7 @@ from django.utils import timezone
 from django_countries.fields import CountryField
 
 # Create your models here.
+
 # choices of eductaion of users
 EDUCATION = [
     ('ES', 'Elementary School'),
