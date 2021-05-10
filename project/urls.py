@@ -25,6 +25,7 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')), # summernote package for text editor in admin
     path('', include('settings.urls', namespace='home')),
     path('contact/', include('contact.urls', namespace='contact')),
+    path('labs/', include('labs.urls', namespace='labs')),
 
 
 ]
