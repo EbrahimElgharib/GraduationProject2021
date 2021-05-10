@@ -1,3 +1,6 @@
+new WOW().init();
+
+
 (function() {
     'use strict';
     window.addEventListener('load', function() {
@@ -60,5 +63,3 @@ function onLoading() {
         }
 
 }
-
-new WOW().init();
