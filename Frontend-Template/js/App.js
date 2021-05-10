@@ -1,6 +1,3 @@
-new WOW().init();
-
-
 (function() {
     'use strict';
     window.addEventListener('load', function() {
@@ -43,23 +40,24 @@ function toUp() {
 }
 
 
-function redirection() {
 
-    let url = "signUp.html";
-    window.location.href(url);
+// function redirection() {
 
-
-}
+//     let url = "signUp.html";
+//     window.location.href(url);
 
 
-function onLoading() {
+// }
 
-    let LoadingPage = dodocument.getElementsByClassName("loading");
-    LoadingPage.addEventListener('onload'),
-        function() {
 
-            console.log("you have finished your loading page");
+// function onLoading() {
 
-        }
+//     let LoadingPage = dodocument.getElementsByClassName("loading");
+//     LoadingPage.addEventListener('onload'),
+//         function() {
 
-}
+//             console.log("you have finished your loading page");
+
+//         }
+
+// }
