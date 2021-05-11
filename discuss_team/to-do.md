@@ -22,3 +22,5 @@ Labs:
 settings : [ info... of site ]
 footer : 
     - subscribe
+
+contact us : [ Done ]

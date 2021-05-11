@@ -1,4 +1,12 @@
 Tasks:
+    footer:
+        ☐ subscribe
+        ☐ ..
+    
+    contact_app:
+        ✔ html form with view @done (١١‏/٥‏/٢٠٢١, ٥:١٨:٠٦ ص)
+        ✔ settings of send emails @done (١١‏/٥‏/٢٠٢١, ٥:١٨:٢٣ ص)
+        
     Accounts_app:
         ✔ models @today @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٠٣ ص)
         ✔ signup @today @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٠٥ ص)
@@ -10,6 +18,7 @@ Tasks:
             ✔ send email [gmail] @critical @done (١١‏/٥‏/٢٠٢١, ٤:١٥:٢٨ ص)
         ✔ profile @high @done (٩‏/٥‏/٢٠٢١, ٣:٠٣:٠٠ ص)
         ✔ edit-profile @high @done (٩‏/٥‏/٢٠٢١, ٣:٠٣:٠١ ص)
+        ☐ Merge Design of (Html files of profile)
         ☐ ** Auth @low
             ☐ Google
             ☐ FB
