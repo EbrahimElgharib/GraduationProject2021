@@ -12,27 +12,10 @@
     <script type="text/javascript" src="js/App.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/profile.css">
-    <script>
-      function checkPassword () {
-
-        var passOne = document.getElementById("passOne").value
-            passTwo = document.getElementById("passTwo").value;
-
-        if(passOne == ""){
-          document.getElementById("message1").innerHTML = "Please Fill This Field";
-          return false;
-        }
-        if (passOne != passTwo) {
-          document.getElementById("message2").innerHTML = "Error, Password didnt match";
-        }
-
-
-      }
-    </script>
-    <title>Profile</title>
+    <title>FAQ</title>
 </head>
 
-<body>
+<body style="margin-top: 130px;">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
         <a class="navbar-brand margin-left Left" href="#"><img src="images/formula.png" style="width: 60px; height:60px"  margin-trim: 1; alt="Taleen"></a>
         <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,135 +49,105 @@
                 <!-- my-2 my-lg-0  -->
                 <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
                 <a href="#" class="btn btn-outline-secondary my-2 my-sm-0 " role="button" aria-pressed="true" target="_blank">Register</a>
-                <a href="#" class="btn btn-outline-secondary   myMoving " role="button" aria-pressed="true" target="_blank">Login</a>    
+                <a href="#" class="btn btn-outline-secondary   myMoving " role="button" aria-pressed="true" target="_blank">Login</a>
+                  
             </div>
         </div>
     </nav>
-    <!-------------------------------------------------------------------------------------------->
-    <div class="container">
-      <h1>Edit Profile</h1>
-      <hr>
-      <div class="row">
-        <!-- left column -->
-        <div class="col-md-3">
-          <div class="left-column text-center">
-            <div class="profile-img">
-              <img  class="rounded-circle" src="https://legamart.com/avatars/Aria.jpg" class="avatar img-circle" alt="avatar">
-            </div>
-            <div class="join-time"><small>Joined 09 Dec 2017</small></div>
-            
-            
-            <form>
-              <div class="form-group">
-                <label for="exampleFormControlFile1">Upload a different photo..</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-              </div>
-            </form>
-          </div>
-        </div>
-        
-        <!-- edit form column -->
-        <div class="col-md-9 alert">
-          <div class="alert alert-info alert-dismissable">
-            <a class="panel-close close" data-dismiss="alert">×</a> 
-            <i class="fa fa-coffee"></i>
-            Please make sure to save your changes before leaving the page.
-          </div>
-          <!---------------------personal-info------------------------------>
-          <form onsubmit = "return checkPassword()" role="form">
-            <h3>Personal info</h3>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="myName">Name</label>
-                <input type="text" class="form-control" id="myName">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="myPhone">phone</label>
-                <input type="text" class="form-control" id="myPhone">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="city">city</label>
-                <input type="text" class="form-control" id="city">
-              </div>
-            </div>
-
-
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputUnversity">Unversity</label>
-                <input type="text" class="form-control" id="inputUnversity">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="myProfession">Profession</label>
-                <select id="myProfession" class="form-control">
-                  <option selected>Profession</option>
-                  <option>Undergraduate Student</option>
-                  <option>Postgraduate Student</option>
-                  <option>Professor</option>
-                  <option>Assistant Professor</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="myFaculty">Faculty</label>
-                <select id="myFaculty" class="form-control">
-                  <option selected>Faculty</option>
-                  <option>Faculty of Engineering</option>
-                  <option>Faculty of Medicine</option>
-                  <option>Faculty of Pharmacy</option>
-                  <option>Others</option>
-                </select>
-              </div>
-              <div class="form-group col-md-6">
-                <label for="web">Web Search</label>
-                <select id="web" class="form-control">
-                  <option selected>How did you hear about us?</option>
-                  <option>Facebook</option>
-                  <option>Youtube</option>
-                  <option>LinkedIn</option>
-                  <option>Others</option>
-                </select>
-              </div>
-            </div>
+    <!---Start FAQ Intro----->
+    <section class="faq">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
             <hr>
-            <!---------------------------change Password-------------------------------------->
-            <h3>Change Password</h3>
-            <div class="form-group">
-              <label for="currentPassword">current Password</label>
-              <input type="password" class="form-control" id="currentPassword" placeholder="">
-            </div>
-            <div class="form-group">
-              <label for="NewPassword">New Password</label>
-              <input type="password" class="form-control" id="passOne" placeholder="">
-              <div style="color: red" id="message1"></div>
-            </div>
-            <div class="form-group">
-              <label for="Confirm">Confirm Password</label>
-              <input type="password" class="form-control" id="passTwo" placeholder="">
-              <div style="color: red" id="message2"></div>
-            </div>
-            
-            <button type="submit" class="btn btn-primary mt-4 mr-3">Save Changes</button>
-            <button type="reset" class="btn btn-primary mt-4">Reset</button>
-          </form>
         </div>
-      </div>
-    </div>
+    </section>
+    <!---End FAQ Intro----->
+    <!-- Start FAQ Accordion-->
+    <section class="faq-questions">
+        <div class="container">
+            <div class="accordion" id="accordionEx">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        #01 Question Number One ?
+                      </button>
+                    </h2>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionEx">
+                    <div class="card-body">
+                      Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the show class.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        #02 Question Number Two ?
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionEx">
+                    <div class="card-body">
+                      Some placeholder content for the second accordion panel. This panel is hidden by default.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        #03 Question Number Three ?
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionEx">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam, voluptatum mollitia sequi iusto, vitae, sapiente nobis temporibus illum nisi voluptatibus adipisci. Reprehenderit praesentium hic a porro at eveniet mollitia?
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          #04 Question Number Four ?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionEx">
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam, voluptatum mollitia sequi iusto, vitae, sapiente nobis temporibus illum nisi voluptatibus adipisci. Reprehenderit praesentium hic a porro at eveniet mollitia?
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingFive">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                          #05 Question Number Five ?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionEx">
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam, voluptatum mollitia sequi iusto, vitae, sapiente nobis temporibus illum nisi voluptatibus adipisci. Reprehenderit praesentium hic a porro at eveniet mollitia?
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </section>
+    <!-- End FAQ Accordion-->
 
 
-    <!-------------------------------------------------------------------------------------------------->
-      <footer class="bg-footer text-white text-center text-lg-start">
+
+<!------------------------------------------>
+    <footer class="bg-footer text-white text-center text-lg-start ">
         <!-- Grid container -->
-        <div class="p-4">
+        <div class=" p-4">
             <!--Grid row-->
             <div class="row">
                 <!--Grid column-->
@@ -263,7 +216,7 @@
             <!-- <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a> -->
         </div>
         <!-- Copyright -->
-    </footer>
+    </foote>
 
 
 
