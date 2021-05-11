@@ -4,10 +4,10 @@ Tasks:
         ✔ signup @today @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٠٥ ص)
         ✔ login  @today @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٠٥ ص)
         ✔ others...... @low @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٥٧ ص)
-        ☐ reset password @low 
+        ✔ reset password @low @done (١١‏/٥‏/٢٠٢١, ٤:١٥:٣٥ ص)
             ✔ html + settings @done (٩‏/٥‏/٢٠٢١, ٣:٠٢:٣٠ ص)
             ✔ send email [consol] @done (٩‏/٥‏/٢٠٢١, ٣:٠٢:٣١ ص)
-            ☐ send email [gmail] @critical 
+            ✔ send email [gmail] @critical @done (١١‏/٥‏/٢٠٢١, ٤:١٥:٢٨ ص)
         ✔ profile @high @done (٩‏/٥‏/٢٠٢١, ٣:٠٣:٠٠ ص)
         ✔ edit-profile @high @done (٩‏/٥‏/٢٠٢١, ٣:٠٣:٠١ ص)
         ☐ ** Auth @low
@@ -16,10 +16,16 @@ Tasks:
             ☐ ....
 
     contact_app:
-        ☐ settings of app with template
-        ☐ send_message view
-        ☐ 
+        ✔ settings of app with template @done (١١‏/٥‏/٢٠٢١, ٤:١٥:٤٨ ص)
+        ✔ send_message view @done (١١‏/٥‏/٢٠٢١, ٤:١٥:٤٩ ص)
+        ✔ send to gmail settings @done (١١‏/٥‏/٢٠٢١, ٤:١٦:١٢ ص)
     settings_app:
         ✔ home.html with login&out @done (٩‏/٥‏/٢٠٢١, ٣:٠٤:١٦ ص)
         ☐ ..
         ☐ ..
+
+
+
+Notes - Fix?:
+    ☐ Mohey : "fix password_reset_done.html" @low 
+        ☐ then "I will fix others"
