@@ -2,10 +2,74 @@
 {% extends "base.html" %}
 {% load static %}
 {% load bootstrap4 %}
+{% load crispy_forms_tags %}
 
 {% block body %}
 
-<div class="container margin-Top">
+    <!-------------------------------------------------------------------------------------------->
+    <div class="container">
+      <h1>Edit Profile</h1>
+      <hr>
+      <div class="row">
+        <!-- left column -->
+        <!-- edit form column -->
+        <div class="col-md-9 alert">
+          <div class="alert alert-info alert-dismissable">
+            <a class="panel-close close" data-dismiss="alert">×</a> 
+            <i class="fa fa-coffee"></i>
+            Please make sure to save your changes before leaving the page.
+          </div>
+          <!---------------------personal-info------------------------------>
+
+          <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h3>Personal info</h3>
+
+            <div class="col-md-3">
+              <div class="left-column text-center">
+                <img src="{{user.profile.image.url}}" alt="aaa">
+                {{profile_form.image}}
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                {{user_form.first_name|as_crispy_field}}
+              </div>
+              <div class="form-group col-md-6">
+                {{user_form.last_name|as_crispy_field}}
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                {{user_form.email|as_crispy_field}}
+              </div>
+              <div class="form-group col-md-6">
+                {{profile_form.phone_number|as_crispy_field}}
+              </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+              {{profile_form.country|as_crispy_field}}
+            </div>
+          </div>
+            
+            <button type="submit" class="btn btn-primary mt-4 mr-3">Save Changes</button>
+            <button type="reset" class="btn btn-primary mt-4">Reset</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock body %}
+
+
+
+
+
+<!-- <div class="container margin-Top">
    <div class="row">
       <div class="col-md-6 mx-auto">
          <h2>Edit Profile</h2>
@@ -20,11 +84,4 @@
 
       </div>      
    </div>
-</div>
-
-{% endblock body %}
-
-
-
-
-
+</div> -->

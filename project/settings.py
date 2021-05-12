@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     ##### FrontEnd
     # https://pypi.org/project/django-bootstrap4/
     "bootstrap4",
+    'crispy_forms',
 
     ##### External Packages
     "taggit", # https://github.com/jazzband/django-taggit
@@ -56,7 +57,7 @@ INSTALLED_APPS = [
     'contact',
 ]
 
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 
