@@ -11,9 +11,17 @@
     <script src="https://kit.fontawesome.com/b89b4b2308.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script type="text/javascript" src="wowJs/dist/wow.min.js"></script>
     <script type="text/javascript" src="js/App.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Blog1</title>
+    <title>Blog-Details</title>
+
+
+    <script>
+        new WOW().init();
+    </script>
+
+
 </head>
 
 <body>
@@ -72,12 +80,12 @@
 
 
             <p>
-                <h1 class="text-center text-muted animate__heartBeat" style="font-family: fantasy;">Our Blogs Posts</h1>
+                <h1 class="text-center text-muted animate__heartBeat" style="font-family: fantasy;"> welcome to our Blogs Posts details</h1>
             </p>
             <br />
 
 
-            <img src="images/pexels-polina-zimmerman-3747486.jpg" class="" alt="Logo" height="800px;" width="100%;">
+            <img src="images/pexels-polina-zimmerman-3747486.jpg" class="wow animate__hinge" alt="Logo" height="800px;" width="100%;">
 
         </div>
 
@@ -93,22 +101,56 @@
                     <div class="card mb-3 shadow p-3 mb-5 bg-white rounded">
                         <img src="images/pexels-pixabay-256262.jpg" class="card-img-top" alt="Logo" height="500px;">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h2 class="card-title">Card title</h2>
+                            <div>
+                                <p>the number of comments</p>
+                            </div>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
                             <p class="card-text">
 
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
                                 survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                                Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                                containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                                leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                                like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in
+                                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
 
                             </p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <div class="fb-like" data-href="http://127.0.0.1:5500/GraduationProject2021/Frontend-Template/Blogs.html" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
+                            <!-- <div class="fb-like" data-href="http://127.0.0.1:5500/GraduationProject2021/Frontend-Template/Blogs.html" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div> -->
+
+                            <tag>the content kind of the article</tag>
+
 
                         </div>
                     </div>
 
-
+                    <!--this div for comments-->
                     <div class="card mb-3 shadow p-3 mb-5 bg-white rounded">
+
+                        <div class="card-body">
+                            <h2 class="card-title">10 comments</h2>
+                            <div>
+                                <p>comments content</p>
+                            </div>
+
+                            <!-- <div class="fb-like" data-href="http://127.0.0.1:5500/GraduationProject2021/Frontend-Template/Blogs.html" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div> -->
+
+
+
+
+                        </div>
+                    </div>
+
+                    <!-- <div class="card mb-3 shadow p-3 mb-5 bg-white rounded">
                         <img src="images/pexels-polina-zimmerman-3747486.jpg" class="card-img-top" alt="..." height="500px;">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -123,9 +165,9 @@
                             <div class="fb-like" data-href="http://127.0.0.1:5500/GraduationProject2021/Frontend-Template/Blogs.html" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
 
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="card mb-3 shadow p-3 mb-5 bg-white rounded ">
+                    <!-- <div class="card mb-3 shadow p-3 mb-5 bg-white rounded ">
                         <img src="images/pexels-rfstudio-3825572.jpg" class="card-img-top cssImage" alt="..." height="500px;">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -140,7 +182,7 @@
                             <div class="fb-like" data-href="http://127.0.0.1:5500/GraduationProject2021/Frontend-Template/Blogs.html" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
 
                         </div>
-                    </div>
+                    </div> -->
 
 
                 </div>
@@ -167,7 +209,7 @@
         </div>
     </section>
 
-    <br />
+
 
     <footer class="bg-footer text-white text-center text-lg-start ">
         <!-- Grid container -->
