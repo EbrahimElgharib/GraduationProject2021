@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+<title>Blogs</title>
+
+
+<br />
+
+<header class="margin-Top">
+
+
+
+  <div class="">
+
+
+    <p>
+    <h1 class="text-center text-muted animate__heartBeat" style="font-family: fantasy;">Our Blogs Posts</h1>
+    </p>
+    <br />
+
+
+    <img src='{% static "images/pexels-polina-zimmerman-3747486.jpg"%}' class="" alt="Logo" height="800px;" width="100%;">
+
+  </div>
+
+</header>
+
+
+
+<section class="Blogs">
+
+  <div class="container-fluid MovingLeft">
+    <div class="row">
+      <div class="col-lg-10 col-md-12 col-sm-12 ">
+        <br />
+        {% for post in post_list %}
+        <div class="card mb-3 shadow p-3 mb-5 bg-white rounded">
+          <img src='{% static "images/pexels-pixabay-256262.jpg"%}' class="card-img-top" alt="Logo" height="500px;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+              specimen book. It has
+              survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+              more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <div class="fb-like" data-href="{{post.get_absolute_url}}" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
+
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+      <!-- <div class="col-lg-4 col-md-12 col-sm-12">
+
+                    <div class=" shadow  bg-white rounded">
+                        <div class="card">
+                            <img src="images/contact.svg" class="card-img-top" alt="Logo">
+                            <div class="card-body">
+                                <h5 class="card-title">About Us</h5>
+                                <p class="card-text">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                                    survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                                </p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> -->
+    </div>
+  </div>
+</section>
+
+
+{% endblock body %}

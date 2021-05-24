@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
+from django.urls import reverse
 
 from taggit.managers import TaggableManager
 
@@ -18,7 +19,7 @@ class Post(models.Model):
     title = models.CharField(max_length=50)
     image = models.ImageField(upload_to='images/')
     created_at = models.DateTimeField(default=timezone.now)
-    description = models.TextField(max_length=20000) 
+    description = models.TextField(max_length=20000)
 
     # tags from external package
     tags = TaggableManager()
@@ -31,9 +32,12 @@ class Post(models.Model):
                self.slug = slugify(self.title)
         # Call the real save() method
         super(Post, self).save(*args, **kwargs)
-    
+
     def __str__(self):
-        return self.title 
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('blog:post_detail',args=[str(self.slug)])
 
 # Category of Posts
 class Category(models.Model):
