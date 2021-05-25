@@ -31,6 +31,7 @@ urlpatterns = [
     path('', include('settings.urls', namespace='home')),
     path('contact/', include('contact.urls', namespace='contact')),
     path('labs/', include('labs.urls', namespace='labs')),
+    path('blog/', include('blog.urls', namespace='blog')),
 
 
 ]
