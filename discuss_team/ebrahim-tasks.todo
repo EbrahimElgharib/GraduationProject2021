@@ -11,7 +11,7 @@ Tasks:
         ✔ models @today @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٠٣ ص)
         ✔ signup @today @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٠٥ ص)
         ✔ login  @today @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٠٥ ص)
-        ✔ others...... @low @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٥٧ ص)
+        ✔ others [ front-end ]...... @low @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٥٧ ص)
         ✔ reset password @low @done (١١‏/٥‏/٢٠٢١, ٤:١٥:٣٥ ص)
             ✔ html + settings @done (٩‏/٥‏/٢٠٢١, ٣:٠٢:٣٠ ص)
             ✔ send email [consol] @done (٩‏/٥‏/٢٠٢١, ٣:٠٢:٣١ ص)
@@ -19,10 +19,12 @@ Tasks:
         ✔ profile @high @done (٩‏/٥‏/٢٠٢١, ٣:٠٣:٠٠ ص)
         ✔ edit-profile @high @done (٩‏/٥‏/٢٠٢١, ٣:٠٣:٠١ ص)
         ☐ Merge Design of (Html files of profile)
-        ☐ ** Auth @low
+            ✔ back end @done (١٢‏/٥‏/٢٠٢١, ٦:٤٦:٠٠ ص)
+            ✔ front end [wait.. Mohey......] @done (٢٥‏/٥‏/٢٠٢١, ١٠:٥٨:١٨ م)
+        ☐ ** django-allauth package @low
             ☐ Google
             ☐ FB
-            ☐ ....
+            ☐ others ....
 
     contact_app:
         ✔ settings of app with template @done (١١‏/٥‏/٢٠٢١, ٤:١٥:٤٨ ص)
@@ -33,8 +35,13 @@ Tasks:
         ☐ ..
         ☐ ..
 
+    about_app:
+        ☐ models
+        ☐ view - urls
+        ☐ html
+
 
 
 Notes - Fix?:
-    ☐ Mohey : "fix password_reset_done.html" @low 
-        ☐ then "I will fix others"
+    ✔ Mohey : "fix --> fixed-Nav-Bar " @low @done (٢٥‏/٥‏/٢٠٢١, ١٠:٥٨:٣٣ م)
+    ☐ ...
