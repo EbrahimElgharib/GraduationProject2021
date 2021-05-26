@@ -263,12 +263,20 @@ html {
     background: #344e86;
 }
 
-.social-login a.twitter {
-    background: #1da1f2;
+.social-login a.whatsapp {
+    background: #25d366;
 }
 
-.social-login a.twitter:hover {
-    background: #0d95e8;
+.social-login a.whatsapp:hover {
+    background: #25d366;
+}
+
+.social-login a.linkedin {
+    background: #0072b1;
+}
+
+.social-login a.linkedin:hover {
+    background: #0072b1;
 }
 
 .text-decoration {
