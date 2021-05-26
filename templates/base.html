@@ -37,29 +37,41 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto ml-5 underline Left control flex-md-shrink-0 " style="margin-trim: 0;">
                 <li class="nav-item ">
-                    <a class="nav-link " href="#">Taleen <span class="sr-only">(current)</span></a>
+                    <a class="nav-link " href="/">Taleen <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="Virtual labs.html">Virtual labs</a>
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link " href="Blogs.html" target="_blank">Blogs</a>
+                    <a class="nav-link " href="Blogs.html">Blogs</a>
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="AboutUs.html" target="_blank">About us</a>
+                    <a class="nav-link" href="{% url 'about:about' %}">About us</a>
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="ContactUs.html">Contact us</a>
+                    <a class="nav-link" href="{% url 'contact:contact' %}">Contact us</a>
                 </li>
 
 
 
 
             </ul>
-
+            {% if request.user.is_authenticated %}
+            <li class="nav-item dropdown adjusting dropdown-menu-right dropdown-menu-lg-left" style="list-style-type: none; padding-right: 80px;">
+                <a class="nav-link dropdown-toggle" style="color: #8da3a5;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-circle "></i>
+                </a>
+                <div class="dropdown-menu" style="background-color: #ecf0f1;" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'accounts:profile' %}">profile</a>
+                    <a class="dropdown-item" href="#">FAQ</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{% url 'logout' %}">log out</a>
+                </div>
+            </li>
+            {% else %}
             <div class="my-2 my-lg-0 ">
                 <!-- my-2 my-lg-0  -->
                 <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
@@ -67,28 +79,10 @@
 
                 <button class="btn btn-outline-secondary   myMoving " type="submit" target="_blank">Log In</button> -->
 
-
-
-                <a href="#" class="btn btn-outline-secondary my-2 my-sm-0 " role="button" aria-pressed="true" target="_blank">Register</a>
-                <a href="#" class="btn btn-outline-secondary   myMoving " role="button" aria-pressed="true" target="_blank">Login</a>
-
-
-
+                <a href="{% url 'accounts:signup' %}" class="btn btn-outline-secondary my-2 my-sm-0" role="button" aria-pressed="true" target="_blank">Register</a>
+                <a href="{% url 'login' %}" class="btn btn-outline-secondary myMoving" role="button" aria-pressed="true" target="_blank">Login</a>
             </div>
-
-
-            <li class="nav-item dropdown adjusting dropdown-menu-right dropdown-menu-lg-left" style="list-style-type: none; padding-right: 80px;">
-                <a class="nav-link dropdown-toggle" style="color: #8da3a5;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user-circle "></i>
-                </a>
-                <div class="dropdown-menu" style="background-color: #ecf0f1;" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">profile</a>
-                    <a class="dropdown-item" href="#">FAQ</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">log out</a>
-                </div>
-            </li>
-
+            {% endif %}
 
         </div>
 
