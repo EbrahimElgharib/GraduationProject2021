@@ -1,5 +1,3 @@
-from email.headerregistry import Address
-
 from django.db import models
 
 # Create your models here.
@@ -14,3 +12,6 @@ class Website(models.Model):
    fb_link = models.URLField(max_length=200)
    twitter_link = models.URLField(max_length=200)
    instagram_link = models.URLField(max_length=200)
+
+   def __str__(self):
+      return str(self.id)

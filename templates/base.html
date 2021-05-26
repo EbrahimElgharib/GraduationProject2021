@@ -29,7 +29,7 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
-        <a class="navbar-brand margin-left Left" href="#"><img src="{% static 'images/formula.png' %}" style="width: 60px; height:60px" alt="Taleen"></a>
+        <a class="navbar-brand margin-left Left" href="#"><img src="{{myfooter.logo.url}}" style="width: 60px; height:60px" alt="Taleen"></a>
         <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon flex-md-shrink-0"></span>
         </button>
@@ -108,10 +108,10 @@
                 <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
                     <img src="{% static 'images/molecule.png' %}" class="rounded-circle" alt="logo" style="width: 60px; height:60px">
                     <br /> <br />
-                    <h5 class="text-uppercase ">Footer Content</h5>
+                    <h5 class="text-uppercase ">{{myfooter.name}}</h5>
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                        {{myfooter.description}}
                     </p>
                 </div>
                 <!--Grid column-->
@@ -162,7 +162,7 @@
                         <!-- <img src="..." class=" " alt="..."> -->
                         <div class="media-body">
                             <h5 class="mt-0"></h5>
-                            <p>Location</p>
+                            <p>{{myfooter.Address}}</p>
                         </div>
 
                     </div>
@@ -171,7 +171,7 @@
                         <!-- <img src="..." class="" alt="..."> -->
                         <div class="media-body">
                             <h5 class="mt-0"></h5>
-                            <p>phone number</p>
+                            <p>{{myfooter.phone}}</p>
                         </div>
                     </div>
 
@@ -180,7 +180,7 @@
                         <!-- <img src="..." class="" alt="..."> -->
                         <div class="media-body">
 
-                            <p>Email</p>
+                            <p>{{myfooter.email}}</p>
                         </div>
                     </div>
 
@@ -213,7 +213,7 @@
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
             © 2021 Copyright:
-            <a class="text-white" href="#">www.Taleen.com</a>
+            <a class="text-white" href="/">www.Taleen.com</a>
             <!-- <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a> -->
         </div>
         <!-- Copyright -->
