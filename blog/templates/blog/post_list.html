@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% block body %}
+
+
 <title>Blogs</title>
 
 
@@ -35,26 +37,53 @@
         <br />
         {% for post in post_list %}
         <div class="card mb-3 shadow p-3 mb-5 bg-white rounded">
-          <img src='{% static "images/pexels-pixabay-256262.jpg"%}' class="card-img-top" alt="Logo" height="500px;">
+          <img src='{{post.image.url}}' class="card-img-top" alt="Logo" height="500px;">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <tag>{{post.category}}</tag>
+            <h3>{{post.author}}</h3>
+            <h5 class="card-title">{{post.title}}</h5>
             <p class="card-text">
 
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has
-              survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-              more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              {{post.description|safe}}
 
             </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <p class="card-text"><small class="text-muted">{{post.created_at}}</small></p>
             <div class="fb-like" data-href="http://127.0.0.1:5500/GraduationProject2021/Frontend-Template/Blogs.html" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
             <a href="{{post.get_absolute_url}}" class="btn btn-info"> Read More</a>
           </div>
         </div>
         {% endfor %}
+        {% if is_paginated %}
+        <div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}">&lt;</a></li>
+                {% else %}
+                <li class="disabled"><span>&laquo;</span></li>
+                {% endif %}
 
-      </div>
-      <!-- <div class="col-lg-4 col-md-12 col-sm-12">
+                {% for i in paginator.page_range %}
+                {% if page_obj.number == i %}
+                <li class="active"><span>{{ i }}</span></li>
+                {% else %}
+                <li><a href="?page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}">&gt;</a></li>
+                {% else %}
+                <li class="disabled"><span>&raquo;</span></li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- <div class="col-lg-4 col-md-12 col-sm-12">
 
                     <div class=" shadow  bg-white rounded">
                         <div class="card">
@@ -73,8 +102,9 @@
 
                     </div>
                 </div> -->
+
+      </div>
     </div>
-  </div>
 </section>
 
 

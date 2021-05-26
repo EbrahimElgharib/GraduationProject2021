@@ -11,8 +11,11 @@ about-us
 virtual_labs
 
 Blog:
-    - posts
-    - post_detail 
+    - posts done
+    - post_detail done
+    - pagination done
+    - comments 
+    - adding author field done
 
 Labs:
     - labs
@@ -20,7 +23,7 @@ Labs:
 
 
 settings : [ info... of site ]
-footer : 
+footer :
     - subscribe
 
 contact us : [ Done ]
