@@ -415,3 +415,15 @@ font-family: sans-serif;
     float: left; */
     }
 }
+
+@media (max-width: 575.98px) {
+    .PaddingLeft {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .MovedLeft {
+        margin-left: 60px;
+    }
+}
