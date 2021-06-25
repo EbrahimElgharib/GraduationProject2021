@@ -25,8 +25,10 @@ SECRET_KEY = 'n@yf1htcf&qqwmw7s(zuhn(e4amv*qebao9)=1f=b1bsr5vy)i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    'virtual-lab-2021.herokuapp.com',
+    '127.0.0.1',
+    ]
 
 # Application definition
 
