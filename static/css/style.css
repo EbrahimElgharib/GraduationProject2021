@@ -21,9 +21,10 @@
     padding-bottom: 3px;
     /* transition: 0.5s ease-in-out;
     float: left; */
- 
-    }
-    /* .cover{
+}
+
+
+/* .cover{
  
         background-repeat: no-repeat;
         margin-bottom: 0px;
@@ -34,40 +35,34 @@
 
     } */
 
-
-    .MovingLeft {
-
-
-        justify-content: center;
-        background-color: #f5f6fa;
-    
-
-    }
-
-    .cssImage:hover {
-
-        transition: steps(1);
+.MovingLeft {
+    justify-content: center;
+    background-color: #f5f6fa;
+}
 
 
-    }
+/* .nav-right {
+    margin-right: 20px;
+} */
 
- .color a:hover {
-   
-     color: #34495e;
-    }
+
+/* .cssImage:hover {
+    transition: steps(1);
+} */
+
+.color a:hover {
+    color: #34495e;
+}
 
 .team {
-
-    background-color:#bdc3c7;
+    background-color: #bdc3c7;
 }
 
 .Virtual-labs {
-
     background-color: #bdc3c7;
 }
 
 .content {
-
     background-color: #ecf0f1;
 }
 
@@ -156,7 +151,7 @@ padding-bottom: 1px;
 }
 
 .margin-left {
-    margin-left: 150px;
+    margin-left: 120px;
 }
 
 #btnScroll {
@@ -268,12 +263,20 @@ html {
     background: #344e86;
 }
 
-.social-login a.twitter {
-    background: #1da1f2;
+.social-login a.whatsapp {
+    background: #25d366;
 }
 
-.social-login a.twitter:hover {
-    background: #0d95e8;
+.social-login a.whatsapp:hover {
+    background: #25d366;
+}
+
+.social-login a.linkedin {
+    background: #0072b1;
+}
+
+.social-login a.linkedin:hover {
+    background: #0072b1;
 }
 
 .text-decoration {
@@ -286,14 +289,10 @@ html {
     font-family: sans-serif;
 }
 
-
 .text-decore {
-
-    border-bottom:  1px salmon silver;
+    border-bottom: 1px salmon silver;
     display: inline-block;
     padding-bottom: 10px;
-
-
 }
 
 html,
@@ -302,7 +301,7 @@ body {
 }
 
 body {
-    position: relative
+    position: relative;
 }
 
 .mt {
@@ -387,5 +386,32 @@ font-family: sans-serif;
 @media (min-width: 768px) and (max-width: 991.98px) {
     .Left {
         margin-left: 40px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .underline a:hover {
+        border-bottom: none;
+        /* padding-bottom: 3px; */
+        /* transition: 0.5s ease-in-out;
+    float: left; */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .underline a:hover {
+        border-bottom: none;
+        /* padding-bottom: 3px; */
+        /* transition: 0.5s ease-in-out;
+    float: left; */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .underline a:hover {
+        border-bottom: none;
+        /* padding-bottom: 3px; */
+        /* transition: 0.5s ease-in-out;
+    float: left; */
     }
 }

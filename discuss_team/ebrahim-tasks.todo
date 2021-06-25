@@ -1,8 +1,4 @@
 Tasks:
-    footer:
-        ☐ subscribe
-        ☐ ..
-    
     contact_app:
         ✔ html form with view @done (١١‏/٥‏/٢٠٢١, ٥:١٨:٠٦ ص)
         ✔ settings of send emails @done (١١‏/٥‏/٢٠٢١, ٥:١٨:٢٣ ص)
@@ -18,7 +14,7 @@ Tasks:
             ✔ send email [gmail] @critical @done (١١‏/٥‏/٢٠٢١, ٤:١٥:٢٨ ص)
         ✔ profile @high @done (٩‏/٥‏/٢٠٢١, ٣:٠٣:٠٠ ص)
         ✔ edit-profile @high @done (٩‏/٥‏/٢٠٢١, ٣:٠٣:٠١ ص)
-        ☐ Merge Design of (Html files of profile)
+        ✔ Merge Design of (Html files of profile) @done (٢٦‏/٥‏/٢٠٢١, ٦:٥٠:٠٨ ص)
             ✔ back end @done (١٢‏/٥‏/٢٠٢١, ٦:٤٦:٠٠ ص)
             ✔ front end [wait.. Mohey......] @done (٢٥‏/٥‏/٢٠٢١, ١٠:٥٨:١٨ م)
         ☐ ** django-allauth package @low
@@ -32,16 +28,30 @@ Tasks:
         ✔ send to gmail settings @done (١١‏/٥‏/٢٠٢١, ٤:١٦:١٢ ص)
     settings_app:
         ✔ home.html with login&out @done (٩‏/٥‏/٢٠٢١, ٣:٠٤:١٦ ص)
-        ☐ ..
-        ☐ ..
+        ✔ footer info @done (٢٦‏/٥‏/٢٠٢١, ٦:٤٩:٥١ ص)
+        ☐ footer:
+            ☐ subscribe
+            ☐ ..
 
     about_app:
-        ☐ models
-        ☐ view - urls
-        ☐ html
+        ✔ models @done (٢٦‏/٥‏/٢٠٢١, ٦:٤٩:٥٧ ص)
+        ✔ view - urls @done (٢٦‏/٥‏/٢٠٢١, ٦:٤٩:٥٨ ص)
+        ✔ html @done (٢٦‏/٥‏/٢٠٢١, ٦:٤٩:٥٩ ص)
 
-
+    blog_app:
+        ☐ comments[disqus.com]
+    
+    labs_app:
+        ☐ comments[disqus.com]
 
 Notes - Fix?:
     ✔ Mohey : "fix --> fixed-Nav-Bar " @low @done (٢٥‏/٥‏/٢٠٢١, ١٠:٥٨:٣٣ م)
     ☐ ...
+
+
+
+features+++:
+    ☐ count number of views [lab-details]
+    ☐ count number of views [lab-Unity]
+    ☐ count number of views [post]
+    ☐ 

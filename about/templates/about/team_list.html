@@ -3,7 +3,7 @@
 {% block body %}
 
 
-    <title>About us</title>
+<title>About us</title>
 </head>
 
 <body>
@@ -18,9 +18,11 @@
                     <div class="col-lg-6 col-md-6">
                         <h1 class="display-4">Fluid jumbotron</h1>
 
-                        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its
+                            parent.</p>
                         <hr class="my-4">
-                        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                        <p>It uses utility classes for typography and spacing to space content out within the larger
+                            container.</p>
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12">
 
@@ -70,7 +72,8 @@
                 </div>
                 <div class="col-lg-6">
 
-                    <img src='{{about.image.url}}' alt="image descritpion" class="img-responsive img-thumbnail img-fluid image ">
+                    <img src='{{about.image.url}}' alt="image descritpion"
+                        class="img-responsive img-thumbnail img-fluid image ">
 
                 </div>
             </div>
@@ -96,12 +99,13 @@
             </div>
             <div class="row ">
                 {% for person in object_list %}
-                  
-                
+
+
                 <div class="col-sm-6 col-md-6 col-lg-3">
 
                     <!-- <i class="fas fa-user-circle marginLeft alert-light fa-8x"></i> -->
-                    <img src='{{person.picture.url}}' class="img-fluid rounded-circle img-thumbnail" style="width: 200px; height: 200px; " alt="...">
+                    <img src='{{person.picture.url}}' class="img-fluid rounded-circle img-thumbnail"
+                        style="width: 200px; height: 200px; " alt="...">
 
                     <div class="" style="width: 18rem;">
                         <div class="card-body ">
@@ -114,13 +118,14 @@
                                 <a href="{{person.fb_link}}" class="facebook">
                                     <span class=" mr-3"><i class="fab fa-facebook-f"></i></span>
                                 </a>
-                                <!-- class of linkedin here -->
-                                <a href="{{person.linkedin_link}}" class="">
-                                    <span class=" mr-3"><i class=""></i></span>
+
+
+                                <a href="{{person.wattsapp_link}}" class="whatsapp">
+                                    <span class="mr-3"><i class="fab fa-whatsapp"></i></span>
                                 </a>
-                                <!-- class of wattsapp here -->
-                                <a href="{{person.wattsapp_link}}" class="">
-                                    <span class=" mr-3"><i class=""></i></span>
+
+                                <a href="{{person.linkedin_link}}" class="linkedin-----">
+                                    <span class="mr-3"><i class="fab fa-linkedin-in"></i></span>
                                 </a>
 
                             </div>
@@ -137,4 +142,4 @@
     </section>
 
     <!-- <br /><br /> -->
-{% endblock body %}
+    {% endblock body %}

@@ -1,4 +1,4 @@
-accounts :
+accounts : [ to-do ]
     - signup
     - login
     - other......
@@ -7,20 +7,22 @@ accounts :
     - ** Auth---> google, FB
 
 
-about-us
+about-us [ Done ]
 virtual_labs
 
 Blog:
     - posts
     - post_detail 
+    - comments
 
 Labs:
     - labs
     - lab_detail
+    - comments
 
 
-settings : [ info... of site ]
-footer : 
-    - subscribe
+settings : [ info... of site ] [ Done ]
+    - footer [ to-do ]
+        - subscribe
 
 contact us : [ Done ]
