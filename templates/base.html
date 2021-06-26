@@ -17,6 +17,7 @@
     <script type="text/javascript" src="{% static 'js/App.js' %}"></script>
     <script type="text/javascript" src="{% static 'wowJs/dist/wow.min.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleContact.css' %}">
     <title>Taleen</title>
 
     <script>
@@ -40,11 +41,11 @@
                     <a class="nav-link " href="/">Taleen <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="Virtual labs.html">Virtual labs</a>
+                    <a class="nav-link" href="{% url 'labs:lab_list' %}">Virtual labs</a>
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link " href="Blogs.html">Blogs</a>
+                    <a class="nav-link " href="{% url 'blog:post_list' %}">Blogs</a>
                 </li>
 
                 <li class="nav-item ">
