@@ -33,6 +33,7 @@ urlpatterns = [
     path('about/', include('about.urls', namespace='about')),
     path('labs/', include('labs.urls', namespace='labs')),
     path('blog/', include('blog.urls', namespace='blog')),
+    path('subscriber/', include('subscriber.urls', namespace='subscriber')),
 
 
 ]

@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'blog',
     'settings',
     'contact',
+    'subscriber',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -182,3 +183,9 @@ EMAIL_HOST_PASSWORD = 'suctirajajirqwdw'
 
 ### for white noise pkg --> heroku
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+### Newsletter  ### https://app.sendgrid.com/settings/api_keys
+FROM_EMAIL = 'ebrahimtest44@gmail.com'
+# SENDGRID_API_KEY = os.environ.get('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')
+SENDGRID_API_KEY ='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'
