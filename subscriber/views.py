@@ -12,7 +12,6 @@ from django.shortcuts import render
 
 
 ### Subscribers
-
 # Generate tokens
 def random_digits():
     return "%0.12d" % random.randint(0, 999999999999)
@@ -27,7 +26,6 @@ def subscribe(request):
             print('form is valid')
             # check if email is unique or not
             new_email = form.cleaned_data['email']
-
             try:
                 print("in try")
                 email = Subscriber.objects.get(email=new_email)
@@ -52,7 +50,7 @@ def subscribe(request):
                 return render(request, 'subscriber/subscribe.html', {'email': sub.email, 'action': 'added', 'form': SubscriberForm()})
         else:
             print('form is not valid')
-            return render(request, 'subscriber/subscribe.html', {'form': SubscriberForm()})
+            return render(request, 'subscriber/subscribe.html', {'message': 'Not Valid', 'form': SubscriberForm()})
     else:
         print('no request yet')
         return render(request, 'subscriber/subscribe.html', {'form': SubscriberForm()})

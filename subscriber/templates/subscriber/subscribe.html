@@ -12,9 +12,12 @@
         {% if email %}
         <p>{{ email }} has been {{ action }}.</p>
         {% endif %}
+        {% if message %}
+        <p>Email is {{ message }}. Try Again</p>
+        {% endif %}
     </div>
     {% if form %}
-    <div class="col-12 col-md-4" id="main_form">
+    <div class="col-12 col-md-4">
         <form method="post" action="{% url 'subscriber:subscribe' %}" novalidate>
             {% csrf_token %}
             {{ form }}
