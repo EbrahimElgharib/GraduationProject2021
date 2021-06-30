@@ -1,4 +1,3 @@
-
 {% load static %}
 {% load bootstrap4 %}
 
@@ -13,7 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -31,7 +31,8 @@
 <body>
 
     <div class="d-lg-flex half">
-        <div class="bg order-1 order-md-2 backGround " style="background-image: url({% static 'images/login_Clip.png' %});"></div>
+        <div class="bg order-1 order-md-2 backGround "
+            style="background-image: url({% static 'images/login_Clip.png' %});"></div>
         <div class="contents order-2 order-md-1">
 
             <div class="container">
@@ -97,8 +98,9 @@
                             {% csrf_token %}
                             {% bootstrap_form form %}
                             {% buttons %}
-                            <input type="submit" value="Create Account" class="btn btn-block btn-danger margin-top border">
-                            {% endbuttons %} 
+                            <input type="submit" value="Create Account"
+                                class="btn btn-block btn-danger margin-top border">
+                            {% endbuttons %}
                             <span class="d-block text-left my-4 text-muted"> or register using</span>
                             <div class="social-login">
                                 <a href="#" class="facebook">
@@ -116,7 +118,7 @@
                                     Already member: </p>
                                 <span><a href="{% url 'login' %}" class="hover"><strong>Log in</strong> </a></span>
                             </div>
-                         </form>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -139,9 +141,13 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
@@ -169,6 +175,3 @@
       </div>      
    </div>
 </div> -->
-
-
-
