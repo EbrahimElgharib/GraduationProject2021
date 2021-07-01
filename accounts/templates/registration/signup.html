@@ -30,6 +30,9 @@
 
 <body>
 
+    {% load socialaccount %}
+    {% providers_media_js %}
+
     <div class="d-lg-flex half">
         <div class="bg order-1 order-md-2 backGround "
             style="background-image: url({% static 'images/login_Clip.png' %});"></div>
@@ -103,13 +106,13 @@
                             {% endbuttons %}
                             <span class="d-block text-left my-4 text-muted"> or register using</span>
                             <div class="social-login">
-                                <a href="#" class="facebook">
+                                <a href="{% provider_login_url 'facebook' method='js_sdk' %}" class="facebook">
                                     <span class=" mr-3"><i class="fab fa-facebook-f"></i></span>
                                 </a>
                                 <a href="#" class="twitter">
                                     <span class=" mr-3"><i class="fab fa-twitter"></i></span>
                                 </a>
-                                <a href="#" class="google">
+                                <a href="{% provider_login_url 'google' %}" class="google">
                                     <span class=" mr-3"><i class="fab fa-google"></i></span>
                                 </a>
                             </div>

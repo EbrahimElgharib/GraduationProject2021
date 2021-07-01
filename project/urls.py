@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 
-settings
+# settings
 
 
 urlpatterns = [
@@ -33,6 +33,9 @@ urlpatterns = [
     path('about/', include('about.urls', namespace='about')),
     path('labs/', include('labs.urls', namespace='labs')),
     path('blog/', include('blog.urls', namespace='blog')),
+
+    # social account
+    path('socialaccounts/', include('allauth.urls')),
 
 
 ]
