@@ -27,7 +27,8 @@
 
             <div class="col-md-3">
               <div class="left-column text-center">
-                <img src="{{user.profile.image.url}}" alt="aaa">
+                <img src="{% if user.profile.image %} {{user.profile.image.url}} {% endif %}" 
+                      alt="Photo" class="img-thumbnail">
                 {{profile_form.image}}
               </div>
             </div>
