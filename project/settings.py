@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'virtual-lab-2021.herokuapp.com',
-    'https://virtual-lab-2021.herokuapp.com',
+    # 'https://virtual-lab-2021.herokuapp.com',
     '127.0.0.1',
     'localhost',
     ]
