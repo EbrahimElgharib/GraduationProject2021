@@ -9,3 +9,6 @@ class LabList(ListView):
 
 class LabDetail(DetailView):
     model = Lab
+
+def unity_lab(request):
+    return render(request, 'labs/unity_lab.html',{})

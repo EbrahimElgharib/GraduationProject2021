@@ -47,64 +47,42 @@
                             </p>
 
 
-                            <h5 class="card-title"><b style="font-family: fantasy;" class="text-muted">Experiment Objects  </b> </h5>
+                            <h5 class="card-title"><b style="font-family: fantasy;" class="text-muted">Experiment Objective  </b> </h5>
                             <p class="card-text">
-
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                {{lab.experiment_objective|safe}}
                             </p>
 
                             <h5 class="card-title"><b style="font-family: fantasy;" class="text-muted"> Experiment Materials</b></h5>
                             <p class="card-text">
-
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                {{lab.experiment_materials|safe}}
                             </p>
 
 
                             <h5 class="card-title"><b style="font-family: fantasy;" class="text-muted">Experiment Steps</b> </h5>
                             <p class="card-text">
-
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                {{lab.experiment_steps|safe}}
                             </p>
-
-
-                            <h5 class="card-title"><b style="font-family: fantasy;" class="text-muted">Experiment Notes</b> </h5>
-                            <p class="card-text">
-
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-
 
                             <h5 class="card-title"><b style="font-family: fantasy;" class="text-muted">Experiment Conclusion</b></h5>
                             <p class="card-text">
-
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                {{lab.experiment_conclusion|safe}}
                             </p>
 
 
-                            <p class="card-text"><small class="text-muted" class="text-muted">Last updated 3 mins ago</small></p>
+                            <p class="card-text"><small class="text-muted" class="text-muted">{{lab.created_at}}</small></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-12 col-sm-12">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="{{lab.youtube_url}}" allowfullscreen></iframe>
 
                     </div>
 
                     <br />
                     <!-- <button type="button" class="btn btn-secondary btn-lg btn-block" style="margin-bottom:20px;">Try Our Experiment Now</button> -->
 
-                    <a role="button" class="btn btn-secondary btn-lg btn-block" href="" aria-pressed="true" style="margin-bottom:20px;">Try Our Experiment Now</a> </div>
+                    <a role="button" class="btn btn-secondary btn-lg btn-block" href="{% url 'labs:unity_lab' %}" aria-pressed="true" style="margin-bottom:20px;">Try Our Experiment Now</a> </div>
 
                 <br />
             </div>

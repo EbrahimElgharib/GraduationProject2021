@@ -10,6 +10,11 @@ class Lab(models.Model):
    description = models.TextField(max_length=20000)
    created_at = models.DateTimeField(default=timezone.now)
    image = models.ImageField(upload_to='images/')
+   youtube_url = models.URLField(max_length = 200,null=True)
+   experiment_objective = models.TextField(max_length=1000,null=True)
+   experiment_materials = models.TextField(max_length=1000,null=True)
+   experiment_steps = models.TextField(max_length=1000,null=True)
+   experiment_conclusion = models.TextField(max_length=1000,null=True)
    # doc_file = models.FileField(upload_to='doc_files/')
 
    # FK
