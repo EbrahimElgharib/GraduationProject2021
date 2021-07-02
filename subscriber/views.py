@@ -6,7 +6,7 @@ from .forms import SubscriberForm
 import random
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
-from django.http.response import JsonResponse
+from django.http import JsonResponse
 from django.shortcuts import render
 # Create your views here.
 
@@ -50,7 +50,13 @@ def subscribe(request):
                 return render(request, 'subscriber/subscribe.html', {'email': sub.email, 'action': 'added', 'form': SubscriberForm()})
         else:
             print('form is not valid')
-            return render(request, 'subscriber/subscribe.html', {'message': 'Not Valid', 'form': SubscriberForm()})
+            data = {
+            'is_taken': True
+                    }
+            if data['is_taken']:
+                data['error_message'] = 'A user with this username already exists.'
+            return JsonResponse(data)
+            # return render(request, 'subscriber/subscribe.html', {'message': 'Not Valid', 'form': SubscriberForm()})
     else:
         print('no request yet')
         return render(request, 'subscriber/subscribe.html', {'form': SubscriberForm()})
