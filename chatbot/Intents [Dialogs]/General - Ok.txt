@@ -1,0 +1,31 @@
+------------------------------
+Document Style:
+	Intent's name
+	What user may say
+	What bot will answer
+------------------------------
+
+
+	
+	
+Ok (General)
+------------------------
+why not
+Okay
+kk
+yaass
+yes
+Got it
+makes sense
+Cool
+Awesome
+OK
+sure
+Sweet
+yup
+Perfect
+Okay I will check it.
+
+
+<Response>
+OK
