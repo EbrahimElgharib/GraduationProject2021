@@ -1,1 +1,74 @@
-<h1>With Coding .....</h1>
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+
+
+<title>virtual labs</title>
+
+
+
+<body class="Virtual-labs">
+
+
+
+  <br /><br /><br /><br />
+
+  <section class="">
+
+    <!-- <h3 style="font-family: fantasy ;text-align: center;">explore oure simulation labs</h3> -->
+    <div class="container translate">
+
+      <h4 class="center wow animate__flash">
+        explore our simulation labs
+      </h4>
+      <br /><br /><br />
+      <div class="row MarginFromLeft">
+
+        {% for lab in lab_list %}
+
+        <div class="col-sm-12 col-md-6 col-lg-4 padding-bot">
+
+          <img src='{{lab.image.url}}' class="img-fluid rounded-circle img-thumbnail" style="width: 230px; height: 230px; " alt="image">
+
+
+          <div class="" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" style="padding-left: 50px;">{{lab.title}}</h5>
+              <tag class="text-muted"></tag>
+              <br><br>
+              <p class="card-text">
+                {{lab.description|safe}}
+              </p>
+              <a href="{% url 'labs:lab_detail' slug=lab.slug %}" class="btn btn-info" style="margin-left: 50px;">Read More</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+
+      <nav aria-label="Page navigation example">
+        <ul class="pagination pagination-lg justify-content-center ">
+          <li class="page-item">
+            <a class="page-link rounded-circle mr-2" style="color: #34495e;" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item "><a class="page-link rounded-circle mr-2" style="color: #34495e; " href="#">1</a></li>
+          <li class="page-item"><a class="page-link rounded-circle mr-2" style="color: #34495e;" href="#">2</a></li>
+          <li class="page-item"><a class="page-link rounded-circle mr-2" style="color: #34495e;" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link rounded-circle mr-2" style="color: #34495e;" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+    </div>
+
+  </section>
+
+
+  {% endblock body %}
