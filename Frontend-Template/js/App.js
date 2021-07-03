@@ -89,4 +89,3 @@ function Register() {
 
 }
 
-Register();
