@@ -88,3 +88,5 @@ function Register() {
     document.getElementsByClassName("message").innerText = message;
 
 }
+
+Register();
