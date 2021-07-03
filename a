@@ -1,0 +1,257 @@
+[33mcommit fcbaab09cb81f5d7af51fbe991c78cab7bb46292[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jul 3 08:08:23 2021 +0200
+
+    just a test
+
+[33mcommit 8fda2ea09df814cf951088abec187d0c4f7d80f8[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jul 3 08:05:29 2021 +0200
+
+    edit static with new frontend
+
+[33mcommit 6c20cb54766f4c657d54d3ed911468924def559d[m
+Merge: f573c87 917f74f
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jul 3 07:25:49 2021 +0200
+
+    Merge remote-tracking branch 'origin/m3.1'
+
+[33mcommit f573c87b2e95a2da4890bdcf4be51e6ba22eeb98[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jul 3 07:18:17 2021 +0200
+
+    edit some things about profile pages
+
+[33mcommit 7e226707db3f1b6dbc9c8e6a4990c0d21692904f[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jul 3 07:11:42 2021 +0200
+
+    edit url of change password button in profile edit
+
+[33mcommit c49501fb913da1e899abf33c9f54f8e27598d4a1[m[33m ([m[1;31morigin/profile_edit[m[33m, [m[1;32mprofile_edit[m[33m)[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jul 3 07:04:11 2021 +0200
+
+    edit
+
+[33mcommit 6ae3451cc4bcf0b86b6ba84218e68d869b01d708[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jul 3 06:54:53 2021 +0200
+
+    finish page change_password_done
+
+[33mcommit 43f62ad38ea9189faf5ee46f02b0d3ed5d1e0a4e[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jul 3 06:13:15 2021 +0200
+
+    profile edit is finished
+
+[33mcommit 917f74fc051fa00b85736c26090ade1888862eec[m[33m ([m[1;31morigin/m3.1[m[33m)[m
+Author: unknown <mohamedagwa>
+Date:   Fri Jul 2 08:16:59 2021 +0200
+
+    Profile page
+
+[33mcommit ee2156d9a7e3500a7f1a824d9c0c53bd79619ea7[m[33m ([m[1;32mtest_profile[m[33m)[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Wed Jun 30 04:05:35 2021 +0200
+
+    x
+
+[33mcommit 0a14c80678eb9fbbdb53fa5611efaadde5a0b1ea[m[33m ([m[1;31morigin/m3[m[33m)[m
+Author: unknown <mohamedagwa>
+Date:   Mon Jun 28 20:44:55 2021 +0200
+
+    Upload Profile Image
+
+[33mcommit c917d5004fd6858633135ded6a93fd55c19ab6bd[m[33m ([m[1;31morigin/DeployHeroku[m[33m)[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jun 26 22:24:10 2021 +0200
+
+    c
+
+[33mcommit ffe54d4625e641d2015b2787033f27f6a589345f[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jun 26 11:30:36 2021 +0200
+
+    edit some urls of pages
+
+[33mcommit c2fae3531444c4e4aab0018c7a0a7a2871839750[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Fri Jun 25 22:02:55 2021 +0200
+
+    add url of heroku site in settings.py
+
+[33mcommit 2d548bdfbb30e644a159c739c8144c8975398c3a[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Fri Jun 25 21:47:30 2021 +0200
+
+    install and settings for heroku
+
+[33mcommit e082f5899e9b443340e86d203198dda7a150c748[m
+Merge: 946bfb0 d920eab
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Thu May 27 09:19:21 2021 +0200
+
+    Merge remote-tracking branch 'origin/FrontEnd'
+
+[33mcommit d920eab1ad170b17f5a1aacd1d0ef50e419431a1[m
+Author: Mohye Mahmoud <dragonsinmeliodas777@gmail.com>
+Date:   Wed May 26 22:36:32 2021 +0200
+
+    adding css style for the linkedin and whatsapp icons
+
+[33mcommit 7fcff6411d09b57a7b4e31ab2c71e16de801cf4e[m
+Author: Mohye Mahmoud <dragonsinmeliodas777@gmail.com>
+Date:   Wed May 26 22:34:58 2021 +0200
+
+    adding linkedin and whatsapp icons to the about us page in the our teams section
+
+[33mcommit 946bfb00a2734a8940e4f166c55cb52d64d6dba5[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Wed May 26 05:53:35 2021 +0200
+
+    .
+
+[33mcommit b8336ffbd0f8e6753d9d57970d073cac0e5e519a[m
+Merge: 9b8df8c 3fb07fd
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Wed May 26 05:32:20 2021 +0200
+
+    merge about-app
+
+[33mcommit 9b8df8c14026e35d617a091ed5c82c6ba40c897d[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Wed May 26 05:10:48 2021 +0200
+
+    add settings is done
+
+[33mcommit 2bc5936dad0df1929db80bef202db38670b190e0[m[33m ([m[1;31morigin/settings-app[m[33m)[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Wed May 26 05:00:07 2021 +0200
+
+    add all of settings-app
+
+[33mcommit 3fb07fd4e4d25837bbe567b1cd052823bee0f971[m[33m ([m[1;31morigin/about-app[m[33m)[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Wed May 26 02:36:50 2021 +0200
+
+    add all of about-app && edit urls templates [signup-login-profile-logout]
+
+[33mcommit ba0925ef110c9f8dfef203a9d3e19b535e6f038e[m
+Merge: 7af6b58 c73baad
+Author: omarsalah331 <omarsalah331@gmail.com>
+Date:   Tue May 25 03:42:16 2021 +0200
+
+    fixint pycache issue
+
+[33mcommit c73baadc1ca7b47a83082f4707957510faaafb2a[m
+Merge: 60844a5 c64b1a1
+Author: Omarsalah331 <30375974+Omarsalah331@users.noreply.github.com>
+Date:   Tue May 25 03:39:26 2021 +0200
+
+    Merge pull request #9 from EbrahimStd/blog
+    
+    Blog
+
+[33mcommit c64b1a11c0286ab0e81aa5bdf4fd6f76908ef670[m
+Author: omarsalah331 <omarsalah331@gmail.com>
+Date:   Tue May 25 03:25:19 2021 +0200
+
+    adding reverse url
+
+[33mcommit 7af6b58491c5bd5f6ef83b127616a5aea68de0db[m
+Author: omarsalah331 <omarsalah331@gmail.com>
+Date:   Tue May 25 03:19:10 2021 +0200
+
+    staching
+
+[33mcommit 5824fd081b06e47d6714152e1471a41683252e7a[m
+Author: omarsalah331 <omarsalah331@gmail.com>
+Date:   Mon May 24 23:43:41 2021 +0200
+
+    blogs model and views updated
+
+[33mcommit 60844a56d66dcbac410d892d33ff64a6f6321044[m
+Merge: d5f8e86 351af95
+Author: Moyhe <73043798+Moyhe@users.noreply.github.com>
+Date:   Mon May 24 23:42:40 2021 +0200
+
+    Merge pull request #8 from EbrahimStd/FrontEnd
+    
+    Front end
+
+[33mcommit 351af9564c12441f979ffa35b349b059e8089a83[m
+Author: Mohye Mahmoud <dragonsinmeliodas777@gmail.com>
+Date:   Wed May 19 01:49:30 2021 +0200
+
+    adjusting the class section name
+
+[33mcommit e16ff356031a63ba13556f27f400552d56975bff[m
+Author: Mohye Mahmoud <dragonsinmeliodas777@gmail.com>
+Date:   Wed May 19 00:22:43 2021 +0200
+
+    adding the folder wow js for animation to the project
+
+[33mcommit deb6a98992b092168c1e80817c806160e986b7d9[m
+Author: Mohye Mahmoud <dragonsinmeliodas777@gmail.com>
+Date:   Sun May 16 03:16:43 2021 +0200
+
+    adjusting for testing
+
+[33mcommit c56943fbd17d93838105f4e5d8feea6289673950[m
+Author: Mohye Mahmoud <dragonsinmeliodas777@gmail.com>
+Date:   Sun May 16 03:15:24 2021 +0200
+
+    adding some headlines to the bolgs details
+
+[33mcommit 31e3f513380373a7c54c48b7bc92b27cf57ca4fa[m
+Author: Mohye Mahmoud <dragonsinmeliodas777@gmail.com>
+Date:   Sun May 16 03:13:27 2021 +0200
+
+    adjusting on the labs by adding headlines and the pagination
+
+[33mcommit 6e3994d5c41a9f429eae488fc732633bd995dff6[m
+Author: Mohye Mahmoud <dragonsinmeliodas777@gmail.com>
+Date:   Sun May 16 03:11:38 2021 +0200
+
+    adjusting on the Blogs.html page by adding the pagination and some headlines
+
+[33mcommit d5f8e86e4a6a7b27488fcd2e967ea3cf5da2ab92[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Wed May 12 06:44:54 2021 +0200
+
+    edit
+
+[33mcommit 0494694d51f3a98485034af8d240215abe102919[m[33m ([m[1;31morigin/may_12_1[m[33m)[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Wed May 12 06:35:54 2021 +0200
+
+    profile and edit is successfully
+
+[33mcommit b9f9e85c6d219cc7d000c91365a6221bd7e6f5dd[m
+Merge: 7d95620 05a1d54
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Tue May 11 05:59:30 2021 +0200
+
+    Merge branch 'may_11_2'
+
+[33mcommit 7d956208752cbf52bab55cd7f60d5baa4c91f6c2[m
+Merge: 1a56bdd 719e970
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Tue May 11 05:48:00 2021 +0200
+
+    Profile, Faq html
+
+[33mcommit 05a1d545bffe4f7e4f3f2483e8a3649bb575567f[m[33m ([m[1;31morigin/may_11_2[m[33m)[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Tue May 11 05:19:39 2021 +0200
+
+    edits
+
+[33mcommit f7b2c0b72acc2d9cc1b1813c4e534aaf17f7c1d1[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Tue May 11 05:01:43 2021 +0200
+
+    edit FrontEnd templates[profile, 
