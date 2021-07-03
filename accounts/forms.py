@@ -27,6 +27,7 @@ class UserForm(forms.ModelForm):
       fields = ['email','first_name','last_name'] 
 
 class ProfileForm(forms.ModelForm):
+   image = forms.ImageField(error_messages={'invalid':("Image Files Only!")}, widget=forms.FileInput)
    class Meta:
       model = Profile
       # fields = ['image', 'phone_number','country', 'address','education']
