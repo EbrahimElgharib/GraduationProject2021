@@ -26,8 +26,8 @@ SECRET_KEY = 'n@yf1htcf&qqwmw7s(zuhn(e4amv*qebao9)=1f=b1bsr5vy)i'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'virtual-lab-2021.herokuapp.com',
-    'https://virtual-lab-2021.herokuapp.com',
+    'virtual-lab-2021.herokuapp.com/',
+    'https://virtual-lab-2021.herokuapp.com/',
     '127.0.0.1',
     'localhost',
     ]
@@ -61,8 +61,6 @@ INSTALLED_APPS = [
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-
 
 
 MIDDLEWARE = [
