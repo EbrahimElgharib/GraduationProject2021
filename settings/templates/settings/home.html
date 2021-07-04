@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load static %}
 {% load bootstrap4 %}
@@ -6,14 +5,32 @@
 
 {% block body %}
 
+{% comment %}
+  This is an alert about subscriber ---> confirm or delete
+{% endcomment %}
+<div class="container">
+  <div class="col-md-9">
+    {% if email %}
+    <div class="alert alert-info alert-dismissable">
+      <a class="panel-close close" data-dismiss="alert">×</a>
+      <i class="fa fa-coffee"></i>
+      {{ email }} has been {{ action }}.
+    </div>
+    {% endif %}
 
-{% if user.is_authenticated %}
-  Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">Log Out</a></p>
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
-{% endif %}
+
+    <div class="text-center">
+    {% if user.is_authenticated %}
+    Hi {{ user.username }}!
+    <p><a href="{% url 'logout' %}">Log Out</a></p>
+    {% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+  </div>
+</div>
+</div>
+
 
 
 
