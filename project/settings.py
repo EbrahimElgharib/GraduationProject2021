@@ -90,6 +90,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'settings.footer_context_processor.myfooter', # my footer
+                'settings.footer_context_processor.subscribe', # subscribe
             ],
         },
     },
@@ -183,3 +184,7 @@ EMAIL_HOST_PASSWORD = 'suctirajajirqwdw'
 
 ### for white noise pkg --> heroku
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+### Newsletter  ### https://app.sendgrid.com/settings/api_keys
+FROM_EMAIL = 'ebrahimtest44@gmail.com'
+SENDGRID_API_KEY ='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'
