@@ -90,7 +90,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'settings.footer_context_processor.myfooter', # my footer
-                # 'settings.footer_context_processor.subscribe', # subscribe
+                'settings.footer_context_processor.subscribe_footer', # subscribe
             ],
         },
     },

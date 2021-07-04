@@ -60,9 +60,9 @@ def subscribe(request):
             data = {'response_message': 'Email is Not Valid!'}
             return JsonResponse(data)
             # return render(request, 'subscriber/subscribe.html', {'message': 'Not Valid', 'form': SubscriberForm()})
-    else:
-        print('no request yet')
-        return {}
+    # else:
+    #     print('no request yet')
+    #     return {}
 
         
 # confirm subscribers
