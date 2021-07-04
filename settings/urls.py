@@ -5,6 +5,7 @@ app_name = 'settings'
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('subscribe/', views.subscribe, name='subscribe'),
     path('subscribe/confirm/', views.confirm, name='confirm_subscribe'),
     path('subscribe/delete/', views.delete, name='delete_subscribe'),
 

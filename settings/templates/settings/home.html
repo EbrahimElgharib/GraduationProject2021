@@ -1,4 +1,12 @@
 
+{% extends "base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">Log Out</a></p>
@@ -6,3 +14,59 @@
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">Log In</a>
 {% endif %}
+
+
+<div class="col-lg-3 col-md-6 mb-4 mb-md-0 mt-0">
+  <!-- <h5 class="text-uppercase mb-0">Links</h5> -->
+  <br />
+  <p class=""><strong>Subscribe to our newsletter to get the latest news</strong></p>
+  <form id="subscribe_form_id" method="POST" action="{% url 'home:subscribe' %}" novalidate>
+      {% csrf_token %}
+      <div class="input-group ">
+          <!-- <input type="email" class="form-control" name="email" value="%value%"
+              placeholder="Email address" aria-label="Recipient's username"
+              aria-describedby="button-addon2"> -->
+          {{ subscriber_form }}
+
+
+          <button class="btn btn-warning" type="submit">Subscribe</button>
+
+      </div>
+
+  </form>
+
+  <div id="message"></div>
+
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+$("#subscribe_form_id").submit(function (e) {
+    e.preventDefault();
+
+    var form = $(this);
+    var url = form.attr("action");
+
+    $.ajax({
+        url: url,
+        type: 'POST',
+        
+        data: form.serialize(),
+        dataType: 'json',
+        success: function (data) {
+            console.log(data.response_message);
+            document.getElementById("message").innerText = 'message here .....';
+        }
+    });
+
+});
+</script>
+
+
+{% endblock body %}
