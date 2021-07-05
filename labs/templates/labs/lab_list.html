@@ -48,21 +48,32 @@
 
 
       <nav aria-label="Page navigation example">
-        <ul class="pagination pagination-lg justify-content-center ">
-          <li class="page-item">
-            <a class="page-link rounded-circle mr-2" style="color: #34495e;" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item "><a class="page-link rounded-circle mr-2" style="color: #34495e; " href="#">1</a></li>
-          <li class="page-item"><a class="page-link rounded-circle mr-2" style="color: #34495e;" href="#">2</a></li>
-          <li class="page-item"><a class="page-link rounded-circle mr-2" style="color: #34495e;" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link rounded-circle mr-2" style="color: #34495e;" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
+        {% if is_paginated %}
+        {% load i18n %}
+        <div class="pagination">
+        {% if page_obj.has_previous %}
+        <a href="?page{{ page_suffix }}={{ page_obj.previous_page_number }}{{ getvars }}{{ hashtag }}" class="prev">&lsaquo;&lsaquo; {% trans "previous" %}</a>
+        {% else %}
+        <span class="disabled prev">&lsaquo;&lsaquo; {% trans "previous" %}</span>
+        {% endif %}
+        {% for page in pages %}
+        {% if page %}
+            {% ifequal page page_obj.number %}
+                <span class="current page">{{ page }}</span>
+            {% else %}
+                <a href="?page{{ page_suffix }}={{ page }}{{ getvars }}{{ hashtag }}" class="page">{{ page }}</a>
+            {% endifequal %}
+        {% else %}
+            ...
+        {% endif %}
+        {% endfor %}
+        {% if page_obj.has_next %}
+        <a href="?page{{ page_suffix }}={{ page_obj.next_page_number }}{{ getvars }}{{ hashtag }}" class="next">{% trans "next" %} &rsaquo;&rsaquo;</a>
+        {% else %}
+        <span class="disabled next">{% trans "next" %} &rsaquo;&rsaquo;</span>
+        {% endif %}
+        </div>
+        {% endif %}
       </nav>
 
 

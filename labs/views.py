@@ -5,7 +5,7 @@ from .models import Category, Lab
 
 class LabList(ListView):
     model = Lab # model data
-    paginate_by = 3 # pagination
+    paginate_by = 2 # pagination
 
 class LabDetail(DetailView):
     model = Lab
