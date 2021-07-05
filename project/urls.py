@@ -34,6 +34,9 @@ urlpatterns = [
     path('labs/', include('labs.urls', namespace='labs')),
     path('blog/', include('blog.urls', namespace='blog')),
 
+    # social account
+    path('socialaccounts/', include('allauth.urls')),
+
 
 ]
 

@@ -32,16 +32,16 @@ def signup(request):
       
    return render(request,'registration/signup.html',{'form':form})
 
-# show profile data to user
-@login_required
-def profile(request):
-   profile = Profile.objects.get(user=request.user)
-   context = {'profile':profile}
-   return render(request, 'profile/profile.html',context)
+# # show profile data to user
+# @login_required
+# def profile(request):
+#    profile = Profile.objects.get(user=request.user)
+#    context = {'profile':profile}
+#    return render(request, 'profile/profile.html',context)
 
 # show (Form) of all profile data to user
 @login_required
-def edit_profile(request):
+def profile(request):
    # get profile data to show it in form
    profile = Profile.objects.get(user=request.user)
 
@@ -59,8 +59,8 @@ def edit_profile(request):
          myprofile.user = request.user
          myprofile.save()
       
-         # Go Back to profile.html
-         return redirect('/accounts/profile')
+         # # Go Back to profile.html
+         # return redirect('/accounts/profile')
 
    else: # when open page 
       print('else not valid')
@@ -71,7 +71,7 @@ def edit_profile(request):
       'profile_form':profile_form,
       'user_form':user_form
    }
-   return render(request, 'profile/profile_edit.html',context)
+   return render(request, 'profile/profile.html',context)
 
 
 
