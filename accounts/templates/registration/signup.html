@@ -30,6 +30,9 @@
 
 <body>
 
+    {% load socialaccount %}
+    {% providers_media_js %}
+
     <div class="d-lg-flex half">
         <div class="bg order-1 order-md-2 backGround "
             style="background-image: url({% static 'images/login_Clip.png' %});"></div>
@@ -103,13 +106,13 @@
                             {% endbuttons %}
                             <span class="d-block text-left my-4 text-muted"> or register using</span>
                             <div class="social-login">
-                                <a href="#" class="facebook">
+                                <a href="{% provider_login_url 'facebook' method='js_sdk' %}" class="facebook">
                                     <span class=" mr-3"><i class="fab fa-facebook-f"></i></span>
                                 </a>
-                                <a href="#" class="twitter">
-                                    <span class=" mr-3"><i class="fab fa-twitter"></i></span>
+                                <a href="{% provider_login_url 'linkedin_oauth2' %}" class="google">
+                                    <span class=" mr-3"><i class="fab fa-linkedin-in"></i></span>
                                 </a>
-                                <a href="#" class="google">
+                                <a href="{% provider_login_url 'google' %}" class="google">
                                     <span class=" mr-3"><i class="fab fa-google"></i></span>
                                 </a>
                             </div>
@@ -158,20 +161,3 @@
 </body>
 
 </html>
-
-
-
-<!-- <div class="container">
-   <div class="row">
-      <div class="col-md-6 mx-auto">
-         <h1>Sign Up</h1>
-         <form method="POST" class="form">
-            {% csrf_token %}
-            {% bootstrap_form form %}
-            {% buttons %}
-                <button type="submit" class="btn btn-primary">Sign Up</button>
-            {% endbuttons %}
-         </form>
-      </div>      
-   </div>
-</div> -->
