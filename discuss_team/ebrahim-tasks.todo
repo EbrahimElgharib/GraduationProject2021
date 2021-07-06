@@ -1,0 +1,65 @@
+Tasks:
+    contact_app:
+        ✔ html form with view @done (١١‏/٥‏/٢٠٢١, ٥:١٨:٠٦ ص)
+        ✔ settings of send emails @done (١١‏/٥‏/٢٠٢١, ٥:١٨:٢٣ ص)
+        
+    Accounts_app:
+        ✔ models @today @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٠٣ ص)
+        ✔ signup @today @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٠٥ ص)
+        ✔ login  @today @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٠٥ ص)
+        ✔ others [ front-end ]...... @low @done (٩‏/٥‏/٢٠٢١, ٣:٠٠:٥٧ ص)
+        ✔ reset password @low @done (١١‏/٥‏/٢٠٢١, ٤:١٥:٣٥ ص)
+            ✔ html + settings @done (٩‏/٥‏/٢٠٢١, ٣:٠٢:٣٠ ص)
+            ✔ send email [consol] @done (٩‏/٥‏/٢٠٢١, ٣:٠٢:٣١ ص)
+            ✔ send email [gmail] @critical @done (١١‏/٥‏/٢٠٢١, ٤:١٥:٢٨ ص)
+        ✔ profile @high @done (٩‏/٥‏/٢٠٢١, ٣:٠٣:٠٠ ص)
+        ✔ edit-profile @high @done (٩‏/٥‏/٢٠٢١, ٣:٠٣:٠١ ص)
+        ✔ Merge Design of (Html files of profile) @done (٢٦‏/٥‏/٢٠٢١, ٦:٥٠:٠٨ ص)
+            ✔ back end @done (١٢‏/٥‏/٢٠٢١, ٦:٤٦:٠٠ ص)
+            ✔ front end [wait.. Mohey......] @done (٢٥‏/٥‏/٢٠٢١, ١٠:٥٨:١٨ م)
+        ☐ change password form ---> delete notes https://youtu.be/P6QHswl2PqE
+        ✔ change password done --> create it @done (٣‏/٧‏/٢٠٢١, ٦:٥٣:٠٦ ص)
+        
+        
+        ☐ ** django-allauth package @low
+            ✔ Google @done (٣‏/٧‏/٢٠٢١, ٦:٣٨:٤٠ ص)
+            ☐ FB
+            ☐ others ....
+
+    contact_app:
+        ✔ settings of app with template @done (١١‏/٥‏/٢٠٢١, ٤:١٥:٤٨ ص)
+        ✔ send_message view @done (١١‏/٥‏/٢٠٢١, ٤:١٥:٤٩ ص)
+        ✔ send to gmail settings @done (١١‏/٥‏/٢٠٢١, ٤:١٦:١٢ ص)
+    settings_app:
+        ✔ home.html with login&out @done (٩‏/٥‏/٢٠٢١, ٣:٠٤:١٦ ص)
+        ✔ footer info @done (٢٦‏/٥‏/٢٠٢١, ٦:٤٩:٥١ ص)
+        ☐ footer:
+            ☐ subscribe - ---> completed backend but not ( ajax )
+            ☐ ..
+
+    about_app:
+        ✔ models @done (٢٦‏/٥‏/٢٠٢١, ٦:٤٩:٥٧ ص)
+        ✔ view - urls @done (٢٦‏/٥‏/٢٠٢١, ٦:٤٩:٥٨ ص)
+        ✔ html @done (٢٦‏/٥‏/٢٠٢١, ٦:٤٩:٥٩ ص)
+
+    blog_app:
+        ☐ comments[disqus.com]
+    
+    labs_app:
+        ☐ comments[disqus.com]
+
+    DeploY:
+        ✔ Heroku @done (٢٦‏/٦‏/٢٠٢١, ١١:١٨:٣٥ ص)
+        
+
+Notes - Fix?:
+    ✔ Mohey : "fix --> fixed-Nav-Bar " @low @done (٢٥‏/٥‏/٢٠٢١, ١٠:٥٨:٣٣ م)
+    ☐ ...
+
+
+
+features+++:
+    ☐ count number of views [lab-details]
+    ☐ count number of views [lab-Unity]
+    ☐ count number of views [post]
+    ☐ 

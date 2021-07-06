@@ -1,0 +1,87 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+
+
+{% block body %}
+
+    <!-------------------------------------------------------------------------------------------->
+    <div class="container">
+      <h1>Edit Profile</h1>
+      <hr>
+      
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-3">
+              <div class="left-column text-center">
+
+                <div class="circle">
+                  <!-- img-thumbnail is added by Ebrahim and I will remove it -->
+                  <img class="profile-pic" src="{{user.profile.image.url}}">
+                </div>
+                <div class="p-image">
+                  <i class="fa fa-camera upload-button"></i>
+                  {{profile_form.image}}
+                </div>
+                
+              </div>
+            </div>
+            
+            <!-- edit form column -->
+            <div class="col-md-9 alert">
+              <div class="alert alert-info alert-dismissable">
+                <a class="panel-close close" data-dismiss="alert">×</a> 
+                <i class="fa fa-coffee"></i>
+                Please make sure to save your changes before leaving the page.
+              </div>
+
+              <!---------------------personal-info------------------------------>
+              
+                <h3>Personal info</h3>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    {{user_form.first_name|as_crispy_field}}
+                  </div>
+                  <div class="form-group col-md-6">
+                    {{user_form.last_name|as_crispy_field}}
+                  </div>
+                </div>
+    
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    {{user_form.email|as_crispy_field}}
+                  </div>
+                  <div class="form-group col-md-6">
+                    {{profile_form.phone_number|as_crispy_field}}
+                  </div>
+                </div>
+                <div class="form-row">
+                <div class="form-group col-md-6">
+                  {{profile_form.country|as_crispy_field}}
+                </div>
+              </div>
+                <hr>
+                <!---------------------------Btn-------------------------------------->
+                <div class="submission">
+                  <div class="row">
+                    <button type="submit" class="btn btn-success mt-4 mr-3">Save Changes</button>
+                    <button type="reset" class="btn btn-primary mt-4">Reset</button>
+                    <a class="btn btn-primary mt-4 ml-auto" type="button" href="{% url 'password_change' %}" role="button">Change Password</a>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+
+
+{% endblock body %}
+
+
