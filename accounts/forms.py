@@ -21,6 +21,8 @@ class SignupForm(UserCreationForm):
               
 
 class UserForm(forms.ModelForm):
+   email = forms.EmailField(label="Email Address", disabled=True)
+   
    class Meta:
       model = User
       # fields = ['username','email','first_name','last_name'] 
