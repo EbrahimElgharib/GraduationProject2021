@@ -19,10 +19,14 @@
             <!-- left column -->
             <div class="col-md-3">
               <div class="left-column text-center">
-
+  
                 <div class="circle">
                   <!-- img-thumbnail is added by Ebrahim and I will remove it -->
+                  {% if user.profile.image %}
                   <img class="profile-pic" src="{{user.profile.image.url}}">
+                  {% else %}
+                  <img class="profile-pic" src="{% static 'images/profile_image_empty.svg' %}">
+                  {% endif %}
                 </div>
                 <div class="p-image">
                   <i class="fa fa-camera upload-button"></i>
