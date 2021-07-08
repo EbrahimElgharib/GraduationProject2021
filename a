@@ -1,0 +1,261 @@
+[33mcommit 498145c50f1406becc5325dec83fdd273956e948[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mconfirm_emails[m[33m)[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Thu Jul 8 11:06:37 2021 +0200
+
+    push
+
+[33mcommit e5942bfacb9f7b9b9e1f5a8d6d41167ca24ad3d2[m
+Merge: 356ac0e aaff3b5
+Author: Omarsalah331 <30375974+Omarsalah331@users.noreply.github.com>
+Date:   Thu Jul 8 03:39:10 2021 +0200
+
+    Merge pull request #21 from EbrahimStd/lab_test
+    
+    Lab test
+
+[33mcommit aaff3b5c2c36d0747e64b722f49f1e480a768019[m[33m ([m[1;31morigin/lab_test[m[33m)[m
+Author: omarsalah331 <omarsalah331@gmail.com>
+Date:   Thu Jul 8 03:38:01 2021 +0200
+
+    labs done
+
+[33mcommit cc362ea29553be81badc1bc02467cb491928ecaa[m
+Author: omarsalah331 <omarsalah331@gmail.com>
+Date:   Thu Jul 8 03:22:51 2021 +0200
+
+    cash
+
+[33mcommit 356ac0ecf0e93abe2240dde730dae1e6a7231736[m
+Merge: b6625c2 bd1f141
+Author: Ebrahim Elsayed ElGharib <74159638+EbrahimStd@users.noreply.github.com>
+Date:   Thu Jul 8 01:57:28 2021 +0200
+
+    Merge pull request #19 from EbrahimStd/blogggg
+    
+    done
+
+[33mcommit bd1f1412893635689ba21417108562904e1a48bb[m[33m ([m[1;31morigin/blogggg[m[33m)[m
+Author: omarsalah331 <omarsalah331@gmail.com>
+Date:   Wed Jul 7 21:10:36 2021 +0200
+
+    done
+
+[33mcommit b6625c2dc4209bc96032a8b66cd22087c1484764[m[33m ([m[1;31morigin/edit_profile_img[m[33m, [m[1;32medit_profile_img[m[33m)[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Wed Jul 7 17:21:32 2021 +0200
+
+    make email field is disabled with django
+
+[33mcommit 2fd4d7d20b2fb516e002a81b142b8e477ae4797b[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Wed Jul 7 15:36:38 2021 +0200
+
+    edit img if not found in profile
+
+[33mcommit 037bc838d79ef81ba490842a6d39222c68114e06[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Tue Jul 6 23:31:23 2021 +0200
+
+    edit site name
+
+[33mcommit 94b420cbea0358915c3ba9f2049be7b24187ac9a[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Tue Jul 6 22:57:43 2021 +0200
+
+    add lcalhos:8000 to app sites for social at local server
+
+[33mcommit 8bbe1962d2492d80f5d485cff3363f80e6dcfa4c[m
+Merge: 749296a 2789c36
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Tue Jul 6 22:45:51 2021 +0200
+
+    Merge branch 'master' of https://github.com/EbrahimStd/GraduationProject2021
+
+[33mcommit 2789c362a5b7982fffaaf1235f553ef40863e0d2[m
+Merge: 6eb9790 718cdf9
+Author: Ebrahim Elsayed ElGharib <74159638+EbrahimStd@users.noreply.github.com>
+Date:   Tue Jul 6 22:44:17 2021 +0200
+
+    Merge pull request #18 from EbrahimStd/revert-17-allauth_pkg_authentication
+    
+    Revert "edit"
+
+[33mcommit 718cdf9e0781fa6a3f5e35ed001173982992f327[m[33m ([m[1;31morigin/revert-17-allauth_pkg_authentication[m[33m)[m
+Author: Ebrahim Elsayed ElGharib <74159638+EbrahimStd@users.noreply.github.com>
+Date:   Tue Jul 6 22:43:57 2021 +0200
+
+    Revert "edit"
+
+[33mcommit 749296a5d1c10776a8bd66041dc6ffd0975c4c4f[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Tue Jul 6 22:42:48 2021 +0200
+
+    return
+
+[33mcommit 6eb97900c270d4031e412b442451b9e83acec3b4[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Tue Jul 6 19:06:11 2021 +0200
+
+    delete all
+
+[33mcommit aeb00aed6f791e68f5fc8562d72a6b6c0dbc56be[m
+Merge: 0d9ac4f 3cec332
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Tue Jul 6 18:57:58 2021 +0200
+
+    edit
+
+[33mcommit 3cec33220ba6fc82957797c82783c091d7c8aca0[m[33m ([m[1;31morigin/allauth_pkg_authentication[m[33m, [m[1;32mallauth_pkg_authentication[m[33m)[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Tue Jul 6 18:49:14 2021 +0200
+
+    edit
+
+[33mcommit 0d9ac4f452882b3474a2b421a2ce9a70786b6f77[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Tue Jul 6 01:37:20 2021 +0200
+
+    edit youtube url
+
+[33mcommit 7c049a8c4c4654b0920b7f256e55e52694b9027c[m
+Merge: 1dd5d24 715844b
+Author: omarsalah331 <omarsalah331@gmail.com>
+Date:   Tue Jul 6 01:18:57 2021 +0200
+
+    labs done
+
+[33mcommit 1dd5d249f1403874b4e9f71c16d1dc3e82cac490[m
+Merge: c917d50 ae275c4
+Author: omarsalah331 <omarsalah331@gmail.com>
+Date:   Tue Jul 6 01:14:13 2021 +0200
+
+    Merge branch 'unity_labs'
+
+[33mcommit ae275c42f7341152defae91dc2945a306a275c16[m[33m ([m[1;31morigin/unity_labs[m[33m)[m
+Author: omarsalah331 <omarsalah331@gmail.com>
+Date:   Tue Jul 6 01:12:06 2021 +0200
+
+    done
+
+[33mcommit 715844b9615c1a55183c950830769e3910526a17[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Mon Jul 5 06:10:48 2021 +0200
+
+    edit test in edit
+
+[33mcommit 9ef9698f4614e7281beb03d80bf5883aaec345af[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Mon Jul 5 05:22:10 2021 +0200
+
+    add success
+
+[33mcommit ac0dd63d3650fc98a9ad7f882c83b45fd62ef29c[m
+Author: omarsalah331 <omarsalah331@gmail.com>
+Date:   Mon Jul 5 04:50:13 2021 +0200
+
+    labs done
+
+[33mcommit db83a06c287aea3f36a92cee4dfee3d74c4764ee[m[33m ([m[1;31morigin/solve_heroku[m[33m, [m[1;32msolve_heroku[m[33m, [m[1;32mbackup-master[m[33m)[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sun Jul 4 20:38:18 2021 +0200
+
+    done subscriber feature
+
+[33mcommit 2718c07a37e55dd9e67a177c6618163906584540[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sun Jul 4 20:05:40 2021 +0200
+
+    z
+
+[33mcommit ab987548c8cc46f979bc908cb2f8aa646e25d4e9[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sun Jul 4 20:03:43 2021 +0200
+
+    s
+
+[33mcommit 34185520364a917cacb4889885f23506aa9f6df0[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sun Jul 4 19:53:31 2021 +0200
+
+    f
+
+[33mcommit a9b487111939df9f4f4441347d685fee5eb93d38[m
+Author: omarsalah331 <omarsalah331@gmail.com>
+Date:   Sun Jul 4 19:01:26 2021 +0200
+
+    added test lab
+
+[33mcommit 2c314f30d337119ca263cf7ee66be140f590ac0a[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sun Jul 4 11:27:48 2021 +0200
+
+    hi
+
+[33mcommit 412831faff332fa59bdc266e75e9236e0202d883[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sun Jul 4 09:40:31 2021 +0200
+
+    add alert in home page when confirm or delete subscriber
+
+[33mcommit f6c04e7366079071f7fcfae40c2a9d36b0867ab9[m[33m ([m[1;31morigin/app_subscribe_footer[m[33m, [m[1;32mapp_subscribe_footer[m[33m)[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sun Jul 4 09:24:44 2021 +0200
+
+    finish back end of subscribe in footer & not confirm|delete frontEnd
+
+[33mcommit 10444d7e7d20d1ae94d7c041e81dec3f3540b577[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sun Jul 4 09:11:08 2021 +0200
+
+    add subscribe to Footer successfully
+
+[33mcommit 532f60c5ce887a584270469e20ee03d52e6c16e5[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sun Jul 4 08:31:25 2021 +0200
+
+    subscribe done in home page only not footer
+
+[33mcommit 717e7fa5030844b4d92a0870ad210293718d73e1[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sun Jul 4 07:44:28 2021 +0200
+
+    edit
+
+[33mcommit d8c58015e6271a27be18608ff8dbc7d6f7d81b78[m
+Author: omarsalah331 <omarsalah331@gmail.com>
+Date:   Sat Jul 3 21:55:44 2021 +0200
+
+    added unity lab
+
+[33mcommit 03b905a34c272946a8a2464a0713f021d2779e6a[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jul 3 08:15:44 2021 +0200
+
+    just a test
+
+[33mcommit fcbaab09cb81f5d7af51fbe991c78cab7bb46292[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jul 3 08:08:23 2021 +0200
+
+    just a test
+
+[33mcommit 8fda2ea09df814cf951088abec187d0c4f7d80f8[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jul 3 08:05:29 2021 +0200
+
+    edit static with new frontend
+
+[33mcommit 6c20cb54766f4c657d54d3ed911468924def559d[m
+Merge: f573c87 917f74f
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jul 3 07:25:49 2021 +0200
+
+    Merge remote-tracking branch 'origin/m3.1'
+
+[33mcommit f573c87b2e95a2da4890bdcf4be51e6ba22eeb98[m
+Author: EbrahimStd <ibrahim267745@eng.zu.edu.eg>
+Date:   Sat Jul 3 07:18:17 2021 +0200
+
+    edit some things about profile pages
+
+[33mcommit 7e226707db3f1b6
