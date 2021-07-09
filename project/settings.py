@@ -259,10 +259,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 ##### login
 LOGIN_URL = '/accounts/login'
-
 ##### Redirect to home URL after login (Default redirects to /accounts/profile/)
 # LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/accounts/login'
+LOGIN_REDIRECT_URL = '/accounts/profile'
+
 
 
 

@@ -97,17 +97,29 @@
                             </div>
 
                         </form> -->
+
+                        {% if user.is_authenticated %}
+
+                        <h5 style="color: brown;">You are logged in already</h5>
+                        <div class="my-2 my-lg-0 ">
+                            <a href="/" class="btn btn-primary btn-lg d-block mt-4 text-decoration-none active" role="button" aria-pressed="true">Home</a>
+                            <a href="{% url 'accounts:profile' %}" class="btn btn-primary btn-lg d-block mt-2 text-decoration-none active" role="button"
+                                aria-pressed="true">Profile</a>
+                            <a href="{% url 'logout' %}" class="btn btn-secondary btn-lg d-block mt-2 text-decoration-none active" role="button"
+                                aria-pressed="true">Logout</a>
+                        </div>
+                        {% else %}
                         <form method="POST" class="form">
                             {% for message in messages %}
                             <div class="alert {{ message.tags }} alert-dismissible" role="alert">
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                              {{ message }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                {{ message }}
                             </div>
-                          {% endfor %}
-                                
-                                
+                            {% endfor %}
+
+
                             {% csrf_token %}
                             {% bootstrap_form form %}
 
@@ -136,6 +148,7 @@
                                 <span><a href="{% url 'login' %}" class="hover"><strong>Log in</strong> </a></span>
                             </div>
                         </form>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -159,12 +172,12 @@
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
