@@ -98,6 +98,11 @@
 
                         </form> -->
                         <form method="POST" class="form">
+                            
+                            {% if email %}
+                                <h6 style="color: red;">This Email {{email}} is Already signned up before</h6>
+                            {% endif %}
+                                
                             {% csrf_token %}
                             {% bootstrap_form form %}
                             {% buttons %}

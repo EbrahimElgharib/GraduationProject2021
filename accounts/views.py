@@ -16,10 +16,14 @@ def signup(request):
       form = SignupForm(request.POST)
       # check if form data is valid before save in DB
       if form.is_valid():
-         form.save()
+         # form.save()
          # login after save
          username = form.cleaned_data['username']
          password = form.cleaned_data['password1']
+         email = form.cleaned_data.get('email')
+         if User.objects.get(email=email):
+            return render(request,'registration/signup.html',{'form':form, 'email':email})
+         form.save()
          print('1')
          user = authenticate(username=username, password=password)
          print('2')
