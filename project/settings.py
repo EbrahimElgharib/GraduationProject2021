@@ -275,6 +275,10 @@ EMAIL_HOST_USER = 'ebrahimtest44@gmail.com'
 EMAIL_HOST_PASSWORD = 'suctirajajirqwdw'
 
 
+# recaptch
+GOOGLE_RECAPTCHA_SECRET_KEY = '6LfxBoUbAAAAAIsEz2PN5gkXj3Y0d2E2XhaMHjmO'
+
+
 
 ### for white noise pkg --> heroku
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

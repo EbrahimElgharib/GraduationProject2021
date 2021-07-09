@@ -98,13 +98,22 @@
 
                         </form> -->
                         <form method="POST" class="form">
-                            
-                            {% if email %}
-                                <h6 style="color: red;">This Email {{email}} is Already signned up before</h6>
-                            {% endif %}
+                            {% for message in messages %}
+                            <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                              {{ message }}
+                            </div>
+                          {% endfor %}
+                                
                                 
                             {% csrf_token %}
                             {% bootstrap_form form %}
+
+                            <script src='https://www.google.com/recaptcha/api.js'></script>
+                            <div class="g-recaptcha" data-sitekey="6LfxBoUbAAAAAAIvBZSYXhz2HfvP5Q2HgkVqU2Gh"></div>
+
                             {% buttons %}
                             <input type="submit" value="Create Account"
                                 class="btn btn-block btn-danger margin-top border">
