@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b89b4b2308.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/App.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.convform.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>chatbot</title>
+</head>
+
+<body class="chatbot">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+        <a class="navbar-brand margin-left Left" href="#"><img src="images/formula.png" style="width: 60px; height:60px"  margin-trim: 1; alt="Taleen"></a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon flex-md-shrink-0"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ml-5 Left control flex-md-shrink-0 " style="margin-trim: 0;">
+                <li class="nav-item ">
+                    <a class="nav-link " href="#">Taleen <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Virtual labs.html">Vitual labs</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link " href="Blogs.html" target="_blank">Blogs</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html" target="_blank">About us</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Contact us</a>
+                </li>
+                
+
+            </ul>
+            <div class="my-2 my-lg-0 MYmovingSection">
+                <!-- my-2 my-lg-0  -->
+                <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <a href="#" class="btn btn-outline-secondary my-2 my-sm-0 " role="button" aria-pressed="true" target="_blank">Register</a>
+                <a href="#" class="btn btn-outline-secondary   myMoving " role="button" aria-pressed="true" target="_blank">Login</a>
+                  
+            </div>
+        </div>
+    </nav>
+    
+
+
+<!-- Start Chatbot Section-->
+    <div class="chat-icon">
+       <i class="fa fa-comment" aria-hidden="true"></i>
+    </div>
+    <div class="chat-box">
+        <div id="chat" class="conv-form-wrapper">
+            <form action="" method="GET" class="hidden">
+                <input type="text" data-conv-question="Let's Get Started, Welcome to our Chatbot" data-no-answer="true">
+                <select name="help" data-conv-question="Do you need help?" name="first-question">
+                    <option value="yes">Yes</option>
+                    <option value="no">Never mind, I dont need help</option>
+                </select>
+
+                <div data-conv-fork="help">
+                    <div data-conv-case="yes">
+                        <input type="text" data-conv-question="Cool!" data-no-answer="true">
+                        <input type="text" name="name" data-conv-question="Alright! First, tell me your full name, please.|Okay! Please, tell me your name first.">
+                        <input type="text" data-conv-question="Howdy, {name}:0! It's a pleasure to meet you." data-no-answer="true">
+                        <input data-conv-question="Type in your e-mail" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" id="email" type="email" name="email" required placeholder="What's your e-mail?">
+                        
+                    </div>
+                    <div data-conv-case="no">
+                        <input type="text" data-conv-question="Okey, I am here if you want any request" data-no-answer="true">
+                    </div>
+                </div>
+                
+                <select data-conv-question="." name="first-question">
+                    <option value="yes">Yes</option>
+                    <option value="sure">Sure!</option>
+                </select>
+                
+            
+
+                
+            </form>
+        </div>
+    </div>
+<!-- End Chatbot Section-->
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/jquery.convform.js"></script>
+    <script src="js/pluign.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
