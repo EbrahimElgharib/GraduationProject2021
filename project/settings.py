@@ -30,7 +30,7 @@ ALLOWED_HOSTS = [
     'https://virtual-lab-2021.herokuapp.com',
     '127.0.0.1',
     'localhost',
-    ]
+]
 
 # Application definition
 INSTALLED_APPS = [
@@ -44,13 +44,13 @@ INSTALLED_APPS = [
 
 
     # for allauth pkg - for social
-        # The following apps are required:
+    # The following apps are required:
     'django.contrib.sites',
 
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-        # providers
+    # providers
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
     # 'allauth.socialaccount.providers.github',
@@ -58,16 +58,16 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.linkedin_oauth2',
 
 
-    ##### FrontEnd
+    # FrontEnd
     # https://pypi.org/project/django-bootstrap4/
     "bootstrap4",
     'crispy_forms',
 
-    ##### External Packages
-    "taggit", # https://github.com/jazzband/django-taggit
-    'django_summernote', # https://github.com/summernote/django-summernote
-    'django_countries', # https://github.com/SmileyChris/django-countries
-    
+    # External Packages
+    "taggit",  # https://github.com/jazzband/django-taggit
+    'django_summernote',  # https://github.com/summernote/django-summernote
+    'django_countries',  # https://github.com/SmileyChris/django-countries
+
     # Apps
     'labs',
     'about',
@@ -81,28 +81,6 @@ INSTALLED_APPS = [
 
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
-    # 'facebook': {
-    #     'METHOD': 'js_sdk',
-    #     'SDK_URL': '//connect.facebook.net/{locale}/sdk.js',
-    #     'SCOPE': ['email', 'public_profile'],
-    #     'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
-    #     'INIT_PARAMS': {'cookie': True},
-    #     'FIELDS': [
-    #         'id',
-    #         'first_name',
-    #         'last_name',
-    #         'middle_name',
-    #         'name',
-    #         'name_format',
-    #         'picture',
-    #         'short_name'
-    #     ],
-    #     'EXCHANGE_TOKEN': True,
-    #     'LOCALE_FUNC': lambda request: 'en_US',
-    #     'VERIFIED_EMAIL': False,
-    #     'VERSION': 'v7.0',
-    # },
-
     'google': {
         'SCOPE': [
             'profile',
@@ -113,31 +91,7 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     },
 
-    # 'github': {
-    #     'SCOPE': [
-    #         'user',
-    #         'repo',
-    #         'read:org',
-    #     ],
-    # },
-
-    # 'linkedin_oauth2': {
-    #     'SCOPE': [
-    #         'r_basicprofile',
-    #         'r_emailaddress'
-    #     ],
-    #     'PROFILE_FIELDS': [
-    #         'id',
-    #         'first-name',
-    #         'last-name',
-    #         'email-address',
-    #         'picture-url',
-    #         'public-profile-url',
-    #     ]
-    # },
-
 }
-
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -146,7 +100,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', ## for whitenoist pkg-heroku
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # for whitenoist pkg-heroku
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -167,8 +121,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'settings.footer_context_processor.myfooter', # my footer
-                'settings.footer_context_processor.subscribe_footer', # subscribe
+                'settings.footer_context_processor.myfooter',  # data in my footer
+                'settings.footer_context_processor.subscribe_footer',  # subscribe form
             ],
         },
     },
@@ -189,17 +143,15 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 LOGIN_REDIRECT_URL = '/'
 
 
-
 WSGI_APPLICATION = 'project.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',  # Path of DB File
     }
 }
 
@@ -241,7 +193,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / "static" / "staticroot" # for heroku
+STATIC_ROOT = BASE_DIR / "static" / "staticroot"  # for heroku
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/var/www/static/',
@@ -250,25 +202,23 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
 
-### Show summernote package
+# Show summernote package
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 SUMMERNOTE_THEME = 'bs4'  # Show summernote with Bootstrap4
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
-##### login
+# login
 LOGIN_URL = '/accounts/login'
-##### Redirect to home URL after login (Default redirects to /accounts/profile/)
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
 # LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/accounts/profile'
 
 
-
-
-### send emails
-EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+# send emails
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
@@ -280,10 +230,9 @@ EMAIL_HOST_PASSWORD = 'suctirajajirqwdw'
 GOOGLE_RECAPTCHA_SECRET_KEY = '6LfxBoUbAAAAAIsEz2PN5gkXj3Y0d2E2XhaMHjmO'
 
 
-
-### for white noise pkg --> heroku
+# for white noise pkg --> heroku
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-### Newsletter  ### https://app.sendgrid.com/settings/api_keys
+# Newsletter  ### https://app.sendgrid.com/settings/api_keys
 FROM_EMAIL = 'ebrahimtest44@gmail.com'
-SENDGRID_API_KEY ='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'
+SENDGRID_API_KEY = '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'

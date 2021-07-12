@@ -1,10 +1,7 @@
 from django.db import models
-from django.utils import timezone
+from django.utils import timezone # return time now
 
-
-# Create your models here.
-
-# about our team
+# about our team of developers
 class Team(models.Model):
    name = models.CharField(max_length=50)
    picture = models.ImageField(upload_to='pictures/')
@@ -19,7 +16,7 @@ class Team(models.Model):
    def __str__(self):
       return self.name
 
-# about project
+# about project or Site
 class About(models.Model):
     who_we_are = models.TextField(max_length=2000)
    #  our_mission = models.TextField(max_length=1000)

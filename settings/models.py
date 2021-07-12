@@ -20,9 +20,6 @@ class Website(models.Model):
       return str(self.id)
 
 
-
-
-
 # Subscribe with Emails
 class Subscriber(models.Model):
     email = models.EmailField(unique=True)
@@ -32,6 +29,7 @@ class Subscriber(models.Model):
     def __str__(self):
         return self.email + " (" + ("not " if not self.confirmed else "") + "confirmed)"
 
+# Newsletter file send to all subscribers
 class Newsletter(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -41,10 +39,12 @@ class Newsletter(models.Model):
     def __str__(self):
         return self.subject + " " + self.created_at.strftime("%B %d, %Y")
 
+    # send func to send messages to subscribers
     def send(self, request):
         contents = self.contents.read().decode('utf-8')
         subscribers = Subscriber.objects.filter(confirmed=True)
         sg = SendGridAPIClient(settings.SENDGRID_API_KEY)
+        # send message to all subscribers
         for sub in subscribers:
             message = Mail(
                     from_email=settings.FROM_EMAIL,
@@ -55,4 +55,4 @@ class Newsletter(models.Model):
                             request.build_absolute_uri('/subscribe'),
                             sub.email,
                             sub.conf_num))
-            sg.send(message)
+            sg.send(message) # send it now
