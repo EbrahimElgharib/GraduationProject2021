@@ -7,7 +7,6 @@ from django.contrib.auth.decorators import login_required
 from .forms import SignupForm, ProfileForm, UserForm
 from .models import Profile
 
-import requests
 from django.conf import settings
 from .decorators import check_recaptcha
 
