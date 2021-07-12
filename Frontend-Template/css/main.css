@@ -126,43 +126,6 @@ body {
 }
 .testimonials .test-box h6 {color: #21a8ae;}
 /* End Testimonials Section*/
-/* Start Chatbot Section*/
-.chat-icon {
-    position: fixed;
-    right: 30px;
-    bottom: 10px;
-    font-size: 50px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 1000;
-}
-.chat-box {
-    position: fixed;
-    right: 20px;
-    bottom: 75px;
-    width: 400px;
-    height: 80vh;
-    background-color: #dedede;
-    z-index: 1000;
-    border-radius: 20px;
-    transition: all 0.3s ease-out;
-    transform: scaleY(0);
-}
-.chat-box.active {
-    transform: scaleY(1);
-}
-.hidden {
-    display: none !important;
-}
-.conv-form-wrapper textarea {
-    height: 30px;
-    overflow: hidden;
-    resize: none;
-}
-#messages {
-    padding: 20px;
-}
-/* End Chatbot Section*/
 
 /* Start Media Quries*/
 @media (max-width: 767px) {
