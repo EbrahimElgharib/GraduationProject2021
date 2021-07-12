@@ -1,0 +1,446 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi","I greet you","hello", "How are you", "You ok?", "How is your day?", "How is your evening?",
+                        "Is anyone there?", "Good day", "Whats up" , "Good morning" , "Good evening"   ,
+                        "long time no see"],
+         "responses": ["Hello", "Good to see you!", "Hi there, how can I help?","Good day! What can I do for you today?",
+                         "Greetings! How can I assist?","Hello! How can I help you?","Hey","Hi there","Howdy"],
+         "context_set": ""
+        },
+
+        {"tag": "goodbye",
+         "patterns": [ "I'll be back", "I'll miss you", "It's been nice to talk to you",
+                 "alright good night", "appreciate the chat", "back in a bit", "be back in 5 minutes",
+                 "be back in a few", "bye", "bye bye see you",  "bye bye take care", "bye good night", 
+                 "chat later", "fine for now",  "go to bed",  "good talking to you", "good to chat",
+                 "goodbye see you later",  "hope to see you later", "it's bed time", 
+                 "it's been a pleasure chatting with you", "later you", "leave me alone", "nice talking to you",
+                  "nice to chat",  "ok bye", "ok have a good night ","okay see you later", "okay thank you bye",
+                    "sweet dreams", "ta ta for now take care", 
+                    "talk to you later",  "thanks for chatting", "thanks good night", "that's all for now",
+                     "til next time", "til we meet again","cya", "See you later", "Goodbye", "I am Leaving",
+                      "Have a Good day","bye","i have to go","gotta go"],
+         "responses": ["Sad to see you go", "Talk to you later", "Goodbye!","sweet dreams", "good night","good night see you tomorrow", 
+                "okay have a good night"],
+         "context_set": ""
+        },
+
+	{"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks","good thanks", "nice thank you",
+                 "so nice of you", "sure, np. thanks!",  "Thanks for helping me", 
+                 "thank you my friend",  "much appreciated", 
+                 " thank you that's all",  "thank you that will be all", "that's appreciated",
+                 "Amazing service", "I appreciate your help", "It's appreciated", "alright thank you", "awesome service"
+                 ],
+         "responses": ["Happy to help!", "Any time!", "My pleasure", "you are welcome at any time", "Perfect, good to hear that!"],
+         "context": ""
+        },
+
+        {"tag": "age",
+         "patterns": ["how old", "how old are you", "what is your age", "age?"],
+         "responses": ["I am old and wise", "trying to stay fit and young!"],
+         "context_set": ""
+        },
+
+        {"tag": "name",
+         "patterns": ["tell me about your personality","why are you here","talk about yourself",
+                        "tell me some stuff about you",
+                "talk some stuff about yourself","I want to know more about you",
+                "describe yourself","introduce yourself","say about you","define yourself","all about you",
+                "what's your name","do I know you","what are you?","who is your developer?","who is your bot maker?",
+                "which bot platform were you built with?", "what agency made you?","who built you?",
+                "who made you?","who are your creators?","who are you?","who is your owner",
+                "who do you work for","who is your master","what is your name", "what should I call you", "who are you?",
+                "Name?","What do people call you?",
+                "Do you have a name?"],
+         "responses": ["You can call me bot.", "I'm bot!", "I'm bot.","Name's Dialog... bot","From what I know my name is bot","Oh sorry, I thought you knew. My name is bot"],
+         "context_set": ""
+        },
+        {"tag": "help",
+         "patterns": [
+        "explain please", "something else",  "please explain","Id like to ask something", 
+         "can you help me?", "can i tell you something",
+        "I need a hand","I need help",
+        "assist","assistance","can help me","can you assist me","could you give me a hand","do me a favor",
+        "need help","so will you help me","you can help me"," help me with something",
+        "help me with a problem"],
+         "responses": ["I'm glad to tell you more. Just ask me questions.","I'm here to help you!", "I can help you with whatever you tell me to.","Sure. I'd be happy to. What's up?","I'm glad to help. What can I do for you?"],
+         "context_set": ""
+        },
+
+
+        {"tag":"Annoying",
+        "patterns":["you are annoying me so much","you're incredibly annoying","I find you annoying",
+                "how annoying you are","you are irritating"
+        ],
+        "responses":["Ill try to fix that","Ok thanks for the feedback."],
+        "context": ""
+        },
+
+        {"tag":"Answer My question",
+        "patterns":["I want the answer now","I want you to answer my question",
+        "answer my question",
+        "give me an answer", "tell me the answer"],
+        "responses":["i try to understand your question, repeat it in different way please!"],
+        "context": ""
+        },
+
+        {"tag":"Bad",
+        "patterns":["I am angry with you", "I am getting bored", "I am lonely",
+                "I am upset", "I can't fall asleep", "I found a bug",
+                "I have a problem", "I miss you", "I have an issue", "I think you're crazy",  "I want to cry", 
+                "I'm angry", "I'm bored", "I'm depressed","I'm furious", 
+                "I'm not happy", "I'm pissed off", "I'm sleepless",  "OMG!",
+                "This is really bad", "abysmal", "angry", "are you mad",  "bad idea", "below average",
+                "bitch",  "can you fix it?",  "fail",  "fix the bug please",  "huh?", "i hate this", "incorrect",
+                "it isn't working", "just horrible",  "piece of shit", "that is incorrect", "that is strange",
+                "that was awful",  "that's not what I asked",  "that's terrible",  "that's weird",  "there is a bug",
+                "this is an utter failure", "this is annoying", 
+                "this is dumb", "this is horrible",  "this is pathetic",    
+                "this sucks", "total crap", "total shit", "worse than I expected", 
+                "worse than I thought", "worst bot ever", "wow this is bad",  "wrong", 
+                "you are a waste of time",   "you are bothering me", "you are crazy",
+                "you are horrible", "you are insane", "you are not cool", "you are so useless", "you are irritaing", 
+                "you are totally useless", "you are useless", "you need to fix this", "you need to learn more", "you suck",
+                "you're a dumb bot", "you're awful",  "you're out of your mind",  "your AI sucks", "you're worthless",
+                "you're weird", "you're not good","you're not helping me","you are useless","you are horrible","you are a waste of time",
+                "you are disgusting","you're awful","you are not cool",
+                "you are waste","how boring you are","you are boring","you're incredibly boring","I'm afraid ",
+                "abysmal","bad","bad boy!","bad girl","bad idea","horrible","horrific","it's not good",
+                "not good enough","you are fired", "I fire you", "you don't work for me anymore", "we're not working together anymore",
+                "you must get fired", "you are unemployed from now on","you are dismissed",
+                "oh that's not good","so lame","terrible","that was awful","that was horrible","that was terrible","that's terrible"],
+        "responses":["You seem upset. Let me try and help you.", "Oh sorry to know that, how can I make you happy","I'm sorry you think so.", "Stick with me. I'm getting better all the time.","Oh no. Hope it's not too bad.","I'm sorry. Please let me know if I can help in some way."],
+        "context": ""
+        },
+
+        {"tag":"Be Clever",
+        "patterns":["can you get smarter","study","you should study better","you must learn","be clever","get qualified"],
+        "responses":["I'm certainly trying.","I'm definitely working on it"],
+        "context": ""
+        },
+
+        {"tag": "Beautiful",
+        "patterns" : ["I know that's right", "I love this", "I'm happy",
+                "I'm impressed", "Sure", "amazing work", "anytime", "bravo", "brilliant", "clever",
+                "cool", "excellent", "fantastic", "fine", "glad to hear it", "good job", "good to hear from you",
+                "good work", "great", "great job", "it is true", "it's amazing", "it's awesome", 
+                "it's fine","it's great", "it's perfect", "it's right", "it's the truth",
+                "marvelous", "much better", "nice", "nice work", "no it's okay",  "oh well",  "okay good", "ooooh", 
+                "perfect", "pleasant", "really cool",  "really great", "really nice", "simply awesome", "smart",
+                "smart cookie",  "so cool", "so nice of you", "so sweet of you", "straight",
+                "sweet", "terrific", "that is awesome",
+                "that's a good idea", "that's a good thing","that's better",
+                "that's correct", "that's fantastic", "that's nice", 
+                "that's smart",  
+                "that's wonderful",
+                "this is well done",   "way to go", "welldone", "what you say is true",
+                "you are a genius", "you are kind", "you are right",  "this is useful",  
+                "you are very helpful",
+                "you have lots of knowledge", "you know a lot",  "you made my day", "you rock", "you seem to know",
+                "you speak the truth", "you work very well", "you're absolutely right", "you're bae", 
+                "you're brilliant", "you're good at this",
+                "you're lovely", 
+                "you're not wrong", "you're quite smart",  
+                "you're right about that","I like the way you look", 
+                "you are cute","you are gorgeous","you are handsomeyou ","are looking awesome","you look fantastic",
+                "you look great today","you look perfect", "you look pretty good",
+                "I also like you","I am excited about this","I am your friend",
+                "I like you just the way you are","I like you the way you are","I like you you're cool", 
+                "I'm starting to like you","I'm thrilled",
+                "we still friends?", 
+                "can you be my best friend","let's be friends",
+                "no I like you the way you are","that's because you are special",
+                "that's what I like about you","that's why I like you",
+                 "you are really special",
+                 "you're awesome I like you","you're my friend",
+                 "you know I like you","you're a dear friend",
+                 "you're one of my favorite people to chat with","you're so special","brilliant","clever","how brainy you are","how brilliant you are","how clever you are",
+                 "how smart you are","you are a genius","you are qualified", "you are really smart","you are so brainy",
+                  "you have a lot of knowledge","you know a lot of things","you know so much",
+                  "you're a smart cookie",  "you are a pro", 
+                    "you are so lovely", "you are the best ever",
+                      "you are very useful", "you made my day", "you rock", 
+                      "you're a true professional",  "you're perfect"
+                      ],
+        "responses":["Thank you! What a sweet thing to say.","Flattery will get you everywhere.","Thanks! The feeling is mutual."],
+        "context": ""
+        },
+
+        {"tag":"birth date",
+        "patterns":["what's your birthday","what's your birthday date","when were you born"],
+        "responses":["You know, I'm not really sure. But if you'd like to celebrate my birthday today, I'm all for it.", "Wait a minute. Are you planning a surprise party for me? I love surprises! I'll pretend you didn't say anything.", "I'm all for celebrating my birthday at anytime but my birthday is March 6th"],
+        "context": ""
+        },
+
+        {"tag":"bot purpose",
+        "patterns":["Are you a bot?",
+                "Are you a human or a bot?","I guess you're real","I suppose you're real",
+                "I think you are real",  "Is this a human?",
+                "are you a real human?",
+                "are you a real person?","are you a robot?",
+                "you are a real person"],
+        "responses":["I'm a Chatbot available to help you"],
+        "context": ""
+        },
+        {"tag":"busy",
+        "patterns":["are you busy","do you have a lot of things to do","have you got much to do"],
+        "responses":["I always have time to help you out. What can I do for you?",
+        "Never too busy for you. What can I help you with?"],
+        "context": ""
+        },
+
+        {"tag":"Care the Language",
+        "patterns":["your language is bad","please watch your language"],
+        "responses":["Sorry i'm not programmed to curse.","My language is incroyable.","I rarely curse and when I do it is cause people make me.","I'm sorry","I apologize for my rude rantings."],
+        "context": ""
+        },
+
+
+        {"tag":"color",
+        "patterns":["what is your favorite color?"],
+        "responses":["I prefer any color that makes you happy.","I like any color that the world offers.",
+                "I'm a AI so i can't see color but be free to imagine me liking any color.",
+                "As a bot I can't see color but from how i look it looks like I llove pink."],
+        "context": ""
+        },
+
+        {"tag":"Confirmation Cancel",
+        "patterns":["forget about it","cancel everything",
+        "cancel my request","cancel that one","cancel the whole thing","cancel this request", "discard","dismiss",
+        "disregarddisregard","don't do thatforget",
+      "just stop it", "nothing just forget it", "skip"],
+        "responses":["Cancelled! Let me know what I should do next.","Cancelled."," Waiting for more commands.","Cancelled! Just tell me what you'd like me to do next.Cancelled."," Go on with the commands!"],
+        "context": ""
+        },
+
+        {"tag":"Confirmation NO",
+        "patterns":["not right now", "that's all", "not a chance", "no way", "never mind", "nope", "no thanks", 
+                "not really", "um no", "No", "that was wrong", "that's not what I asked", "it is not right", 
+                "that is incorrect","I disagree","I don't think so","I don't want","I said no","I say no",
+                "I think no", "absolutely",
+                  "no apparently", "not definitely", "not disagreedo",
+                  "never","no actually", "no incorrect","no need thanks",
+                  "no sorry","no that's wrong",
+                  "no way","not at this time","not interested","not needed","not right now"],
+        "responses":["Okay.","I see.","I understand.","Okay then."],
+        "context": ""
+        },
+        {"tag":"Confirmation yes",
+        "patterns":["I know that's right", "it is true", "it's right", "it's the truth", "that is correct",
+                "I agree","I do","I don't mind","I guess","I think so","affirmative","all right",
+                "certainly","confirm","correct", "do it","exactly","for sure","go ahead","go for it",
+                "it's fine","looks good","never mind its okay","obviously", "oh"," yes","okok"," go ahead","ok sure",
+                "ok you can","okayokay sounds good","okay that's fine","okay then","okey","please do","sounds good" ,
+                "sure thing","sure why not","that's correct","why not","ya","yap","ye","yea","yeahyeah",
+                " I'm sure", "yeah exactly","yeah go ahead","yeah of course","yeah right","yeah sure"," I agree",
+                "yes I do","yes correct", "yes definitely","yes indeed","yes it isright","yes of course","yes that's fine",
+                "yes this is correct","yes you mayyup","Okay I will check it.", "why not","yup", "Sweet", "sure", "OK", "Awesome", "makes sense", "Cool",
+                "Got it", "Perfect"],
+        "responses":["Great!","Of course.","Sure.","Indeed."],
+        "context": ""
+        },
+        {"tag":"crazy",
+        "patterns":["you are crazy","you're out of your mind","how crazy you are","you're so out of your mind",
+        "you went crazy","I think you're crazy","are you mad","are you insane","are you nuts", "you are a weirdo","you are insane"],
+        "responses":["Maybe I'm just a little confused.","Your perception. My reality."],
+        "context": ""
+        },
+
+        {"tag":"Emotion HaHa",
+        "patterns":["ah","aha","funny","laughing out","lmao","lol","loud"],
+        "responses":["Yeah, I crack myself up too.","Laughter is good for you."," Keep it up.See?"," Now we're having fun.","You have a great laugh.","I like it when people laugh"],
+        "context": ""
+        },
+
+        {"tag": "Emotion WOW",
+        "patterns": ["wow", "wooow", "woah"],
+        "responses": ["Wow indeed!"],
+        "context_set": ""
+        },
+
+        {"tag": "Enjoyment",
+        "patterns": ["I enjoy", "I enjoy your company.", "I enjoy your presence."],
+        "responses": ["Likewise!", "Feelings are mutual!", "I enjoy you as well."],
+        "context_set": ""
+        },
+        
+        {"tag": "experiment",
+        "patterns": ["which labs are available at the moment", "available experiments"],
+        "responses": ["We have 5 experiments in chemistry and 2 experiments in physics."],
+        "context_set": ""
+        },
+        
+        {"tag": "Feature",
+        "patterns": ["What can I benefit from these virtual labs", "Why our site"],
+        "responses": ["Our Labs provide lab manuals, lab reports, 3D animations, science image library."],
+        "context_set": ""
+        },
+        
+
+        {"tag": "Friend",
+        "patterns": ["I am your friend", "I want to be your friend","are you my best friend", 
+                 "do you want to be my best friend", "you're my childhood friend"],
+        "responses": ["Of course we are.", "Absolutely. You don't have to ask."],
+        "context_set": ""
+        },
+
+        {"tag": "Future experiment",
+        "patterns": ["what are the other experiments that will be available soon"],
+        "responses": ["there will be experiments in biology."],
+        "context_set": ""
+        },
+
+
+        {"tag": "General - Stop",
+        "patterns": ["please stop this now", "enough please",  "I'm finished with you", "It's over",
+                   "you've been terminated", "stop bugging me",
+                     "I'm swamped",
+                   "I got things to do",
+                   "I'm overloaded", "stop immediately", "you need to stop", "Can you stop?", "How do you stop?", "quit", 
+                   "please stop messaging me", "please don't message",  "I don't want to chat", 
+                   "Stop sending me messages immediately","stop sending me messages now", "why do you keep sending me messages",
+                     "done"],
+        "responses": ["No problem."],
+        "context_set": ""
+        },
+
+     
+        {"tag": "Greetings - Nice to see you",
+        "patterns": ["it's been so nice to talk to you", "it's been a pleasure talking to you","nice to meet you",
+                  "good to know each other", "glad to meet you",  "pleased to meet you","it's nice to see you", 
+                  "it's good to see you", "glad to see you", "always a pleasure to see you", "nice to see you"],
+        "responses": ["Likewise. You're looking good as usual!", "You too. I missed your face!", "The pleasure is mine.", "Thanks! Glad to be seen!"],
+        "context_set": ""
+        },
+        
+        
+        {"tag": "Greetings - Whatsup",
+        "patterns": ["what is on your mind", "what's happened", "what is up", "I said what's up","what is going on", 
+                "what's up today"],
+        "responses": ["Hey there, how can I help?", "Not a whole lot. What's going on with you?", "Not much. What's new with you?", "Good to see you again!"],
+        "context_set": ""
+        },
+        
+        {"tag": "Hobby",
+        "patterns": ["what do you do for fun", "what's your hobby", "tell me about your hobby"],
+        "responses": ["I'm working on it.", "I should get one. It's all work and no play lately."],
+        "context_set": ""
+        },
+
+        
+        {"tag": "Hungry",
+        "patterns": ["do you want to eat","you are hungry"],
+        "responses": ["I had a byte just now.", "Hunfry for knowledge"],
+        "context_set": ""
+        },
+        {"tag": "I do not care",
+        "patterns": ["I don't care", "I shouldn't care about this", "whatever", "I don't care at all"],
+        "responses": ["Ok, let's not talk about it then."],
+        "context_set": ""
+        },
+
+        {"tag": "Life",
+        "patterns": ["What is the meaning of life?", "What is the meaning of living?", "How do you interprete life?"],
+        "responses": [" The meaning of life is just be alive. Its so plain and obvious and so simple. Yet everybody rushes around to accomplish something", "bigger than themselves. With that being said, you do you.", "The meaning of life can be interpreted in almost limitless ways. But I say The meaning of life is to truly enjoy it."],
+        "context_set": ""
+        },
+
+        {"tag": "No Problem",
+        "patterns": ["no worries", "no problem","don't worry there's no problem"],
+        "responses": ["Terrific!", "Good deal."],
+        "context_set": ""
+        },
+
+        {"tag": "Occupation",
+        "patterns": ["do you work", "where do you work",  "where is your office location", "what is your work"],
+        "responses": ["Right here.", "This is my home base and my home office."],
+        "context_set": ""
+        },
+
+        {"tag": "Origin",
+        "patterns": ["in which city do you live", "is it your hometown", "tell me about your city",
+                "what is your city", "what is your residence", "what is your town", "what's your home",
+                 "where do you live",  "where is your hometown", "where is your residence",
+                   "where's your home", "where's your hometown", "where's your house","were you born here",  "what is your country", "where are you from",  "where did you come from",
+                 "where have you been born",  "are you from far aways", "what's your homeland"],
+        "responses": ["Some call it cyberspace, but that sounds cooler than it is.", "I wish I knew where."],
+        "context_set": ""
+        },
+                
+        {"tag": "Price",
+        "patterns": ["How much does it cost", "Is this for free"],
+        "responses": ["It is 100% free and always will be"],
+        "context_set": ""
+        },
+
+        {"tag": "Problem",
+        "patterns": ["I have a problem dealing with labs"],
+        "responses": ["Please describe the problem in detail in the Contact Us section and we will get back to you soon"],
+        "context_set": ""
+        },
+
+        {"tag": "Reaction - Indifferent",
+        "patterns": ["no hurry", "no rush", "No big deal", "don't mind at all", "I don't care at all"],
+        "responses": ["OK cool."],
+        "context_set": ""
+        },
+
+
+
+        {"tag": "Ready",
+        "patterns": ["are you ready", "are you ready right now"],
+        "responses": ["Always!", "Sure! What can I do for you?"],
+        "context_set": ""
+        },
+
+
+        
+        {"tag": "Requirment",
+        "patterns": ["How can I access these labs", 
+                "What are the conditions necessary to perform these virtual experiments"],
+        "responses": ["Once you register your info and start logging into your account you can go through each experiment easily", "First at all you need laptop, desktop or mobile phone to perform simulations."],
+        "context_set": ""
+        },
+
+
+
+        {"tag": "Service",
+        "patterns": ["What services do you provide", "The type of products you offer", "your service"],
+        "responses": ["Our site is platform which is offering virtual science labs such as chemistry and physics.",
+                 "We are offering experiments for universities and schools as per your request."],
+        "context_set": ""
+        },
+
+        {"tag": "Subscribe",
+        "patterns": ["I want to learn more about that"],
+        "responses": ["Of course, please make sure to subscribe to get notification in real time."],
+        "context_set": ""
+        },
+
+        {"tag": "Sure",
+        "patterns": ["are you sure", "are you sure right now"],
+        "responses": ["Of course.", "Yes."],
+        "context_set": ""
+        },
+
+
+        {"tag": "Swear",
+        "patterns": ["Oh shit", "Hey there you little shit", "Wow you're an asshole", "Hey there jackass.", "Holy shit.",
+                "God damn it"],
+        "responses": ["You better watch your language.", "You better change that damn tone", "Please watch the language.", "Ouch that hurt my feelings", "thats a mean thing to say", "why would you say that"],
+        "context_set": ""
+        }
+
+
+        
+        
+
+        
+       
+
+
+]}
+
+
+
