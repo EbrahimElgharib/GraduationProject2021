@@ -1,12 +1,10 @@
 from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render
-
-# Create your views here.
-
 # for contact-us page
 def send_email(request):
     if request.method == "POST":
+        # get all data from form to send it
         name = request.POST['name']
         email = request.POST['email']
         subject = request.POST['subject']

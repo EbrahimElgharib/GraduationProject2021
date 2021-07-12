@@ -1,8 +1,6 @@
 from functools import wraps
-
 from django.conf import settings
 from django.contrib import messages
-
 import requests
 
 def check_recaptcha(view_func):
