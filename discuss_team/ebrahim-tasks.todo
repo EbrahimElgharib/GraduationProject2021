@@ -17,8 +17,12 @@ Tasks:
         ✔ Merge Design of (Html files of profile) @done (٢٦‏/٥‏/٢٠٢١, ٦:٥٠:٠٨ ص)
             ✔ back end @done (١٢‏/٥‏/٢٠٢١, ٦:٤٦:٠٠ ص)
             ✔ front end [wait.. Mohey......] @done (٢٥‏/٥‏/٢٠٢١, ١٠:٥٨:١٨ م)
+        ☐ change password form ---> delete notes https://youtu.be/P6QHswl2PqE
+        ✔ change password done --> create it @done (٣‏/٧‏/٢٠٢١, ٦:٥٣:٠٦ ص)
+        
+        
         ☐ ** django-allauth package @low
-            ☐ Google
+            ✔ Google @done (٣‏/٧‏/٢٠٢١, ٦:٣٨:٤٠ ص)
             ☐ FB
             ☐ others ....
 
@@ -30,7 +34,7 @@ Tasks:
         ✔ home.html with login&out @done (٩‏/٥‏/٢٠٢١, ٣:٠٤:١٦ ص)
         ✔ footer info @done (٢٦‏/٥‏/٢٠٢١, ٦:٤٩:٥١ ص)
         ☐ footer:
-            ☐ subscribe
+            ☐ subscribe - ---> completed backend but not ( ajax )
             ☐ ..
 
     about_app:

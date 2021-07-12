@@ -38,6 +38,18 @@
                <div class="col-md-7">
                   <h3>Log in <strong>to our website Taleen</strong></h3>
                   <p class="mb-4">welcome to our virtual labs.</p>
+                  
+                  
+                  {% if user.is_authenticated %}
+                  <h5 style="color: brown;">You are logged in already</h5>
+                  <div class="my-2 my-lg-0 ">
+                      <a href="/" class="btn btn-primary btn-lg d-block mt-4 text-decoration-none active" role="button" aria-pressed="true">Home</a>
+                      <a href="{% url 'accounts:profile' %}" class="btn btn-primary btn-lg d-block mt-2 text-decoration-none active" role="button"
+                          aria-pressed="true">Profile</a>
+                      <a href="{% url 'logout' %}" class="btn btn-secondary btn-lg d-block mt-2 text-decoration-none active" role="button"
+                          aria-pressed="true">Logout</a>
+                  </div>
+                  {% else %}
                   <form action="#" method="post" class="needs-validation" novalidate>
                         {% csrf_token %}
                         {% bootstrap_form form %}
@@ -50,7 +62,7 @@
                            <input type="checkbox" />
                            <div class="control__indicator"></div>
                         </label>
-                        <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
+                        <span class="ml-auto"><a href="{% url 'password_reset' %}" class="forgot-pass">Forgot Password</a></span>
                      </div>
 
                      <div class="edit">
@@ -59,6 +71,7 @@
                         <span><a href="{% url 'accounts:signup' %}" class="hover"><strong>sign up</strong> </a></span>
                      </div>
                   </form>
+                  {% endif %}
                </div>
             </div>
          </div>
