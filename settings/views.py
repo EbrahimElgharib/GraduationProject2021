@@ -1,3 +1,5 @@
+from labs.models import Lab
+from blog.models import Post
 from django.shortcuts import render
 from .models import Subscriber
 from django.conf import settings
@@ -41,13 +43,19 @@ from django.http import JsonResponse
 #     return render(request, 'settings/home.html', context)
 
 def home(request):
-    return render(request, 'settings/home.html', {'subscriber_form': SubscriberForm()})
+    context = {
+        'recent_posts': Post.objects.all()[:3],
+        'recent_labs': Lab.objects.all()[:3],
+        'subscriber_form': SubscriberForm(),
+    }
+    return render(request, 'settings/home.html', context)
 
 
 ### Subscribers
 # Generate tokens
 def random_digits():
     return "%0.12d" % random.randint(0, 999999999999)
+
 
 @csrf_exempt
 def subscribe(request):

@@ -96,119 +96,32 @@
 </header>
 
 
-<section class="exploration">
-  <br> <br>
-  <h4 class="">
-    <p class="moving wow animate__fadeInLeftBig">explore our simulation labs</p>
-  </h4>
-  <br> <br>
 
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="container">
-          <div class="row margin-left">
-
-
-            <div class="col-sm-12 col-md-6 col-lg-6 padding-bot">
-              <img src="{% static 'images/Sign_Clip.png' %}" class="img-fluid rounded-circle img-thumbnail"
-                style="width: 230px; height: 230px; " alt="image">
-
-
-              <div class="" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title" style="padding-left: 50px;">Card title1</h5>
-                  <p class="card-text pl">Some quick example text to build on the card title and make up the bulk of the
-                    card's content Some quick example text to build on the card title and make up the bulk of the card's
-                    content Some quick example text
-                    to build on the card title and make up the bulk of the card's content .
-
-                  </p>
-                  <a href="#" class="btn btn-info" style="margin-left: 50px;">Read More</a>
-                </div>
-              </div>
-
-
-
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-6 padding-bot">
-
-
-              <img src="{% static 'images/login_Clip.png' %}" class="img-fluid rounded-circle img-thumbnail"
-                style="width: 230px; height: 230px; " alt="image">
-
-
-              <div class="" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title" style="padding-left: 50px;">Card title6</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content Some quick example text to build on the card title and make up the bulk of the card's
-                    content Some quick example text
-                    to build on the card title and make up the bulk of the card's content ..</p>
-                  <a href="#" class="btn btn-info" style="margin-left: 50px;">Read More</a>
-                </div>
-              </div>
+  <section id="blogs" class="">
+    <div class="container translate">
+      <h4 class="center wow animate__fadeInLeft">
+        Latest Virtual Labs
+      </h4>
+      <br />
+      <div class="row MarginFromLeft wow animate__fadeInLeft">
+        {% for lab in recent_labs %}
+        <div class="col-sm-12 col-md-6 col-lg-4 padding-bot">
+          <img src="{{lab.image.url}}" class="img-fluid rounded-circle img-thumbnail"
+            style="width: 230px; height: 230px; " alt="image">
+          <div class="" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" style="padding-left: 50px;">{{post.title}}</h5>
+              <p class="card-text">{{lab.description|safe|truncatewords:10}}</p>
+              <a href="{{lab.get_absolute_url}}" class="btn btn-info" style="margin-left: 50px;">Read More</a>
             </div>
           </div>
         </div>
+        {% endfor %}
       </div>
-      <div class="carousel-item marginLeft1">
-        <img src="{% static 'images/about.jpg' %}" class="img-fluid rounded-circle img-thumbnail"
-          style="width: 230px; height: 230px; " alt="image">
-
-
-        <div class="" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title" style="padding-left: 50px;">Card title3</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content Some quick example text to build on the card title and make up the bulk of the card's content Some
-              quick example text to build on
-              the card title and make up the bulk of the card's content ..</p>
-            <a href="#" class="btn btn-info" style="margin-left: 50px;"> Read More</a>
-          </div>
-        </div>
-
-
-
-      </div>
-      <div class="carousel-item marginLeft1">
-        <img src="{% static 'images/about.jpg' %}" class="img-fluid rounded-circle img-thumbnail"
-          style="width: 230px; height: 230px; " alt="image">
-
-
-        <div class="" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title" style="padding-left: 50px;">Card title3</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content Some quick example text to build on the card title and make up the bulk of the card's content Some
-              quick example text to build on
-              the card title and make up the bulk of the card's content ..</p>
-            <a href="#" class="btn btn-info" style="margin-left: 50px;"> Read More</a>
-          </div>
-        </div>
-
-
-
-      </div>
-
-
-
+  
     </div>
-
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-
-  </div>
+  </section>
   <br>
-
-</section>
 
 <section id="simulation">
 
@@ -291,51 +204,19 @@
     </h4>
     <br />
     <div class="row MarginFromLeft wow animate__fadeInLeft">
+      {% for post in recent_posts %}
       <div class="col-sm-12 col-md-6 col-lg-4 padding-bot">
-        <img src="{% static 'images/pexels-rfstudio-3825572.jpg' %}" class="img-fluid rounded-circle img-thumbnail"
-          style="width: 230px; height: 230px; " alt="image">
-
-        <div class="" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title" style="padding-left: 50px;">Card title9</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content Some quick example text to build on the card title and make up the bulk of the card's content Some
-              quick example text to build on
-              the card title and make up the bulk of the card's content .
-            </p>
-            <a href="#" class="btn btn-info" style="margin-left: 50px;">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-4 padding-bot">
-        <img src="{% static 'images/pexels-pixabay-256262.jpg' %}" class="img-fluid rounded-circle img-thumbnail"
+        <img src="{{post.image.url}}" class="img-fluid rounded-circle img-thumbnail"
           style="width: 230px; height: 230px; " alt="image">
         <div class="" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title" style="padding-left: 50px;">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content Some quick example text to build on the card title and make up the bulk of the card's content Some
-              quick example text to build on
-              the card title and make up the bulk of the card's content ..</p>
-            <a href="#" class="btn btn-info" style="margin-left:50px ;">Read More</a>
+            <h5 class="card-title" style="padding-left: 50px;">{{post.title}}</h5>
+            <p class="card-text">{{post.description|safe|truncatewords:20}}</p>
+            <a href="{{post.get_absolute_url}}" class="btn btn-info" style="margin-left: 50px;">Read More</a>
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-4 padding-bot">
-        <img src="{% static 'images/pexels-polina-zimmerman-3747486.jpg' %}"
-          class="img-fluid rounded-circle img-thumbnail" style="width: 230px; height: 230px; " alt="image">
-        <div class="" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title" style="padding-left :50px;">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content Some quick example text to build on the card title and make up the bulk of the card's content Some
-              quick example text to build on
-              the card title and make up the bulk of the card's content ..</p>
-            <a href="#" class="btn btn-info " style="margin-left: 50px;">Read More</a>
-          </div>
-        </div>
-
-      </div>
+      {% endfor %}
     </div>
 
   </div>
