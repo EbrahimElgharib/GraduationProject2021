@@ -24,13 +24,13 @@
                               <div class="card">
                                   <div class="card-header">
                                       <a class="card-link" data-toggle="collapse" href="#menu{{faq.id}}" aria-expanded="true"
-                                          aria-controls="menuone">{{faq.title}} <span <!--title of the question loaded from the database -->
+                                          aria-controls="menuone">{{faq.title|safe}} <span <!--title of the question loaded from the database -->
                                               class="collapsed"><i class="icon-plus-circle"></i></span><span
                                               class="expanded"><i class="icon-minus-circle"></i></span></a>
                                   </div>
                                   <div id="menu{{faq.id}}" class="collapse ">
                                       <div class="card-body">
-                                          <p>{{faq.content}}</p><!--content of the question loaded from the database -->
+                                          <p>{{faq.content|safe}}</p><!--content of the question loaded from the database -->
                                       </div>
                                   </div>
                               </div>
