@@ -9,6 +9,37 @@ from sendgrid.helpers.mail import Mail
 from django.http import JsonResponse
 # Create your views here.
 
+
+# def home(request):
+#     places = Place.objects.all().annotate(property_count=Count('property_place'))
+#     categorys = Category.objects.all()
+
+#     # property list of every category
+#     restaurant_list = Property.objects.filter(category__name='Restaurant')[:5]
+#     hotels_list = Property.objects.filter(category__name='Hotels')[:4]
+#     places_list = Property.objects.filter(category__name='Places')[:4]
+#     recent_posts = Post.objects.all()[:4]
+
+#     # count of propertys of every category
+#     user_count = User.objects.all().count()
+#     restaurant_count = Property.objects.filter(category__name='Restaurant').count()
+#     hotels_count = Property.objects.filter(category__name='Hotels').count()
+#     places_count = Property.objects.filter(category__name='Places').count()
+
+#     context = {
+#         'places':places,
+#         'categorys':categorys,
+#         'restaurant_list':restaurant_list,
+#         'hotels_list':hotels_list,
+#         'places_list':places_list,
+#         'recent_posts':recent_posts,
+#         'user_count':user_count,
+#         'restaurant_count':restaurant_count,
+#         'places_count':places_count,
+#         'hotels_count':hotels_count,
+#     }
+#     return render(request, 'settings/home.html', context)
+
 def home(request):
     return render(request, 'settings/home.html', {'subscriber_form': SubscriberForm()})
 

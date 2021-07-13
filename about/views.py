@@ -1,3 +1,4 @@
+from settings.forms import SubscriberForm
 from django.views.generic import ListView
 from .models import About, Team
 
@@ -7,4 +8,6 @@ class AboutList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["about"] = About.objects.last()
+        context["subscriber_form"] = SubscriberForm()
+
         return context

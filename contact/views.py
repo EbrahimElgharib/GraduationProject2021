@@ -1,3 +1,4 @@
+from settings.forms import SubscriberForm
 from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render
@@ -17,4 +18,4 @@ def send_email(request):
             [email]
         )
     # print('go return')
-    return render(request, 'contact/contact.html', {})
+    return render(request, 'contact/contact.html', {'subscriber_form': SubscriberForm()})

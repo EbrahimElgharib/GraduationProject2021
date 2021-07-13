@@ -1,3 +1,4 @@
+from settings.forms import SubscriberForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
@@ -65,6 +66,7 @@ def profile(request):
    context = {
       'profile_form':profile_form,
       'user_form':user_form,
+      'subscriber_form': SubscriberForm()
    }
    return render(request, 'profile/profile.html',context)
 
