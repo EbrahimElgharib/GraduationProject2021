@@ -17,13 +17,10 @@
         <div class="">
 
 
-            <p>
-                <h1 class="text-center text-muted animate__heartBeat" style="font-family: fantasy;"> welcome to our Blogs Posts details</h1>
-            </p>
+            <h4 class="center wow animate__flash">
+              explore our simulation labs
+            </h4>
             <br />
-
-
-            <img src='{% static "images/pexels-polina-zimmerman-3747486.jpg" %}' class="wow animate__hinge" alt="Logo" height="800px;" width="100%;">
 
         </div>
 
@@ -39,51 +36,51 @@
                 <div class="col-lg-7 col-md-12 col-sm-12">
 
                     <div class="card mb-3 shadow p-3 mb-5 bg-white rounded">
-                        <img src='{{lab.image.url}}' class="card-img-top" alt="Logo" height="500px;">
+                        <img src='{{lab.image.url}}' class="card-img-top" alt="Logo" height="500px;"><!-- loading this specific lab image form DB -->
                         <div class="card-body">
-                            <h5 class="card-title"><b style="font-family: fantasy;" class="text-muted"> {{lab.title}}</b> </h5>
+                            <h5 class="card-title"><b style="font-family: fantasy;" class="text-muted"> {{lab.title}}</b> </h5><!-- loading this specific lab title form DB -->
                             <p class="card-text">
-                              {{lab.description|safe}}
+                              {{lab.description|safe}} <!-- loading this description lab image form DB -->
                             </p>
 
 
                             <h5 class="card-title"><b style="font-family: fantasy;" class="text-muted">Experiment Objective  </b> </h5>
                             <p class="card-text">
-                                {{lab.experiment_objective|safe}}
+                                {{lab.experiment_objective|safe}}<!-- loading this objective lab image form DB -->
                             </p>
 
                             <h5 class="card-title"><b style="font-family: fantasy;" class="text-muted"> Experiment Materials</b></h5>
                             <p class="card-text">
-                                {{lab.experiment_materials|safe}}
+                                {{lab.experiment_materials|safe}}<!-- loading this mateials lab image form DB -->
                             </p>
 
 
                             <h5 class="card-title"><b style="font-family: fantasy;" class="text-muted">Experiment Steps</b> </h5>
                             <p class="card-text">
-                                {{lab.experiment_steps|safe}}
+                                {{lab.experiment_steps|safe}}<!-- loading this specific steps image form DB -->
                             </p>
 
                             <h5 class="card-title"><b style="font-family: fantasy;" class="text-muted">Experiment Conclusion</b></h5>
                             <p class="card-text">
-                                {{lab.experiment_conclusion|safe}}
+                                {{lab.experiment_conclusion|safe}}<!-- loading this specific lab Conclusion form DB -->
                             </p>
 
 
-                            <p class="card-text"><small class="text-muted" class="text-muted">{{lab.created_at}}</small></p>
+                            <p class="card-text"><small class="text-muted" class="text-muted">{{lab.created_at}}</small></p><!-- loads the date creation of this app -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-12 col-sm-12">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="{{lab.youtube_url}}" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="{{lab.youtube_url}}" allowfullscreen></iframe><!-- opens specific youtuber url for the experiment -->
 
                     </div>
 
                     <br />
                     <!-- <button type="button" class="btn btn-secondary btn-lg btn-block" style="margin-bottom:20px;">Try Our Experiment Now</button> -->
 
-                    <a role="button" class="btn btn-secondary btn-lg btn-block" href="{% url 'labs:unity_lab' %}" aria-pressed="true" style="margin-bottom:20px;">Try Our Experiment Now</a> </div>
-
+                    <a role="button" class="btn btn-secondary btn-lg btn-block" href="{% url 'labs:unity_lab' lab_id=lab.id %}" aria-pressed="true" style="margin-bottom:20px;">Try Our Experiment Now</a> </div>
+                    <!-- redirects the user to the unity page -->
                 <br />
             </div>
         </div>
