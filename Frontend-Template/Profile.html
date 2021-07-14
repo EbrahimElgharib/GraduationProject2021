@@ -8,37 +8,294 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
-    <title>User Profile</title>
+    <script src="https://kit.fontawesome.com/b89b4b2308.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/App.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+   
+    <title>Profile</title>
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+    <a class="navbar-brand margin-left Left" href="index.html"><img src="images/formula.png" style="width: 60px; height:60px"  margin-trim: 1;" alt="Taleen"></a>
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon flex-md-shrink-0"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav underline mr-auto ml-5 Left control flex-md-shrink-0 " style="margin-trim: 0;">
+            <li class="nav-item ">
+                <a class="nav-link " href="index.html">Taleen <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="virtual-labs.html">Virtual labs</a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link " href="Blogs.html" target="_blank">Blogs</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="about-us.html" target="_blank">About us</a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="contact-us.html">Contact us</a>
+            </li>
+        </ul>
+        <div class="my-2 my-lg-0 ">
+            <a href="sign-up.html" class="btn btn-outline-secondary my-2 my-sm-0 " role="button" aria-pressed="true"
+                target="_blank">Register</a>
+            <a href="log-in.html" class="btn btn-outline-secondary   myMoving " role="button" aria-pressed="true"
+                target="_blank">Login</a>
+        </div>
+
+    </div>
+</nav>
+
+    <!-------------------------------------------------------------------------------------------->
+
+    <div class="container" style="padding: 4rem 0;">
+      <h1>Edit Profile</h1>
+      <hr>
+      
+      <form action="" role="form" method="POST">
+        <div class="row">
+
+            <!-- left column -->
+            
+            <div class="col-md-3">
+              <div class="left-column text-center">
+
+                <div class="row">
+                  <img class="img-fluid rounded-circle img-thumbnail profile-pic" style="width: 200px; height: 200px;" src="https://legamart.com/avatars/Aria.jpg">
+                </div>
+                
+                <div class="p-image">
+                  <i class="fa fa-camera upload-button"></i>
+                  <input class="file-upload" type="file" accept="image/*"/>
+                </div>
+                
+              </div>
+            </div>
+            
+            <!-- edit form column -->
+            <div class="col-md-9 alert">
+                <div class="alert alert-info alert-dismissable fade show">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <i class="fa fa-coffee"></i>
+                  Please make sure to save your changes before leaving the page.
+                </div>
+                <!---------------------personal-info------------------------------>
+                <h3>Personal info</h3>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="myName">Name</label>
+                    <input type="text" class="form-control" id="myName" required >
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="myEmail">Email</label>
+                    <input type="email" class="form-control" id="myEmail" required >
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="myPhone">phone</label>
+                    <input type="number" class="form-control" id="myPhone" required >
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="city">city</label>
+                    <input type="text" class="form-control" id="city" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="myUnversity">Unversity</label>
+                    <input type="text" class="form-control" id="myUnversity" required >
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="myProfession">Profession</label>
+                    <select id="myProfession" class="form-control" required>
+                      <option>Profession</option>
+                      <option>Undergraduate Student</option>
+                      <option>Postgraduate Student</option>
+                      <option>Professor</option>
+                      <option>Assistant Professor</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="myFaculty">Faculty</label>
+                    <select id="myFaculty" class="form-control" required>
+                      <option>Faculty</option>
+                      <option>Faculty of Engineering</option>
+                      <option>Faculty of Medicine</option>
+                      <option>Faculty of Pharmacy</option>
+                      <option>Others</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="web">Web Search</label>
+                    <select id="web" class="form-control" required >
+                      <option>How did you hear about us?</option>
+                      <option>Facebook</option>
+                      <option>Youtube</option>
+                      <option>LinkedIn</option>
+                      <option>Others</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="submission">
+                  <div class="row" style="margin-left: 1px;">
+                    <button type="submit" class="btn btn-primary mt-4 mr-3">Save Changes</button>
+                    <button type="reset" class="btn btn-primary mt-4">Reset</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </form>
+    </div>
+
+
+    <!-------------------------------------------------------------------------------------------------->
+    <footer class="bg-footer text-white text-center text-lg-start ">
+      <!-- Grid container -->
+      <div class=" p-4">
+          <!--Grid row-->
+          <div class="row  wow slideInLeft">
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                  <img src="images/molecule.png" class="rounded-circle" alt="logo" style="width: 60px; height:60px">
+                  <br /> <br />
+                  <h5 class="text-uppercase ">Welcome To Our Website</h5>
+
+                  <p>
+                      our teams provide a standard virtual lab that keep up with
+                      other websites that have the same idea
+                      and they will available for you in case you have a trouble in understanding
+                      our expirements.
+                      they also provide a modern way for our stuents to facilitate the methods of
+                      learing for them and make easy to grasp
+                  </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+                  <h5 class="">HAVE A QUESTIONS?</h5>
+
+                  <!-- <ul class="list-unstyled mb-0">
+                      <li>
+                          <a href="#!" class="text-white">virtual labs</a>
+                      </li>
+                      <br />
+                      <li>
+                          <a href="#!" class="text-white">Contact us</a>
+                      </li>
+                      <br />
+                      <li>
+                          <a href="#!" class="text-white">About us</a>
+                      </li>
+                      <br />
+                      <li>
+                          <a href="#!" class="text-white">Blogs</a>
+                      </li>
+                  </ul> -->
 
 
 
+                  <!-- <ul class="list-unstyled mb-0">
+                      <li> <i class="fas fa-map-marker-alt " style="padding-right: 20px;"></i> <span> Location</span>
+                      </li>
+                      <br />
+                      <li>
+                          <i class="fas fa-phone-alt" style="padding-right: 20px;"></i> <span> phone number</span>
+                      </li>
+                      <br />
+                      <li>
+                          <i class="fas fa-envelope" style="padding-right: 20px;"></i> <span> Email</span>
+                      </li>
+                      <br />
+
+                  </ul> -->
 
 
 
+                  <div class="">
+                      <i class="fas fa-map-marker-alt "></i>
+                      <!-- <img src="..." class=" " alt="..."> -->
+                      <div class="media-body">
+                          <h5 class="mt-0"></h5>
+                          <p>dyarb negm </p>
+                      </div>
 
+                  </div>
+                  <div class="">
+                      <i class="fas fa-phone-alt"></i>
+                      <!-- <img src="..." class="" alt="..."> -->
+                      <div class="media-body">
+                          <h5 class="mt-0"></h5>
+                          <p>01142485899</p>
+                      </div>
+                  </div>
 
+                  <div class="">
+                      <i class="fas fa-envelope"></i>
+                      <!-- <img src="..." class="" alt="..."> -->
+                      <div class="media-body">
 
+                          <p>dragonsinmeliodas777@gmail.com</p>
+                      </div>
+                  </div>
 
+              </div>
+              <!--Grid column-->
 
+              <!--Grid column-->
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0 mt-0">
+                  <!-- <h5 class="text-uppercase mb-0">Links</h5> -->
+                  <br />
+ <p class=""><strong>Subscribe To Our Newsletter To Get The Latest News</strong></p>
 
-
-
-
-
-
-
-
+                  <form action="" method="post">
+                      <div class="input-group ">
+                          <input type="email" class="form-control" name="email" value="" placeholder="Email address"
+                              aria-label="Recipient's username" aria-describedby="button-addon2">
+                          <div class="input-group-append">
+                              <button class="btn btn-warning" type="button" id="button-addon2"
+                                  onclick="Register()">Go!</button>
+                          </div>
+                      </div>
+                  </form>
+                  <div class="message"></div>
+              </div>
+              <!--Grid column-->
+          </div>
+          <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+          © 2021 Copyright:
+          <a class="text-white" href="#">www.Taleen.com</a>
+          <!-- <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a> -->
+      </div>
+      <!-- Copyright -->
+  </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
+    <script src="js/pluign.js"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
