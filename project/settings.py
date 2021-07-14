@@ -222,3 +222,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Newsletter  ### https://app.sendgrid.com/settings/api_keys
 FROM_EMAIL = 'ebrahimtest44@gmail.com'
 SENDGRID_API_KEY = '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'
+
+
+
+
+
+
+VERIFICATION_SUCCESS_TEMPLATE = None
