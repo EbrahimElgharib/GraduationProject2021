@@ -1,3 +1,4 @@
+from django.contrib import messages
 from settings.forms import SubscriberForm
 from django.conf import settings
 from django.core.mail import send_mail
@@ -18,5 +19,6 @@ def send_email(request):
             [settings.EMAIL_HOST_USER]
         )
         print('email is sent')
+        messages.error(request, 'Your Message is Sent successfully')
     print('go return')
     return render(request, 'contact/contact.html', {'subscriber_form': SubscriberForm()})
