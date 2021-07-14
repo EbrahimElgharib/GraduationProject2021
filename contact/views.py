@@ -10,12 +10,13 @@ def send_email(request):
         email = request.POST['email']
         subject = request.POST['subject']
         message = request.POST['message']
-        # print('get request data is done')
+        print('get request data is done')
         send_mail(
-            subject,
+            subject + ':' + name,
             message,
             settings.EMAIL_HOST_USER,
             [email]
         )
-    # print('go return')
+        print('email is sent')
+    print('go return')
     return render(request, 'contact/contact.html', {'subscriber_form': SubscriberForm()})
