@@ -15,7 +15,6 @@
         <div class="left-column text-center">
 
           <div class="circle">
-            <!-- img-thumbnail is added by Ebrahim and I will remove it -->
             {% if user.profile.image %}
             <img class="profile-pic" src="{{user.profile.image.url}}">
             {% else %}
@@ -61,6 +60,9 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             {{profile_form.country|as_crispy_field}}
+          </div>
+          <div class="form-group col-md-6">
+            {{profile_form.education|as_crispy_field}}
           </div>
         </div>
         <hr>
