@@ -35,7 +35,7 @@ def signup(request):
             # login(request, user)
 
             inactive_user = send_verification_email(request, form) # verify pkg
-            inactive_user.cleaned_data['email']
+            # inactive_user.cleaned_data['email']
 
             return redirect('/accounts/profile')  
    else: # else return form as empty
