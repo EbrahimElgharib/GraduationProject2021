@@ -68,6 +68,8 @@ INSTALLED_APPS = [
     'blog',
     'settings',
     'contact',
+
+    "verify_email.apps.VerifyEmailConfig", # verification
 ]
 
 # Provider specific settings

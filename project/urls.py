@@ -33,6 +33,8 @@ urlpatterns = [
     # social account
     path('socialaccounts/', include('allauth.urls')),
 
+    path('verification/', include('verify_email.urls')), # verify pkg
+
 
 ]
 
