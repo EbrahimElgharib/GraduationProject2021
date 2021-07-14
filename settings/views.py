@@ -78,18 +78,30 @@ def subscribe(request):
 # confirm subscribers
 def confirm(request):
     sub = Subscriber.objects.get(email=request.GET['email'])
+    context = {
+        'email': sub.email,
+        "subscriber_form" : SubscriberForm()
+    }
     if sub.conf_num == request.GET['conf_num']:
         sub.confirmed = True
         sub.save()
-        return render(request, 'subscriber/subscribe.html', {'email': sub.email, 'action': 'confirmed'})
+        context["action"] = 'confirmed'
+        return render(request, 'subscriber/subscribe.html', context)
     else:
-        return render(request, 'subscriber/subscribe.html', {'email': sub.email, 'action': 'denied'})
+        context["action"] = 'denied'
+        return render(request, 'subscriber/subscribe.html', context)
 
 # delete subscribers
 def delete(request):
     sub = Subscriber.objects.get(email=request.GET['email'])
+    context = {
+        'email': sub.email,
+        "subscriber_form" : SubscriberForm()
+    }
     if sub.conf_num == request.GET['conf_num']:
         sub.delete()
-        return render(request, 'subscriber/subscribe.html', {'email': sub.email, 'action': 'unsubscribed'})
+        context["action"] = 'unsubscribed'
+        return render(request, 'subscriber/subscribe.html', context)
     else:
-        return render(request, 'subscriber/subscribe.html', {'email': sub.email, 'action': 'denied'})
+        context["action"] = 'denied'
+        return render(request, 'subscriber/subscribe.html', context)

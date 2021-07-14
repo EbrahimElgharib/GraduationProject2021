@@ -16,3 +16,7 @@ class AboutList(ListView):
 
 class FAQ(ListView):
     model = FAQ
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["subscriber_form"] = SubscriberForm()
+        return context
