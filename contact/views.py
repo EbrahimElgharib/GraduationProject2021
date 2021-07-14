@@ -12,10 +12,10 @@ def send_email(request):
         message = request.POST['message']
         print('get request data is done')
         send_mail(
-            subject + ':' + name,
-            message,
-            settings.EMAIL_HOST_USER,
-            [email]
+            subject,
+            "I am "+name+": "+message,
+            email,
+            [settings.EMAIL_HOST_USER]
         )
         print('email is sent')
     print('go return')
