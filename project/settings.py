@@ -227,5 +227,6 @@ SENDGRID_API_KEY = 'SG.ZjH8QTrqRbGDNMjn3PREhg.NQOKkO2lqglOdwLvxqi8_6f_iJoMwNntQU
 
 
 
-
+# pkg verification 
 VERIFICATION_SUCCESS_TEMPLATE = None
+EXPIRE_AFTER = "1d"
