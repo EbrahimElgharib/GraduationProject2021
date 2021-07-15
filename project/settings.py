@@ -95,10 +95,6 @@ SOCIALACCOUNT_PROVIDERS = {
             'email',
             'name',
         ],
-        'EXCHANGE_TOKEN': True,
-        'LOCALE_FUNC': 'path.to.callable',
-        'VERIFIED_EMAIL': False,
-        'VERSION': 'v2.8',
     }
 
 }
