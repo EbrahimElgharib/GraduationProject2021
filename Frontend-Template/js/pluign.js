@@ -29,6 +29,9 @@ $(document).ready(function() {
         
     });
 
-    $('.conv-form-wrapper').convform({selectInputStyle: 'disable'});
+    $('#chat').convform({selectInputStyle: 'disable'});
+
+
+
 });
 
