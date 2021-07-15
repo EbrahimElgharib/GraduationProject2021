@@ -69,7 +69,7 @@ INSTALLED_APPS = [
     'settings',
     'contact',
 
-    "verify_email.apps.VerifyEmailConfig", # verification
+    "verify_email.apps.VerifyEmailConfig",  # verification
 ]
 
 # Provider specific settings
@@ -83,6 +83,23 @@ SOCIALACCOUNT_PROVIDERS = {
             'access_type': 'online',
         }
     },
+
+
+    'facebook': {
+        'METHOD': 'oauth2',
+        'SCOPE': ['email', 'public_profile', 'user_friends'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'INIT_PARAMS': {'cookie': True},
+        'FIELDS': [
+            'id',
+            'email',
+            'name',
+        ],
+        'EXCHANGE_TOKEN': True,
+        'LOCALE_FUNC': 'path.to.callable',
+        'VERIFIED_EMAIL': False,
+        'VERSION': 'v2.8',
+    }
 
 }
 
@@ -224,9 +241,6 @@ FROM_EMAIL = 'ebrahimtest44@gmail.com'
 SENDGRID_API_KEY = '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'
 
 
-
-
-
-# pkg verification 
+# pkg verification
 VERIFICATION_SUCCESS_TEMPLATE = None
 EXPIRE_AFTER = "1d"
