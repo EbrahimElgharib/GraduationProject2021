@@ -24,6 +24,8 @@
 }
 
 
+  
+
 /* .cover{
  
         background-repeat: no-repeat;
@@ -413,5 +415,17 @@ font-family: sans-serif;
         /* padding-bottom: 3px; */
         /* transition: 0.5s ease-in-out;
     float: left; */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .PaddingLeft {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .MovedLeft {
+        margin-left: 60px;
     }
 }

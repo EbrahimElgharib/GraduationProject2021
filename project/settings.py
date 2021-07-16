@@ -27,11 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'virtual-lab-2021.herokuapp.com',
+    'https://virtual-lab-2021.herokuapp.com',
     '127.0.0.1',
-    ]
+    'localhost',
+]
 
 # Application definition
-
 INSTALLED_APPS = [
     'accounts',
     'django.contrib.admin',
@@ -41,33 +42,71 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    ##### FrontEnd
+
+    # for allauth pkg - for social
+    # The following apps are required:
+    'django.contrib.sites',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    # providers
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.linkedin_oauth2',
+    # FrontEnd
     # https://pypi.org/project/django-bootstrap4/
     "bootstrap4",
     'crispy_forms',
-
-    ##### External Packages
-    "taggit", # https://github.com/jazzband/django-taggit
-    'django_summernote', # https://github.com/summernote/django-summernote
-    'django_countries', # https://github.com/SmileyChris/django-countries
-    
+    # External Packages
+    "taggit",  # https://github.com/jazzband/django-taggit
+    'django_summernote',  # https://github.com/summernote/django-summernote
+    'django_countries',  # https://github.com/SmileyChris/django-countries
     # Apps
     'labs',
     'about',
     'blog',
     'settings',
     'contact',
+
+    "verify_email.apps.VerifyEmailConfig",  # verification
 ]
 
+# Provider specific settings
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    },
+
+
+    'facebook': {
+        'METHOD': 'oauth2',
+        'SCOPE': ['email', 'public_profile', 'user_friends'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'INIT_PARAMS': {'cookie': True},
+        'FIELDS': [
+            'id',
+            'email',
+            'name',
+        ],
+    }
+
+}
+
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-
 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', ## for whitenoist pkg-heroku
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # for whitenoist pkg-heroku
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -88,22 +127,38 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'settings.footer_context_processor.myfooter', # my footer
+                'settings.footer_context_processor.myfooter',  # data in my footer
+                'settings.footer_context_processor.subscribe_footer',  # subscribe form
             ],
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+# login
+LOGIN_URL = '/accounts/login'
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGOUT_REDIRECT_URL = '/accounts/login'
+LOGIN_REDIRECT_URL = '/accounts/profile'
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',  # Path of DB File
     }
 }
 
@@ -145,7 +200,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / "static" / "staticroot" # for heroku
+STATIC_ROOT = BASE_DIR / "static" / "staticroot"  # for heroku
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/var/www/static/',
@@ -154,24 +209,15 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
 
-### Show summernote package
+# Show summernote package
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 SUMMERNOTE_THEME = 'bs4'  # Show summernote with Bootstrap4
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
-##### login
-LOGIN_URL = '/accounts/login'
-
-##### Redirect to home URL after login (Default redirects to /accounts/profile/)
-# LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
-
-
-
-### send emails
-EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+# send emails
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
@@ -179,6 +225,18 @@ EMAIL_HOST_USER = 'ebrahimtest44@gmail.com'
 EMAIL_HOST_PASSWORD = 'suctirajajirqwdw'
 
 
+# recaptch
+GOOGLE_RECAPTCHA_SECRET_KEY = '6LfxBoUbAAAAAIsEz2PN5gkXj3Y0d2E2XhaMHjmO'
 
-### for white noise pkg --> heroku
+
+# for white noise pkg --> heroku
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Newsletter  ### https://app.sendgrid.com/settings/api_keys
+FROM_EMAIL = 'ebrahimtest44@gmail.com'
+SENDGRID_API_KEY = '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'
+
+
+# pkg verification
+VERIFICATION_SUCCESS_TEMPLATE = None
+EXPIRE_AFTER = "1d"

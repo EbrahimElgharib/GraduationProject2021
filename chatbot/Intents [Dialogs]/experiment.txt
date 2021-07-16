@@ -1,9 +1,0 @@
-
-Experiment
------------------
-which labs are available at the moment
-available experiments
-
-
-<Response>
-We have 5 experiments in chemistry and 2 experiments in physics.

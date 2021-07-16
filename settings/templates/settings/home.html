@@ -1,8 +1,204 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
 
-{% if user.is_authenticated %}
-  Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">Log Out</a></p>
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
-{% endif %}
+
+{% block body %}
+
+<!-- home content -->
+<article>
+  <div id="carouselExampleCaptions" class="carousel slide bottomPadding" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="{% static 'images/SOL_3-min.jpg' %}" class="d-block w-100 mySize " alt="image">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5 >Immersive 3D Interaction</h5>
+                  <p >Taleen provides students with an immersive and interactive 3D simulation of a realistic lab,
+                      enhancing their understanding and knowledge
+                      with a virtual hands-on experience of what they’ve learned.</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="{% static 'images/build-atom-min.jpg' %}" class="d-block w-100 mySize" alt="image">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>Adaptive to Learning Styles</h5>
+                  <p>We provide an experience and educational tools that fit every student’s unique learning
+                      style,
+                      with various multimedia formats and adaptive learning experiences that will help them
+                      excel..</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="{% static 'images/maxresdefault.jpg' %}" class="d-block w-100 mySize" alt="image">
+              <div class="carousel-caption d-none d-md-block" >
+                  <h5>Beyond the Lab</h5>
+                  <p>Students get more with PraxiLabs, thanks to its various study aids provided in different
+                      formats and its assessment
+                      to boost their knowledge and understanding,
+                      in addition to the opportunity to perform experiments safely..</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</article>
+
+
+<header id="Home" class="Home">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+
+
+      <div class="row wow slideInLeft">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <h2 class="display-4">Experience a Virtual World of Science Education</h2>
+
+          <p class="lead">Taleen Helps You Conduct Science Experiments Anywhere Via 3D Interactive Virtual
+            Labs .</p>
+          <hr class="my-4">
+          <p>Whether you are teaching or learning biology, chemistry, or physics at university, We’ve got
+            you covered.</p>
+        </div>
+        <br />
+        <div class="col-lg-6 col-md-6 col-sm-12 wow slideInLeft">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PjkU_pQQ8hU"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <section id="blogs" class="">
+    <div class="container translate">
+      <h4 class="center wow animate__fadeInLeft">
+        Latest Virtual Labs
+      </h4>
+      <br />
+      <div class="row MarginFromLeft wow animate__fadeInLeft">
+        {% for lab in recent_labs %}
+        <div class="col-sm-12 col-md-6 col-lg-4 padding-bot">
+          <img src="{{lab.image.url}}" class="img-fluid rounded-circle img-thumbnail"
+            style="width: 230px; height: 230px; " alt="image">
+          <div class="" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" style="padding-left: 50px;">{{lab.title}}</h5>
+              <p class="card-text">{{lab.description|safe|truncatewords:10}}</p>
+              <a href="{{lab.get_absolute_url}}" class="btn btn-info" style="margin-left: 50px;">Read More</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+  
+    </div>
+  </section>
+
+<section id="simulation">
+
+  <div class="container myPadding">
+    <br>
+    <h4 class="center wow animate__fadeInLeft">learn easily with us!</h4>
+    <br />
+    <br />
+
+    <div class="row wow slideInLeft ">
+      <div class=" col-md-4 col-sm-12 ">
+        <img src="{% static 'images/book.svg' %}" alt="" width="50px;" class="">
+
+        <h4>think easily</h4>
+        <p>this is the most eaisly way to learn how to be a good student in the future so you can understand every thing
+          you want here
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <img src="{% static 'images/biological.svg' %}" alt="information" width="50px;">
+        <h4>learn free</h4>
+        <p>
+          you can be professional if you follow our instructions in this tutorials so have fun with this information
+          from our webiste
+
+
+        </p>
+
+      </div>
+
+      <div class="col-md-4 col-sm-12">
+        <img src="{% static 'images/innovation.svg' %}" alt="information" width="50px;">
+
+        <h4>study with us</h4>
+        <p>
+          you have the full options to be the most clever boy in this tutorial about our simulation labs that wil
+          enpower your in the filed you are work with
+        </p>
+
+      </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+
+    <div class="row wow slideInLeft ">
+      <div class="col-md-4 col-sm-12">
+        <img src="{% static 'images/coronavirus.svg' %}" alt="information" width="50px;">
+        <h4>love us!</h4>
+        <p>
+          we think that you will be able to study easily as we provide the most modern ways for teaching you so you can
+          be able to do what you want after seeing our labs
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <img src="{% static 'images/understanding.svg' %}" alt="informtion" width="50px;">
+        <h4>welcome !</h4>
+        <p>
+          most of the popular people loves our work and they express their opinions that the webiste was so good for
+          student to stduy with the most modern way in their filed
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-12">
+        <img src="{% static 'images/light-bulb.svg' %}" alt="information" width="50px;">
+        <h4>we are here</h4>
+        <p>
+          we introudce to you more simple ways to learn in your filed in case you have some toruble in your studing
+          through our vitual labs you will be happy and your skills will grow fast so have fun.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="blogs" class="">
+  <div class="container translate">
+    <h4 class="center wow animate__fadeInLeft">
+      Latest Blog Posts
+    </h4>
+    <br />
+    <div class="row MarginFromLeft wow animate__fadeInLeft">
+      {% for post in recent_posts %}
+      <div class="col-sm-12 col-md-6 col-lg-4 padding-bot">
+        <img src="{{post.image.url}}" class="img-fluid rounded-circle img-thumbnail"
+          style="width: 230px; height: 230px; " alt="image">
+        <div class="" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title" style="padding-left: 20px;">{{post.title}}</h5>
+            <p class="card-text">{{post.description|safe|truncatewords:30}}</p>
+            <a href="{{post.get_absolute_url}}" class="btn btn-info" style="margin-left: 50px;">Read More</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+
+
+{% endblock body %}

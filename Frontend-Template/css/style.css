@@ -1,5 +1,10 @@
-body {
-    margin-top: 86px;
+.jumbotron {
+    background-image: url("");
+    background-repeat: no-repeat;
+    margin-bottom: 0px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .backGroundImage {
@@ -9,7 +14,6 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 4rem 2rem;
 }
 
 .underline a:hover {
@@ -19,6 +23,8 @@ body {
     float: left; */
 }
 
+
+  
 
 /* .cover{
  
@@ -52,8 +58,6 @@ body {
 
 .team {
     background-color: #bdc3c7;
-    padding-top: 80px;
-    padding-bottom: 80px;
 }
 
 .Virtual-labs {
@@ -62,8 +66,6 @@ body {
 
 .content {
     background-color: #ecf0f1;
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 
 #simulation {
@@ -194,10 +196,15 @@ padding-right: 30px;
 html {
     scroll-behavior: smooth;
 }
+
 .marginTop {
     margin-top: 100px;
 }
 
+.margin-Top {
+    margin-top: 100px;
+    /* justify-content: initial; */
+}
 
 .image {
     background-repeat: no-repeat;
@@ -207,6 +214,10 @@ html {
     background-attachment: fixed;
     width: 500px;
     height: 500px;
+}
+
+.myPad {
+    margin-right: 40px;
 }
 
 .content-left {
@@ -271,6 +282,7 @@ html {
 }
 
 .text-decoration {
+    /* border-bottom: 1px solid #000; */
     font-size: 2.5rem;
     font-weight: 700;
     border-bottom: 2px solid #fff;
@@ -403,5 +415,17 @@ font-family: sans-serif;
         /* padding-bottom: 3px; */
         /* transition: 0.5s ease-in-out;
     float: left; */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .PaddingLeft {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .MovedLeft {
+        margin-left: 60px;
     }
 }
