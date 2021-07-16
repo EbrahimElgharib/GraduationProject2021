@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-    
     var readURL = function(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -13,7 +12,6 @@ $(document).ready(function() {
         }
     }
     
-
     $(".file-upload").on('change', function(){
         readURL(this);
     });
@@ -29,9 +27,23 @@ $(document).ready(function() {
         
     });
 
+
     $('#chat').convform({selectInputStyle: 'disable'});
-
-
 
 });
 
+
+
+var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword() {
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
