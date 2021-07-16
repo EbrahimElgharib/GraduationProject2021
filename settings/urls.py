@@ -1,9 +1,12 @@
 from django.urls import path
-from .views import home
+from . import views
 
 app_name = 'settings'
 
 urlpatterns = [
-    path('', home, name='home'),
+    path('', views.home, name='home'),
+    path('subscribe/', views.subscribe, name='subscribe'),
+    path('subscribe/confirm/', views.confirm, name='confirm_subscribe'),
+    path('subscribe/delete/', views.delete, name='delete_subscribe'),
 
 ]

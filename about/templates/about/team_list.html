@@ -5,136 +5,131 @@
 
 <title>About us</title>
 
-    <header id="Home">
+<header id="Home">
 
-        <div class="backGroundImage jumbotron jumbotron-fluid ">
-            <div class="container marginTop ">
-
-
-                <div class="row ">
-                    <div class="col-lg-6 col-md-6">
-                        <h1 class="display-4">Fluid jumbotron</h1>
-
-                        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its
-                            parent.</p>
-                        <hr class="my-4">
-                        <p>It uses utility classes for typography and spacing to space content out within the larger
-                            container.</p>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb margin-Top">
-                                <li class="breadcrumb-item"><a href="#">HOME</a></li>
-                                <li class="breadcrumb-item"><a href="#">ABOUT US</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">WHO WE ARE</li>
-                            </ol>
-                        </nav>
+    <div class="backGroundImage jumbotron jumbotron-fluid ">
+        <div class="container marginTop ">
 
 
-
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-
-    </header>
-
-    <section class="content">
-
-
-
-        <div class="container">
-
-            <!-- <p class="center m-2 " style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 30px; " > WHO WE ARE </p> -->
-
-            <div class=" text-center">
-                <br /><br />
-                <h4 class="text-muted text-decoration">WHO WE ARE</h4>
-                <br>
-
-            </div>
-
-            <br />
-            <div class="row">
-                <div class="col-lg-6 mb-5">
-
-                    <p class="justify-content-center moving-top mr-5 animate__bounceOut">{{about.who_we_are}}</p>
-
-                </div>
-                <div class="col-lg-6">
-
-                    <img src='{{about.image.url}}' alt="image descritpion"
-                        class="img-responsive img-thumbnail img-fluid image ">
-
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- <hr class="divider"> -->
-
-    <div style="border-bottom: white 1px snow;"></div>
-
-    <section class="team">
-
-        <div class="container">
-
-            <div class=" text-center">
-                <br /><br />
-                <h4 class="text-muted text-decoration">our teams</h4>
-
-                <br /><br />
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                <br /><br />
-            </div>
             <div class="row ">
-                {% for person in object_list %}
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h1 class="display-4">Dedicated Team</h1>
+
+                    <p class="lead">our team is dedicated to enhancing science education in your organization to enhance
+                        the educational experience of your students.</p>
+                    <hr class="my-4">
+                    <p>Technology never takes a day off, and that is why we constantly seek ways to improve and enhance
+                        our solutions.</p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb margin-Top">
+                            <li class="breadcrumb-item"><a href="/">HOME</a></li>
+                            <li class="breadcrumb-item"><a href="{% url 'about:about' %}">ABOUT US</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">WHO WE ARE</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-                <div class="col-sm-6 col-md-6 col-lg-3">
+</header>
 
-                    <!-- <i class="fas fa-user-circle marginLeft alert-light fa-8x"></i> -->
-                    <img src='{{person.picture.url}}' class="img-fluid rounded-circle img-thumbnail"
-                        style="width: 200px; height: 200px; " alt="...">
-
-                    <div class="" style="width: 18rem;">
-                        <div class="card-body ">
-                            <h5 class="card-title ">{{person.name}}</h5>
-                            <p class="card-text myPad">
-                                {{person.description}}
-                            </p>
-                            <!-- facebook here -->
-                            <div class="social-login">
-                                <a href="{{person.fb_link}}" class="facebook">
-                                    <span class=" mr-3"><i class="fab fa-facebook-f"></i></span>
-                                </a>
+<section class="content">
 
 
-                                <a href="{{person.wattsapp_link}}" class="whatsapp">
-                                    <span class="mr-3"><i class="fab fa-whatsapp"></i></span>
-                                </a>
 
-                                <a href="{{person.linkedin_link}}" class="linkedin">
-                                    <span class="mr-3"><i class="fab fa-linkedin-in"></i></span>
-                                </a>
+    <div class="container">
 
-                            </div>
+        <!-- <p class="center m-2 " style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 30px; " > WHO WE ARE </p> -->
 
+        <div class=" text-center">
+            <br /><br />
+            <h4 class="text-muted text-decoration">WHO WE ARE</h4>
+            <br>
+
+        </div>
+
+        <br />
+        <div class="row">
+            <div class="col-lg-6 mb-5">
+
+                <p class="justify-content-center moving-top mr-5 animate__bounceOut">{{about.who_we_are}}</p>
+
+            </div>
+            <div class="col-lg-6">
+
+                <img src='{{about.image.url}}' alt="image descritpion"
+                    class="img-responsive img-thumbnail img-fluid image ">
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- <hr class="divider"> -->
+
+<div style="border-bottom: white 1px snow;"></div>
+
+<section class="team">
+
+    <div class="container">
+
+        <div class=" text-center">
+            <br /><br />
+            <h4 class="text-muted text-decoration">Our Team</h4>
+
+            <br /><br />
+            <p>This is our teams that will help you in case you need any help</p>
+            <br /><br />
+        </div>
+        <div class="row ">
+            {% for person in object_list %}
+
+
+            <div class="col-sm-6 col-md-6 col-lg-3 PaddingLeft">
+
+                <!-- <i class="fas fa-user-circle marginLeft alert-light fa-8x"></i> -->
+                <img src='{{person.picture.url}}' class="img-fluid rounded-circle img-thumbnail"
+                    style="width: 200px; height: 200px; " alt="...">
+
+                <div class="" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{person.name}}</h5>
+                        <p class="card-text myPad">
+                            {{person.description}}
+                        </p>
+                        <!-- facebook here -->
+                        <div class="social-login">
+                            <a href="{{person.fb_link}}" class="facebook">
+                                <span class=" mr-3"><i class="fab fa-facebook-f"></i></span>
+                            </a>
+
+
+                            <a href="{{person.wattsapp_link}}" class="whatsapp">
+                                <span class="mr-3"><i class="fab fa-whatsapp"></i></span>
+                            </a>
+
+                            <a href="{{person.linkedin_link}}" class="linkedin">
+                                <span class="mr-3"><i class="fab fa-linkedin-in"></i></span>
+                            </a>
 
                         </div>
+
+
                     </div>
                 </div>
-                {% endfor %}
-
             </div>
+            {% endfor %}
+
         </div>
+    </div>
 
-    </section>
+</section>
 
-    <!-- <br /><br /> -->
+<!-- <br /><br /> -->
 {% endblock body %}

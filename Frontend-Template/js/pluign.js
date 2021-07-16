@@ -28,7 +28,10 @@ $(document).ready(function() {
         
     });
 
+
+
     $('#chat').convform({selectInputStyle: 'disable'});
+
 });
 
 

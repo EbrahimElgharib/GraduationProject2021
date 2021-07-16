@@ -61,3 +61,31 @@ function toUp() {
 //         }
 
 // }
+
+
+function Register() {
+
+    let message;
+
+    if (document.form.input.value == "email") {
+        
+        message = "thanks for registration!";
+        input.preventDefault();
+        input.stopPropagation();
+    } else if (document.form.input.value == "exist") {
+
+        message = "your are already exist";
+        input.preventDefault();
+        input.stopPropagation();
+
+    }else {
+
+        message = "not valid email! Please try again";
+        input.preventDefault();
+        input.stopPropagation();
+    }
+
+    document.getElementsByClassName("message").innerText = message;
+
+}
+

@@ -11,6 +11,7 @@ class SignupForm(UserCreationForm):
                                 widget=forms.PasswordInput)
    password2 = forms.CharField(label='Confirm password', 
                                 widget=forms.PasswordInput)
+   
 
    # form
    class Meta:
@@ -21,15 +22,18 @@ class SignupForm(UserCreationForm):
               
 
 class UserForm(forms.ModelForm):
+   email = forms.EmailField(label="Email Address", disabled=True)
+   
    class Meta:
       model = User
       # fields = ['username','email','first_name','last_name'] 
       fields = ['email','first_name','last_name'] 
 
 class ProfileForm(forms.ModelForm):
+   image = forms.ImageField(error_messages={'invalid':("Image Files Only!")}, widget=forms.FileInput)
    class Meta:
       model = Profile
       # fields = ['image', 'phone_number','country', 'address','education']
-      fields = ['image','phone_number','country']
+      fields = ['image','phone_number','country', 'education']
       # fields = ['user','phone_number','address','image']
       widgets = {'country': CountrySelectWidget()} # for country pkg
