@@ -23,9 +23,11 @@ $(document).ready(function() {
 
     //   chatbot
     $(".chat-icon").click(function () { 
+        
         $(".chat-box").toggleClass("active");
         
     });
+
 
 
     $('#chat').convform({selectInputStyle: 'disable'});
