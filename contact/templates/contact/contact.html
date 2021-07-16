@@ -11,13 +11,12 @@
                     <div class="row justify-content-center">
                         <div class="col-md-6">
                             <h3 class="heading mb-4">Let's talk about everything!</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas debitis, fugit natus?
-                            </p>
+                            <p>Be Hapy to communicate with us and share your notes to improve our products</p>
                             <p><img src="{% static 'images/contact.svg' %}" alt="Image"
                                     class="img-fluid img-responsive"></p>
                         </div>
                         <div class="col-md-6">
-                            
+
                             <!-- Start Messeage from backend view -->
                             {% for message in messages %}
                             <div class="alert {{ message.tags }} alert-dismissible alert-success" role="alert">
