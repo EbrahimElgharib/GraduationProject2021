@@ -14,10 +14,16 @@ body {
     z-index: 1000;
     color: rgb(0, 110, 255);
 }
+.chat-icon i {
+    background-color: #4f8cc3;
+    color: #fff;
+    padding: 10px;
+    font-size: 40px;
+}
 .chat-box {
     position: fixed;
     right: 20px;
-    bottom: 75px;
+    bottom: 74px;
     width: 400px;
     height: 80vh;
     background-color: #dedede;
