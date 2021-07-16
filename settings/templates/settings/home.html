@@ -6,31 +6,6 @@
 
 {% block body %}
 
-<!-- {% comment %} -->
-<!-- This is an alert about subscriber - confirm or delete -->
-<!-- {% endcomment %} -->
-<!-- <div class="container">
-  <div class="col-md-9">
-    {% if email %}
-    <div class="alert alert-info alert-dismissable">
-      <a class="panel-close close" data-dismiss="alert">×</a>
-      <i class="fa fa-coffee"></i>
-      {{ email }} has been {{ action }}.
-    </div>
-    {% endif %}
-    <div class="text-center">
-    {% if user.is_authenticated %}
-    Hi {{ user.username }}!
-    <p><a href="{% url 'logout' %}">Log Out</a></p>
-    {% else %}
-    <p>You are not logged in</p>
-    <a href="{% url 'login' %}">Log In</a>
-    {% endif %}
-  </div>
-</div>
-</div> -->
-
-
 <!-- home content -->
 <article>
   <div id="carouselExampleCaptions" class="carousel slide bottomPadding" data-ride="carousel">
@@ -111,7 +86,7 @@
             style="width: 230px; height: 230px; " alt="image">
           <div class="" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title" style="padding-left: 50px;">{{post.title}}</h5>
+              <h5 class="card-title" style="padding-left: 50px;">{{lab.title}}</h5>
               <p class="card-text">{{lab.description|safe|truncatewords:10}}</p>
               <a href="{{lab.get_absolute_url}}" class="btn btn-info" style="margin-left: 50px;">Read More</a>
             </div>
