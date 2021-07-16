@@ -69,8 +69,6 @@ INSTALLED_APPS = [
     'settings',
     'contact',
 
-    'chatbotapp', # chatbot
-
     "verify_email.apps.VerifyEmailConfig",  # verification
 ]
 
