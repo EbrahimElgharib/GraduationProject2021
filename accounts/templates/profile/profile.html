@@ -55,6 +55,7 @@
             <!-- <label for="inputEmail4">Email</label>
                     <input type="email" class="form-control" id="email" value="{{user_form.email.value}}" disabled> -->
           </div>
+          {% endif %}
 
           <div class="form-group {% if email %}col-md-6{% else %}col-md-12{% endif %}">
             {{profile_form.phone_number|as_crispy_field}}
