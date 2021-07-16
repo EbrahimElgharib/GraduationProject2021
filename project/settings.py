@@ -68,6 +68,8 @@ INSTALLED_APPS = [
     'blog',
     'settings',
     'contact',
+
+    "verify_email.apps.VerifyEmailConfig",  # verification
 ]
 
 # Provider specific settings
@@ -81,6 +83,19 @@ SOCIALACCOUNT_PROVIDERS = {
             'access_type': 'online',
         }
     },
+
+
+    'facebook': {
+        'METHOD': 'oauth2',
+        'SCOPE': ['email', 'public_profile', 'user_friends'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'INIT_PARAMS': {'cookie': True},
+        'FIELDS': [
+            'id',
+            'email',
+            'name',
+        ],
+    }
 
 }
 
@@ -127,12 +142,11 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 LOGIN_REDIRECT_URL = '/'
 # login
 LOGIN_URL = '/accounts/login'
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
-# LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/accounts/profile'
 
@@ -221,3 +235,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Newsletter  ### https://app.sendgrid.com/settings/api_keys
 FROM_EMAIL = 'ebrahimtest44@gmail.com'
 SENDGRID_API_KEY = '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'
+
+
+# pkg verification
+VERIFICATION_SUCCESS_TEMPLATE = None
+EXPIRE_AFTER = "1d"

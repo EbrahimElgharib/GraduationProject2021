@@ -5,6 +5,7 @@ from django.conf import settings
 
 # Create your models here.
 
+
 class Website(models.Model):
    name = models.CharField(max_length=100)
    description = models.TextField(max_length=1000) 
@@ -28,6 +29,7 @@ class Subscriber(models.Model):
 
     def __str__(self):
         return self.email + " (" + ("not " if not self.confirmed else "") + "confirmed)"
+
 
 # Newsletter file send to all subscribers
 class Newsletter(models.Model):

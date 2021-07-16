@@ -5,8 +5,6 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django_countries.fields import CountryField
 
-### Creating Our models here.
-
 # choices of eductaion of users
 EDUCATION = [
     # (stored value in DB, shown value in frontend),
@@ -16,7 +14,6 @@ EDUCATION = [
     ('U','University'),
     ('G','Graduate'),
 ]
-
 # Model Class to Create a Prfile Table in DB
 class Profile(models.Model):
    # Relation One-to_One with USER

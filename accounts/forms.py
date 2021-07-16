@@ -34,6 +34,6 @@ class ProfileForm(forms.ModelForm):
    class Meta:
       model = Profile
       # fields = ['image', 'phone_number','country', 'address','education']
-      fields = ['image','phone_number','country']
+      fields = ['image','phone_number','country', 'education']
       # fields = ['user','phone_number','address','image']
       widgets = {'country': CountrySelectWidget()} # for country pkg

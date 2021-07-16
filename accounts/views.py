@@ -9,6 +9,8 @@ from .models import Profile
 from django.conf import settings
 from .decorators import check_recaptcha
 
+from verify_email.email_handler import send_verification_email
+
 # signup view 
 @check_recaptcha # recaptcha api for security and stability
 def signup(request):
@@ -27,10 +29,14 @@ def signup(request):
             test = User.objects.get(email=email)
             messages.error(request, 'This email is signned up already')
          except:
-            form.save() # save a form
+            # form.save() # save a form
             ### login in now
-            user = authenticate(username=username, password=password)
-            login(request, user)
+            # user = authenticate(username=username, password=password)
+            # login(request, user)
+
+            inactive_user = send_verification_email(request, form) # verify pkg
+            # inactive_user.cleaned_data['email']
+
             return redirect('/accounts/profile')  
    else: # else return form as empty
       form = SignupForm()

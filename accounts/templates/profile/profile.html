@@ -15,7 +15,6 @@
         <div class="left-column text-center">
 
           <div class="circle">
-            <!-- img-thumbnail is added by Ebrahim and I will remove it -->
             {% if user.profile.image %}
             <img class="profile-pic" src="{{user.profile.image.url}}">
             {% else %}
@@ -62,13 +61,16 @@
           <div class="form-group col-md-6">
             {{profile_form.country|as_crispy_field}}
           </div>
+          <div class="form-group col-md-6">
+            {{profile_form.education|as_crispy_field}}
+          </div>
         </div>
         <hr>
         <!---------------------------Btn-------------------------------------->
         <div class="submission">
           <div class="row">
             <button type="submit" class="btn btn-success mt-4 mr-3">Save Changes</button>
-            <button type="reset" class="btn btn-primary mt-4">Reset</button>
+            <button type="reset" class="btn btn-secondary mt-4" style="background-color:#22a6b3;">Reset</button>
             <a class="btn btn-primary mt-4 ml-auto" type="button" href="{% url 'password_change' %}"
               role="button">Change Password</a>
           </div>

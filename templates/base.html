@@ -1,4 +1,8 @@
 {% load static %}
+{% url 'contact:contact' as contact %}
+{% url 'accounts:profile' as profile %}
+
+
 <!doctype html>
 <html lang="en">
 
@@ -15,8 +19,17 @@
     <script type="text/javascript" src="{% static 'js/App.js' %}"></script>
     <script type="text/javascript" src="{% static 'wowJs/dist/wow.min.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/styleContact.css' %}">
+    
+    {% if request.path == contact %}
+      <link rel="stylesheet" href="{% static 'css/styleContact.css' %}">  
+    {% endif %}
+
+     {% if request.path == profile %}
     <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    {% endif %}
+        
+    
+
     <title>Taleen</title>
 
     <script>

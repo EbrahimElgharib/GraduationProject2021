@@ -1,5 +1,38 @@
-<div class="col-12">
-    {% if email %}
-    <p>{{ email }} has been {{ action }}.</p>
-    {% endif %}
-</div>
+{% extends "base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+
+{% block body %}
+<div class="container">
+    <div class="row" >
+       <div class="col-md-6 mx-auto">
+        <div class="p-5 text-center bg-light">
+        {% if email %}
+        <h2 class="mb-3">{{ email }}</h2> 
+        <h3 class="mb-3">has been</h3>
+        <h2 class="mb-5 text-info">{{ action }}</h2>
+        {% endif %}
+        <p class="mb-3">you will be redirected directly to Home after 5 seconds, or click below</p>
+        <a class="btn btn-primary" href="/" role="button">Home</a>
+        </div>
+        
+       </div>
+             
+    </div>
+ </div>
+
+
+
+
+
+
+<script>
+    setTimeout(function(){
+         window.location.href = '/';
+      }, 5000);
+</script>
+
+
+{% endblock body %}

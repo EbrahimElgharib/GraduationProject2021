@@ -11,38 +11,9 @@ from sendgrid.helpers.mail import Mail
 from django.http import JsonResponse
 # Create your views here.
 
-
-# def home(request):
-#     places = Place.objects.all().annotate(property_count=Count('property_place'))
-#     categorys = Category.objects.all()
-
-#     # property list of every category
-#     restaurant_list = Property.objects.filter(category__name='Restaurant')[:5]
-#     hotels_list = Property.objects.filter(category__name='Hotels')[:4]
-#     places_list = Property.objects.filter(category__name='Places')[:4]
-#     recent_posts = Post.objects.all()[:4]
-
-#     # count of propertys of every category
-#     user_count = User.objects.all().count()
-#     restaurant_count = Property.objects.filter(category__name='Restaurant').count()
-#     hotels_count = Property.objects.filter(category__name='Hotels').count()
-#     places_count = Property.objects.filter(category__name='Places').count()
-
-#     context = {
-#         'places':places,
-#         'categorys':categorys,
-#         'restaurant_list':restaurant_list,
-#         'hotels_list':hotels_list,
-#         'places_list':places_list,
-#         'recent_posts':recent_posts,
-#         'user_count':user_count,
-#         'restaurant_count':restaurant_count,
-#         'places_count':places_count,
-#         'hotels_count':hotels_count,
-#     }
-#     return render(request, 'settings/home.html', context)
-
+# Home page
 def home(request):
+    # prepare data shown in page
     context = {
         'recent_posts': Post.objects.all()[:3],
         'recent_labs': Lab.objects.all()[:3],
@@ -107,18 +78,30 @@ def subscribe(request):
 # confirm subscribers
 def confirm(request):
     sub = Subscriber.objects.get(email=request.GET['email'])
+    context = {
+        'email': sub.email,
+        "subscriber_form" : SubscriberForm()
+    }
     if sub.conf_num == request.GET['conf_num']:
         sub.confirmed = True
         sub.save()
-        return render(request, 'settings/home.html', {'email': sub.email, 'action': 'confirmed'})
+        context["action"] = 'confirmed'
+        return render(request, 'subscriber/subscribe.html', context)
     else:
-        return render(request, 'settings/home.html', {'email': sub.email, 'action': 'denied'})
+        context["action"] = 'denied'
+        return render(request, 'subscriber/subscribe.html', context)
 
 # delete subscribers
 def delete(request):
     sub = Subscriber.objects.get(email=request.GET['email'])
+    context = {
+        'email': sub.email,
+        "subscriber_form" : SubscriberForm()
+    }
     if sub.conf_num == request.GET['conf_num']:
         sub.delete()
-        return render(request, 'settings/home.html', {'email': sub.email, 'action': 'unsubscribed'})
+        context["action"] = 'unsubscribed'
+        return render(request, 'subscriber/subscribe.html', context)
     else:
-        return render(request, 'settings/home.html', {'email': sub.email, 'action': 'denied'})
+        context["action"] = 'denied'
+        return render(request, 'subscriber/subscribe.html', context)
