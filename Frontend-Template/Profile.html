@@ -12,23 +12,7 @@
     <script type="text/javascript" src="js/App.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/profile.css">
-    <script>
-      function checkPassword () {
-
-        var passOne = document.getElementById("passOne").value
-            passTwo = document.getElementById("passTwo").value;
-
-        if(passOne == ""){
-          document.getElementById("message1").innerHTML = "Please Fill This Field";
-          return false;
-        }
-        if (passOne != passTwo) {
-          document.getElementById("message2").innerHTML = "Error, Password didnt match";
-        }
-
-
-      }
-    </script>
+   
     <title>Profile</title>
 </head>
 
@@ -71,18 +55,21 @@
         </div>
     </nav>
     <!-------------------------------------------------------------------------------------------->
-    <div class="container">
+
+    <div class="container" style="padding: 4rem 0;">
       <h1>Edit Profile</h1>
       <hr>
       
-      <form onsubmit = "return checkPassword()" role="form" method="POST">
+      <form action="" role="form" method="POST">
         <div class="row">
+
             <!-- left column -->
+            
             <div class="col-md-3">
               <div class="left-column text-center">
 
-                <div class="circle">
-                  <img class="profile-pic" src="https://legamart.com/avatars/Aria.jpg">
+                <div class="row">
+                  <img class="img-fluid rounded-circle img-thumbnail profile-pic" style="width: 200px; height: 200px;" src="https://legamart.com/avatars/Aria.jpg">
                 </div>
                 
                 <div class="p-image">
@@ -95,47 +82,46 @@
             
             <!-- edit form column -->
             <div class="col-md-9 alert">
-              <div class="alert alert-info alert-dismissable">
-                <a class="panel-close close" data-dismiss="alert">×</a> 
-                <i class="fa fa-coffee"></i>
-                Please make sure to save your changes before leaving the page.
-              </div>
-
-              <!---------------------personal-info------------------------------>
-              
+                <div class="alert alert-info alert-dismissable fade show">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <i class="fa fa-coffee"></i>
+                  Please make sure to save your changes before leaving the page.
+                </div>
+                <!---------------------personal-info------------------------------>
                 <h3>Personal info</h3>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="myName">Name</label>
-                    <input type="text" class="form-control" id="myName" >
+                    <input type="text" class="form-control" id="myName" required >
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" >
+                    <label for="myEmail">Email</label>
+                    <input type="email" class="form-control" id="myEmail" required >
                   </div>
                 </div>
 
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="myPhone">phone</label>
-                    <input type="text" class="form-control" id="myPhone" >
+                    <input type="number" class="form-control" id="myPhone" required >
                   </div>
                   <div class="form-group col-md-6">
                     <label for="city">city</label>
-                    <input type="text" class="form-control" id="city" >
+                    <input type="text" class="form-control" id="city" required>
                   </div>
                 </div>
 
-
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputUnversity">Unversity</label>
-                    <input type="text" class="form-control" id="inputUnversity"  >
+                    <label for="myUnversity">Unversity</label>
+                    <input type="text" class="form-control" id="myUnversity" required >
                   </div>
                   <div class="form-group col-md-6">
                     <label for="myProfession">Profession</label>
-                    <select id="myProfession" class="form-control">
-                      <option selected>Profession</option>
+                    <select id="myProfession" class="form-control" required>
+                      <option>Profession</option>
                       <option>Undergraduate Student</option>
                       <option>Postgraduate Student</option>
                       <option>Professor</option>
@@ -147,8 +133,8 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="myFaculty">Faculty</label>
-                    <select id="myFaculty" class="form-control">
-                      <option selected>Faculty</option>
+                    <select id="myFaculty" class="form-control" required>
+                      <option>Faculty</option>
                       <option>Faculty of Engineering</option>
                       <option>Faculty of Medicine</option>
                       <option>Faculty of Pharmacy</option>
@@ -157,8 +143,8 @@
                   </div>
                   <div class="form-group col-md-6">
                     <label for="web">Web Search</label>
-                    <select id="web" class="form-control">
-                      <option selected>How did you hear about us?</option>
+                    <select id="web" class="form-control" required >
+                      <option>How did you hear about us?</option>
                       <option>Facebook</option>
                       <option>Youtube</option>
                       <option>LinkedIn</option>
@@ -166,31 +152,13 @@
                     </select>
                   </div>
                 </div>
-                <hr>
-                <!---------------------------change Password-------------------------------------->
-                <h3>Change Password</h3>
-                <div class="form-group">
-                  <label for="currentPassword">current Password</label>
-                  <input type="password" class="form-control" id="currentPassword" required>
-                </div>
-                <div class="form-group">
-                  <label for="NewPassword">New Password</label>
-                  <input type="password" class="form-control" id="passOne" required>
-                  <div style="color: red" id="message1"></div>
-                </div>
-                <div class="form-group">
-                  <label for="Confirm">Confirm Password</label>
-                  <input type="password" class="form-control" id="passTwo" required>
-                  <div style="color: red" id="message2"></div>
-                </div>
                 <div class="submission">
-                  <div class="row">
+                  <div class="row" style="margin-left: 1px;">
                     <button type="submit" class="btn btn-primary mt-4 mr-3">Save Changes</button>
                     <button type="reset" class="btn btn-primary mt-4">Reset</button>
-                    <button type="button" class="btn btn-primary mt-4 ml-auto">Change Password</button>
                   </div>
                 </div>
-          </div>
+            </div>
         </div>
       </form>
     </div>

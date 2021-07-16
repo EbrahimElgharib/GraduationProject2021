@@ -23,11 +23,12 @@ $(document).ready(function() {
 
     //   chatbot
     $(".chat-icon").click(function () { 
+        
         $(".chat-box").toggleClass("active");
         
     });
 
-    $('.conv-form-wrapper').convform({selectInputStyle: 'disable'});
+    $('#chat').convform({selectInputStyle: 'disable'});
 });
 
 

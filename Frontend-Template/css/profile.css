@@ -1,5 +1,5 @@
 body{
-    margin-top: 130px;
+    margin-top: 86px;
     background:#f4f6f9
 }
 
@@ -7,17 +7,12 @@ body{
     max-width: 200px;
     max-height: 200px;
     display: block;
+    margin: auto;
 }
 .file-upload {
     display: none;
 }
-.circle {
-    border-radius: 1000px !important;
-    overflow: hidden;
-    width: 150px;
-    height: 150px;
-    margin: auto;
-}
+
 img {
     max-width: 100%;
     height: auto;
@@ -28,24 +23,49 @@ img {
     right: -63px;
     color: #666666;
     transition: all .2s ease-in-out;
-  }
-  .upload-button {
+}
+.upload-button {
     font-size: 20px;
-  }
-  
-  .upload-button:hover {
+}
+
+.upload-button:hover {
     transition: all .2s ease-in-out;
     color: #999;
-  }
+}
 .alert h3 { margin-bottom: 25px;}
 
-
+@media (max-width: 768px) {
+    img {
+        margin: auto;
+    }
+    h3 {
+        text-align: center;
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .alert {
+        padding-left: 30px;
+    }
+}
+@media (min-width: 991.98px) {
+    .p-image {
+        right: -62px;
+    }
+}
+@media (min-width: 991.98px) and (max-width: 1199px){
+    .p-image {
+        right: -62px;
+    }
+}
+label {
+    color: #8c8c8c;
+}
 /* Start FAQ Accordion*/
 .faq h1 {
     letter-spacing: -3px;
     font-size: 50px;
 }
-.faq h1 ~ hr {width: 70%;}
 
 .faq-questions {
     padding-top: 60px;
