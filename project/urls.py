@@ -30,6 +30,8 @@ urlpatterns = [
     path('labs/', include('labs.urls', namespace='labs')),
     path('blog/', include('blog.urls', namespace='blog')),
 
+    path('chatbot/', include('chatbotapp.urls', namespace='chatbot')),
+
     # social account
     path('socialaccounts/', include('allauth.urls')),
 
