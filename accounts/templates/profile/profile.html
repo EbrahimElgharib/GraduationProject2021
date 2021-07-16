@@ -18,11 +18,10 @@
             {% if user.profile.image %}
             <img class="profile-pic" src="{{user.profile.image.url}}">
             {% else %}
-            <img class="profile-pic" src="{% static 'images/profile_image_empty.svg' %}">
+            <img class="profile-pic" src="https://i0.wp.com/centro-renacer.org/wp-content/uploads/2016/06/blank-profile.png">
             {% endif %}
           </div>
-          <div class="p-image">
-            <i class="fa fa-camera upload-button"></i>
+          <div class="mt-3">
             {{profile_form.image}}
           </div>
 
