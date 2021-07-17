@@ -28,9 +28,8 @@ $(document).ready(function() {
         
     });
 
-
-
     $('#chat').convform({selectInputStyle: 'disable'});
+    $(".submit").html('<i class="fas fa-play"></i>');
 
 });
 
