@@ -48,7 +48,7 @@
         </div>
         <div class="form-row">
           
-          {% if email %}
+          {% if user_form.email %}
           <div class="form-group col-md-6">
             {{user_form.email|as_crispy_field}}
             <!-- <label for="inputEmail4">Email</label>
@@ -56,7 +56,7 @@
           </div>
           {% endif %}
 
-          <div class="form-group {% if email %}col-md-6{% else %}col-md-12{% endif %}">
+          <div class="form-group {% if user_form.email %}col-md-6{% else %}col-md-12{% endif %}">
             {{profile_form.phone_number|as_crispy_field}}
           </div>
         </div>
