@@ -1,8 +1,6 @@
 {% load static %}
 {% load bootstrap4 %}
 
-
-
 <!doctype html>
 <html lang="en">
 
@@ -60,7 +58,7 @@
                                 {{ message }}
                             </div>
                             {% endfor %}
-                            
+
                             {% csrf_token %}
                             {% bootstrap_form form %}
 
