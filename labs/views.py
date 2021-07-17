@@ -6,7 +6,7 @@ from settings.forms import SubscriberForm
 
 class LabList(ListView):# gets the ListView from django
     model = Lab # model data
-    paginate_by = 2 # pagination
+    paginate_by = 3 # pagination
 
     # return subscriber form in footer
     def get_context_data(self, **kwargs): # return another data
