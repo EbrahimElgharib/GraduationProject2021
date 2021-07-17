@@ -7,14 +7,14 @@
 
 
 
-<body class="Virtual-labs">
+<body class="Virtual-labs mt-5">
   <section class="">
-    <div class="container translate">
+    <div class="container translate mt-5">
 
-      <h4 class="center wow animate__flash">
+      <h4 class="center wow animate__flash mb-5">
         explore our simulation labs
       </h4>
-      <br /><br /><br />
+
       <div class="row MarginFromLeft">
 
         {% for lab in lab_list %}   <!--for every lab in the website, it will has these attributes loaded from models -->
@@ -26,11 +26,10 @@
 
           <div class="" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title" style="padding-left: 50px;">{{lab.title}}</h5> <!-- loading this specific lab title form DB -->
+              <h5 class="card-title" >{{lab.title}}</h5> <!-- loading this specific lab title form DB -->
               <tag class="text-muted"></tag>
-              <br><br>
               <p class="card-text">
-                {{lab.description|safe}} <!-- loading this specific lab description form DB -->
+                {{lab.description|safe|truncatewords:10}} <!-- loading this specific lab description form DB -->
               </p>
               <a href="{% url 'labs:lab_detail' slug=lab.slug %}" class="btn btn-info" style="margin-left: 50px;">Read More</a><!--redircting the user to the chosen lab_detail page -->
             </div>
@@ -73,6 +72,6 @@
     </div>
 
   </section>
-
+</body>
 
   {% endblock body %}
